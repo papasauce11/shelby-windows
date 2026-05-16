@@ -171,13 +171,13 @@ export default function Home() {
       <div className="bg-warm-50"><svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block -mb-px"><path d="M0 0C240 32 480 48 720 48s480-16 720-48H0z" fill="#ffffff"/></svg></div>
 
       {/* Supplier Strip */}
-      <section className="py-10 sm:py-14 lg:py-20 px-5 sm:px-6 bg-white">
+      <section className="py-8 sm:py-10 px-5 sm:px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
-          <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block">Our Trusted Suppliers</span>
-          <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-4">
+          <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 block">Our Trusted Suppliers</span>
+          <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-3">
             Canadian manufacturers you can count on
           </h2>
-          <p className="text-warm-500 max-w-xl mx-auto mb-12">
+          <p className="text-warm-500 max-w-xl mx-auto mb-8">
             Every product we install is sourced from established Canadian manufacturers committed to quality and performance.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
