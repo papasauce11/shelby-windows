@@ -22,16 +22,6 @@ export default function OurWork() {
         image={heroBg}
       />
 
-      {/* Intro statement */}
-      <section className="bg-warm-50 py-8 sm:py-14 px-5 sm:px-6 border-b border-warm-100">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row sm:items-center gap-6">
-          <div className="w-10 h-px bg-teal-600 flex-shrink-0 hidden sm:block" />
-          <p className="text-warm-700 text-xl lg:text-2xl font-heading font-600 leading-snug">
-            Every project is different, but our standard stays the same — quality products, careful installation, and a home that performs better than before.
-          </p>
-        </div>
-      </section>
-
       {/* Project grid */}
       <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">

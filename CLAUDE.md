@@ -8,6 +8,7 @@
 - **Router:** React Router v6
 - **Repo path:** `C:\Users\Varai\Desktop\Varaico\shelby-windows`
 - **Bash path (update each session):** check `ls /sessions/*/mnt/` to find current mount
+- **Push workflow:** Always provide a single copy-paste PowerShell command to commit and push. Format: `git add -A; git commit -m "message"; git push origin main`
 
 ---
 
