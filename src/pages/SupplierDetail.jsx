@@ -68,7 +68,7 @@ export default function SupplierDetail() {
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo — no box, large */}
           <div className="mb-6">
-            <SupplierLogo supplier={supplier} size="hero" linkable={false} />
+            <SupplierLogo supplier={supplier} size={supplier.slug === 'golden-windows' ? 'heroGolden' : 'hero'} linkable={false} />
           </div>
 
           {/* Tagline badge */}
