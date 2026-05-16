@@ -65,7 +65,7 @@ export default function Home() {
       </section>
 
       {/* Trust Strip */}
-      <section className="py-8 sm:py-10 px-5 sm:px-6 bg-white border-b border-warm-100">
+      <section className="py-8 sm:py-10 px-5 sm:px-6 bg-warm-50 border-b border-warm-200">
         <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-center">
           {[
             { icon: (
@@ -109,10 +109,10 @@ export default function Home() {
             </div>
             <Link
               to="/windows"
-              className="hidden sm:inline-flex items-center text-teal-700 font-medium hover:text-teal-600 transition-colors"
+              className="hidden sm:inline-flex items-center text-lg lg:text-xl text-teal-700 font-semibold hover:text-teal-600 transition-colors"
             >
               Browse all windows
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -144,16 +144,16 @@ export default function Home() {
             </div>
             <Link
               to="/doors"
-              className="hidden sm:inline-flex items-center text-teal-700 font-medium hover:text-teal-600 transition-colors"
+              className="hidden sm:inline-flex items-center text-lg lg:text-xl text-teal-700 font-semibold hover:text-teal-600 transition-colors"
             >
               Browse all doors
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {featuredDoors.map(product => (
               <ProductCard key={product.slug} product={product} />
             ))}
@@ -243,7 +243,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reviews — TODO: Paste real Google reviews from Vick here */}
+      {/* Reviews — Real Google Reviews (5.0 / 20 reviews) */}
       <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
@@ -253,19 +253,37 @@ export default function Home() {
             </h2>
           </div>
 
-          {/* PLACEHOLDER — replace the three cards below with real Google reviews from Vick */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 border border-dashed border-warm-200 flex flex-col gap-4">
+            {[
+              {
+                name: "Herbert Lemcke",
+                time: "2 months ago",
+                text: "We recently upgraded all our windows to aluminum-clad wooden windows from Golden Windows. This was a tricky job in a log home with large windows, some of them located quite high up. Vick reliably coordinated the installation and was very accommodating in completing the custom trim work. A major shout-out to Walter and his crew, who did an excellent job. Their attention to detail was impressive, their workmanship impeccable. We're very happy with the outcome!"
+              },
+              {
+                name: "Petra Hamann",
+                time: "7 months ago",
+                text: "Shelby Windows & Doors did an outstanding job! Vick has deep knowledge of windows and doors built on years of hands-on installation experience. He carefully inspected the job site, recommended the right products for my home, and was personally involved in every step. After interviewing four other window suppliers, I chose Shelby because no one else demonstrated this level of expertise and commitment. Highly recommended!"
+              },
+              {
+                name: "Nexus 303",
+                time: "9 months ago",
+                text: "Our company has worked with Vick for 4 years and we can confidently say he stands out in the window and door industry. As professional installers, we value high standards and attention to detail -- qualities Vick brings to every project. His customer service is exceptional. Vick goes above and beyond for clients, treating every project with care and always aiming to exceed expectations. We highly recommend Vick to anyone wanting top-quality windows and doors."
+              }
+            ].map(({ name, time, text }) => (
+              <div key={name} className="bg-white rounded-2xl p-8 border border-warm-100 shadow-sm flex flex-col gap-4">
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, s) => (
-                    <svg key={s} className="w-5 h-5 text-warm-200" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={s} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                 </div>
-                <div className="h-16 bg-warm-100 rounded-lg" />
-                <div className="h-3 bg-warm-100 rounded w-1/3" />
+                <p className="text-warm-600 text-sm leading-relaxed flex-1">{text}</p>
+                <div>
+                  <p className="font-heading font-700 text-warm-900 text-sm">{name}</p>
+                  <p className="text-warm-400 text-xs">{time}</p>
+                </div>
               </div>
             ))}
           </div>

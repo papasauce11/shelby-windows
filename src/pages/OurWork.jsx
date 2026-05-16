@@ -24,30 +24,79 @@ export default function OurWork() {
         image={heroBg}
       />
 
-      {/* Project grid */}
+      {/* Intro strip */}
+      <section className="py-6 sm:py-8 px-5 sm:px-6 bg-warm-50 border-b border-warm-100">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p className="text-sm sm:text-base text-warm-600 max-w-2xl leading-relaxed">
+            From full-home replacements to custom commercial installs, every project gets the same hands-on attention to detail. Here are a few recent highlights.
+          </p>
+          <div className="flex-shrink-0 rounded-xl border border-warm-200 px-6 py-4 text-center bg-white">
+            <span className="font-heading font-800 text-3xl sm:text-4xl block text-teal-700">5.0</span>
+            <span className="text-warm-500 text-xs mt-1 block">Google rating (20 reviews)</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Project grid — top row: 2 items, bottom row: 3 items */}
       <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, i) => (
+          {/* Top row — 2 large cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            {projects.slice(0, 2).map((project, i) => (
               <a
                 key={i}
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group block ${i === 0 ? 'sm:col-span-2 lg:col-span-2 lg:row-span-2' : ''}`}
+                className="group block"
               >
-                <div className={`rounded-2xl overflow-hidden border border-warm-100 group-hover:border-teal-200 group-hover:shadow-xl transition-all duration-300 ${i === 0 ? 'aspect-[4/3] lg:aspect-auto lg:h-full' : 'aspect-[4/3]'}`}>
+                <div className="relative rounded-2xl overflow-hidden border border-warm-100 shadow-sm group-hover:border-teal-200 group-hover:shadow-xl transition-all duration-300 aspect-[4/3]">
                   <img
                     src={project.image}
                     alt={project.caption}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                    <p className="text-white text-sm font-medium [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">{project.caption}</p>
+                  </div>
                 </div>
                 <div className="mt-3 flex items-start gap-3">
                   <span className="text-xs text-teal-600/60 font-heading font-700 mt-0.5 flex-shrink-0">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <p className="text-sm text-warm-600 font-medium">{project.caption}</p>
+                  <p className="text-sm text-warm-600">{project.caption}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Bottom row — 3 cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {projects.slice(2).map((project, i) => (
+              <a
+                key={i + 2}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <div className="relative rounded-2xl overflow-hidden border border-warm-100 shadow-sm group-hover:border-teal-200 group-hover:shadow-xl transition-all duration-300 aspect-[4/3]">
+                  <img
+                    src={project.image}
+                    alt={project.caption}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                    <p className="text-white text-sm font-medium [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">{project.caption}</p>
+                  </div>
+                </div>
+                <div className="mt-3 flex items-start gap-3">
+                  <span className="text-xs text-teal-600/60 font-heading font-700 mt-0.5 flex-shrink-0">
+                    {String(i + 3).padStart(2, '0')}
+                  </span>
+                  <p className="text-sm text-warm-600">{project.caption}</p>
                 </div>
               </a>
             ))}
@@ -56,7 +105,7 @@ export default function OurWork() {
       </section>
 
       {/* Instagram promo */}
-      <section className="py-12 sm:py-16 px-5 sm:px-6 bg-warm-50">
+      <section className="py-12 sm:py-16 px-5 sm:px-6 bg-warm-50 border-t border-warm-100">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 mb-6">
             <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
