@@ -1,0 +1,217 @@
+import { useState, useRef, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { navigation } from '../../data/navigation';
+import mapleLeaf from '../../assets/canada_flag.png';
+import shelbyLogo from '../../assets/shelby_logo3.png';
+import shelbyBranding from '../../assets/shelbybranding_.png';
+
+export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [mobileAccordion, setMobileAccordion] = useState(null);
+  const dropdownRef = useRef(null);
+  const location = useLocation();
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+    setProductsOpen(false);
+    setMobileAccordion(null);
+  }, [location.pathname]);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClick(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setProductsOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  const productsData = navigation.main.find(n => n.label === 'Products');
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-200 shadow-sm">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-1">
+            <img src={shelbyBranding} alt="" className="h-[66px] w-auto" />
+            <img src={shelbyLogo} alt="Shelby Windows & Doors" className="h-[66px] w-auto" />
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {navigation.main.map((item) => {
+              if (item.label === 'Products') {
+                return (
+                  <div key={item.label} ref={dropdownRef} className="relative">
+                    <button
+                      onClick={() => setProductsOpen(!productsOpen)}
+                      className={`px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-lg
+                        ${productsOpen ? 'text-teal-700 bg-teal-50' : 'text-warm-700 hover:text-teal-700 hover:bg-warm-50'}`}
+                    >
+                      Products
+                      <svg className={`inline-block w-4 h-4 ml-1 transition-transform ${productsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {/* Mega Dropdown */}
+                    {productsOpen && (
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[720px] bg-white rounded-2xl shadow-xl border border-warm-100 p-8 grid grid-cols-3 gap-8">
+                        {Object.values(productsData.children).map((section) => (
+                          <div key={section.label}>
+                            <Link
+                              to={section.path}
+                              className="text-xs font-heading font-700 uppercase tracking-widest text-teal-700 mb-4 block hover:text-teal-600"
+                              onClick={() => setProductsOpen(false)}
+                            >
+                              {section.label}
+                            </Link>
+                            <ul className="space-y-2">
+                              {section.items.map((sub) => (
+                                <li key={sub.path}>
+                                  <Link
+                                    to={sub.path}
+                                    className="text-sm text-warm-600 hover:text-teal-700 hover:pl-1 transition-all block"
+                                    onClick={() => setProductsOpen(false)}
+                                  >
+                                    {sub.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors group
+                    ${location.pathname === item.path ? 'text-teal-700' : 'text-warm-700 hover:text-teal-700'}`}
+                >
+                  {item.label}
+                  <span className={`absolute bottom-0 left-4 right-4 h-px bg-teal-600 transition-transform origin-left duration-300
+                    ${location.pathname === item.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
+                </Link>
+              );
+            })}
+
+            {/* Desktop CTAs */}
+            <Link
+              to="/contact"
+              className="px-5 py-2.5 bg-teal-700 text-white text-sm font-semibold rounded-full hover:bg-teal-800 shadow-sm hover:shadow-md ml-4"
+            >
+              Get a Quote
+            </Link>
+            <Link
+              to="/contact"
+              className="ml-6 text-xs text-warm-400 hover:text-teal-600 transition-colors tracking-wide"
+            >
+              Financing Available
+            </Link>
+          </nav>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden p-2 text-warm-700 hover:text-teal-700"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {mobileOpen && (
+        <div className="lg:hidden fixed inset-0 top-20 bg-white z-40 overflow-y-auto">
+          <nav className="max-w-7xl mx-auto px-6 py-8 space-y-2">
+            {navigation.main.map((item) => {
+              if (item.label === 'Products') {
+                return (
+                  <div key={item.label}>
+                    <button
+                      onClick={() => setMobileAccordion(mobileAccordion === 'products' ? null : 'products')}
+                      className="w-full flex items-center justify-between py-3 px-4 text-lg font-medium text-warm-800 hover:bg-warm-50 rounded-lg"
+                    >
+                      Products
+                      <svg className={`w-5 h-5 transition-transform ${mobileAccordion === 'products' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {mobileAccordion === 'products' && (
+                      <div className="pl-4 space-y-4 mt-2 mb-4">
+                        {Object.values(productsData.children).map((section) => (
+                          <div key={section.label}>
+                            <Link to={section.path} className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 block mb-2 px-4">
+                              {section.label}
+                            </Link>
+                            <ul className="space-y-1">
+                              {section.items.map((sub) => (
+                                <li key={sub.path}>
+                                  <Link to={sub.path} className="block py-2 px-4 text-base text-warm-600 hover:text-teal-700 hover:bg-teal-50 rounded-lg min-h-[48px] flex items-center">
+                                    {sub.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  className="block py-3 px-4 text-lg font-medium text-warm-800 hover:text-teal-700 hover:bg-warm-50 rounded-lg min-h-[48px] flex items-center"
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+
+            <div className="pt-6 border-t border-warm-100 space-y-3">
+              <Link
+                to="/contact"
+                className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-base font-medium hover:bg-teal-100 transition-colors"
+              >
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Financing Available
+              </Link>
+              <Link
+                to="/contact"
+                className="block w-full text-center py-4 bg-teal-700 text-white text-lg font-semibold rounded-full hover:bg-teal-800"
+              >
+                Get a Quote
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}

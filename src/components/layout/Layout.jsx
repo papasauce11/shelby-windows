@@ -1,0 +1,66 @@
+import { useEffect, useState } from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
+
+export default function Layout({ children }) {
+  const { pathname } = useLocation();
+  const [showSticky, setShowSticky] = useState(false);
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  // Sticky CTA — appears after scrolling 500px
+  useEffect(() => {
+    const handler = () => setShowSticky(window.scrollY > 500);
+    window.addEventListener('scroll', handler, { passive: true });
+    return () => window.removeEventListener('scroll', handler);
+  }, []);
+
+  // Scroll animation observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+
+      <main className="flex-1 pt-20">
+        {children}
+      </main>
+
+      <Footer />
+
+      {/* Sticky CTA bar */}
+      <div className={`fixed bottom-0 left-0 right-0 z-40 transition-transform duration-400 ${showSticky ? 'translate-y-0' : 'translate-y-full'}`}>
+        <div className="bg-white border-t border-warm-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] py-3 px-6">
+          <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
+            <p className="text-sm text-warm-600 hidden sm:block shrink-0">Free measurements across the GTA</p>
+            <div className="flex gap-2 sm:gap-3 ml-auto w-full sm:w-auto">
+              <a
+                href="tel:+19056605505"
+                className="flex-1 sm:flex-none text-center px-4 py-2.5 text-sm font-semibold text-teal-700 border border-teal-200 rounded-full hover:bg-teal-50 transition-colors"
+              >
+                (905) 660-5505
+              </a>
+              <Link
+                to="/contact"
+                className="flex-1 sm:flex-none text-center px-4 py-2.5 text-sm font-semibold bg-teal-700 text-white rounded-full hover:bg-teal-800 transition-colors shadow-sm"
+              >
+                Get a Free Quote
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
