@@ -13,7 +13,8 @@ export default function SupplierLogo({ supplier, size = "default", linkable = tr
   const sizes = {
     small: "px-4 py-3 h-16",
     default: "px-6 py-4 h-20",
-    large: "px-8 py-5 h-24"
+    large: "px-8 py-5 h-24",
+    hero: "h-20 sm:h-28 lg:h-32"
   };
 
   const logo = logoMap[supplier.slug];

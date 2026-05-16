@@ -65,26 +65,22 @@ export default function SupplierDetail() {
     <>
       {/* Themed hero header */}
       <section className={`${t.heroBg} border-b ${t.heroBorder} pt-28 sm:pt-32 pb-12 sm:pb-16 px-5 sm:px-6`}>
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Logo */}
-          <div className="inline-flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-white border border-warm-200 p-4 shadow-sm mb-6">
-            <SupplierLogo supplier={supplier} size="large" linkable={false} />
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Logo — no box, large */}
+          <div className="mb-6">
+            <SupplierLogo supplier={supplier} size="hero" linkable={false} />
           </div>
 
           {/* Tagline badge */}
           {supplier.tagline && (
-            <div className="mb-4">
+            <div className="mb-6">
               <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-heading font-700 uppercase tracking-widest ${t.taglineBg}`}>
                 {supplier.tagline}
               </span>
             </div>
           )}
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-800 text-warm-900 mb-4">
-            {supplier.name}
-          </h1>
-
-          <p className="text-warm-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-8">
+          <p className="text-warm-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
             {supplier.description}
           </p>
 
