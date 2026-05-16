@@ -19,19 +19,16 @@ export const navigation = {
             { label: "Single Hung Windows", path: "/windows/single-hung" },
             { label: "Sliding Windows", path: "/windows/sliding" },
             { label: "Custom Shape Windows", path: "/windows/custom-shape" },
-            { label: "Tilt & Turn Windows", path: "/windows/tilt-turn" }
+            { label: "Tilt Windows", path: "/windows/tilt" }
           ]
         },
         doors: {
           label: "Doors",
           path: "/doors",
           items: [
-            { label: "Entrance Doors", path: "/doors/entrance" },
-            { label: "Folding Doors", path: "/doors/folding" },
-            { label: "Multi-Slide Doors", path: "/doors/multi-slide" },
             { label: "Sliding Patio Doors", path: "/doors/sliding-patio" },
-            { label: "Swinging Patio Doors", path: "/doors/swinging-patio" },
-            { label: "Lift & Slide Doors", path: "/doors/lift-slide" }
+            { label: "Terrace Doors", path: "/doors/terrace" },
+            { label: "Entry Doors", path: "/doors/entry" }
           ]
         },
         suppliers: {

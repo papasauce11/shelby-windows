@@ -167,15 +167,15 @@ Because every custom shape window is made to order, the sizing, shape, and finis
       metaDescription: "Custom shape windows from Shelby Windows & Doors. Arches, circles, and unique geometries. Made-to-order in Canada."
     },
     {
-      slug: "tilt-turn",
-      name: "Tilt & Turn Windows",
+      slug: "tilt",
+      name: "Tilt Windows",
       category: "windows",
       shortDescription: "European-style windows that tilt inward at the top or swing fully open like a door.",
-      description: `Tilt and turn windows offer two distinct opening modes in a single unit. In tilt mode, the top of the sash tilts inward, allowing controlled ventilation while maintaining security and weather protection. In turn mode, the sash swings fully inward like a door, providing wide-open access for cleaning or maximum airflow.
+      description: `Tilt windows offer two distinct opening modes in a single unit. In tilt mode, the top of the sash tilts inward, allowing controlled ventilation while maintaining security and weather protection. In turn mode, the sash swings fully inward like a door, providing wide-open access for cleaning or maximum airflow.
 
 This dual-function design originated in Europe and has gained popularity in Canada for its versatility and performance. The multi-point locking system engages along all four sides of the sash, creating one of the tightest seals available in an operable window.
 
-Tilt and turn windows are an excellent fit for upper-floor installations where exterior cleaning would otherwise require a ladder, and for bedrooms where you want secure overnight ventilation without a fully open window.`,
+Tilt windows are an excellent fit for upper-floor installations where exterior cleaning would otherwise require a ladder, and for bedrooms where you want secure overnight ventilation without a fully open window.`,
       features: [
         "Dual-mode operation: tilt for ventilation, turn for full opening",
         "Multi-point locking on all four sides for superior seal",
@@ -186,80 +186,11 @@ Tilt and turn windows are an excellent fit for upper-floor installations where e
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
       relatedProducts: ["casement", "awning", "double-hung"],
-      metaTitle: "Tilt & Turn Windows | Shelby Windows & Doors",
-      metaDescription: "Tilt & turn windows from Shelby Windows & Doors. European-style dual-mode operation for versatile ventilation. Canadian installation."
+      metaTitle: "Tilt Windows | Shelby Windows & Doors",
+      metaDescription: "Tilt windows from Shelby Windows & Doors. European-style dual-mode operation for versatile ventilation. Canadian installation."
     }
   ],
   doors: [
-    {
-      slug: "entrance",
-      name: "Entrance Doors",
-      category: "doors",
-      shortDescription: "Front entry doors that set the tone for your home with security, insulation, and curb appeal.",
-      description: `Your entrance door is the first thing visitors see and the last line of defence against the elements. A well-chosen entry door combines visual impact with practical performance: thermal insulation, weather resistance, and physical security.
-
-Entrance doors are available in steel, fibreglass, and wood, each offering a different balance of durability, maintenance, and appearance. Steel doors provide the strongest security at the most accessible price point. Fibreglass doors resist denting and offer realistic wood-grain textures without the upkeep. Solid wood doors deliver unmatched warmth and character for a premium finish.
-
-Sidelites, transoms, and decorative glass inserts allow you to customize the look and control how much natural light enters your foyer. Multi-point locking hardware and reinforced frames are standard on quality entrance door systems.`,
-      features: [
-        "Available in steel, fibreglass, and solid wood",
-        "Multi-point locking systems for enhanced security",
-        "Sidelite and transom options for added light and style",
-        "Decorative and privacy glass insert options",
-        "Weatherstripping and insulated cores for energy efficiency",
-        "Custom sizing, colours, and hardware finishes available"
-      ],
-      suppliers: ["entryguard-doors", "golden-windows", "vinyl-bilt"],
-      relatedProducts: ["sliding-patio", "swinging-patio", "folding"],
-      metaTitle: "Entrance Doors | Shelby Windows & Doors",
-      metaDescription: "Entrance doors from Shelby Windows & Doors. Steel, fibreglass, and wood entry doors. Secure, insulated, and built to impress."
-    },
-    {
-      slug: "folding",
-      name: "Folding Doors",
-      category: "doors",
-      shortDescription: "Multi-panel doors that fold open to create a wide, unobstructed connection to outdoor spaces.",
-      description: `Folding doors, sometimes called bi-fold doors, consist of multiple panels that fold against each other and stack to one or both sides of the opening. When fully retracted, they create a dramatic, unobstructed passage between indoor and outdoor living areas.
-
-These doors are a premium choice for homeowners who want to open up a living room, kitchen, or entertaining space directly onto a patio, deck, or garden. The panels operate on a top-hung or bottom-rolling track system engineered for smooth, balanced movement even across wide spans.
-
-When closed, folding doors provide full weather protection with continuous seals and multi-point locking across all panels. Low-profile thresholds create a seamless transition between interior floors and exterior surfaces.`,
-      features: [
-        "Multiple panels fold and stack to one or both sides",
-        "Creates a wide, barrier-free opening to outdoor spaces",
-        "Precision track system for smooth panel operation",
-        "Multi-point locking across all panels for security",
-        "Low-profile threshold for seamless floor transitions",
-        "Available in a range of panel configurations and finishes"
-      ],
-      suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["multi-slide", "sliding-patio", "lift-slide"],
-      metaTitle: "Folding Doors | Shelby Windows & Doors",
-      metaDescription: "Folding doors from Shelby Windows & Doors. Multi-panel bi-fold systems for seamless indoor-outdoor living. Canadian-made quality."
-    },
-    {
-      slug: "multi-slide",
-      name: "Multi-Slide Doors",
-      category: "doors",
-      shortDescription: "Large-format sliding doors with multiple panels that stack or pocket into a wall for maximum opening.",
-      description: `Multi-slide doors feature multiple large glass panels that slide along a track and stack behind each other or disappear into a wall pocket. This creates an expansive opening that standard sliding doors cannot match.
-
-The panels can be configured to slide in one direction and stack at the side, or to split and slide to both sides for a centred opening. Pocket configurations hide the panels inside the wall cavity, leaving the entire opening clear.
-
-Multi-slide doors are designed for wide openings and deliver a strong visual connection between indoor living areas and outdoor spaces. The large glass panels maximize natural light and views, while precision-engineered rollers ensure smooth, quiet operation even with heavy panels.`,
-      features: [
-        "Multiple panels slide and stack or pocket into walls",
-        "Configurable to stack left, right, or split to both sides",
-        "Pocket option hides panels inside the wall cavity",
-        "Large glass panels maximize light and views",
-        "Precision rollers for smooth, quiet operation",
-        "Suitable for openings wider than standard sliding doors"
-      ],
-      suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["sliding-patio", "folding", "lift-slide"],
-      metaTitle: "Multi-Slide Doors | Shelby Windows & Doors",
-      metaDescription: "Multi-slide doors from Shelby Windows & Doors. Large-format sliding panels for wide openings. Premium Canadian installation."
-    },
     {
       slug: "sliding-patio",
       name: "Sliding Patio Doors",
@@ -279,20 +210,20 @@ Modern sliding patio doors use heavy-duty roller systems for smooth, effortless 
         "Double and triple glazing options for energy efficiency"
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["swinging-patio", "multi-slide", "folding"],
+      relatedProducts: ["terrace", "entry"],
       metaTitle: "Sliding Patio Doors | Shelby Windows & Doors",
       metaDescription: "Sliding patio doors from Shelby Windows & Doors. Smooth, space-saving operation for your deck or patio. Canadian-made and installed."
     },
     {
-      slug: "swinging-patio",
-      name: "Swinging Patio Doors",
+      slug: "terrace",
+      name: "Terrace Doors",
       category: "doors",
       shortDescription: "Hinged patio doors that swing open for a traditional, elegant connection to your outdoor space.",
-      description: `Swinging patio doors, also known as French doors or garden doors, feature one or two hinged panels that swing inward or outward. They provide a classic, elegant transition between your home and outdoor spaces.
+      description: `Terrace doors, also known as French doors or garden doors, feature one or two hinged panels that swing inward or outward. They provide a classic, elegant transition between your home and outdoor spaces.
 
 The swinging design offers a wider clear opening than sliding patio doors of the same frame size, since the full panel swings clear of the frame. This makes them a practical choice for moving furniture, hosting gatherings, or simply enjoying an open-air feel on warm days.
 
-Swinging patio doors are available in single-door and double-door configurations, with options for sidelites and transoms to expand the glass area. They are a natural complement to traditional and transitional home styles, though modern profiles are available as well.`,
+Terrace doors are available in single-door and double-door configurations, with options for sidelites and transoms to expand the glass area. They are a natural complement to traditional and transitional home styles, though modern profiles are available as well.`,
       features: [
         "Hinged panels swing inward or outward",
         "Full panel clears the frame for a wide opening",
@@ -301,33 +232,33 @@ Swinging patio doors are available in single-door and double-door configurations
         "Multi-point locking and reinforced hinges for security",
         "Available in traditional and contemporary profiles"
       ],
-      suppliers: ["golden-windows", "vinyl-bilt", "entryguard-doors"],
-      relatedProducts: ["sliding-patio", "entrance", "folding"],
-      metaTitle: "Swinging Patio Doors | Shelby Windows & Doors",
-      metaDescription: "Swinging patio doors from Shelby Windows & Doors. Elegant hinged French doors for your patio or garden. Canadian quality."
+      suppliers: ["golden-windows", "vinyl-bilt"],
+      relatedProducts: ["sliding-patio", "entry"],
+      metaTitle: "Terrace Doors | Shelby Windows & Doors",
+      metaDescription: "Terrace doors from Shelby Windows & Doors. Elegant hinged French doors for your patio or garden. Canadian quality."
     },
     {
-      slug: "lift-slide",
-      name: "Lift & Slide Doors",
+      slug: "entry",
+      name: "Entry Doors",
       category: "doors",
-      shortDescription: "Premium large-panel doors that lift off the track to slide effortlessly, handling heavy glass with ease.",
-      description: `Lift and slide doors use a specialized handle mechanism that lifts the door panel off its seal and onto rollers, allowing it to glide effortlessly along the track. When closed, the panel drops back down onto a compression seal for an airtight, watertight closure.
+      shortDescription: "Front entry doors available in fiberglass, steel, and NHP high performance steel — built for security, insulation, and curb appeal.",
+      description: `Your entry door is the first thing visitors see and the last line of defence against the elements. A well-chosen entry door combines visual impact with practical performance: thermal insulation, weather resistance, and physical security.
 
-This lift-and-lower design allows for much larger and heavier panels than standard sliding doors can accommodate. The result is expansive glass walls that provide dramatic views and flood interior spaces with natural light, while still operating smoothly with minimal effort.
+We carry entry doors in three core materials. Fiberglass doors resist denting and warping, hold paint and stain beautifully, and can replicate the look of real wood without the maintenance. Steel doors deliver the strongest security at an accessible price point, with insulated cores that perform well year-round. For the highest level of durability and energy performance, NHP high performance steel doors offer an engineered step up — built to handle the demands of the Canadian climate with tighter seals and reinforced construction.
 
-Lift and slide doors are a premium product typically specified for high-end residential projects and architectural homes. They deliver exceptional thermal performance through their compression seal system and are available with double or triple glazing for Canadian climate requirements.`,
+Sidelites, transoms, and decorative glass inserts allow you to customize the look and control how much natural light enters your foyer. Multi-point locking hardware and reinforced frames are standard across all entry door systems.`,
       features: [
-        "Lift mechanism raises panel onto rollers for effortless sliding",
-        "Compression seal drops into place when closed for airtight performance",
-        "Handles larger, heavier panels than standard sliding doors",
-        "Expansive glass area for maximum views and natural light",
-        "Premium thermal performance with advanced sealing",
-        "Engineered for high-end residential and architectural projects"
+        "Available in fiberglass, steel, and NHP high performance steel",
+        "NHP steel for maximum durability and energy performance",
+        "Multi-point locking systems for enhanced security",
+        "Sidelite and transom options for added light and style",
+        "Decorative and privacy glass insert options",
+        "Custom sizing, colours, and hardware finishes available"
       ],
-      suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["multi-slide", "sliding-patio", "folding"],
-      metaTitle: "Lift & Slide Doors | Shelby Windows & Doors",
-      metaDescription: "Lift & slide doors from Shelby Windows & Doors. Premium large-panel doors for expansive views. Engineered for Canadian homes."
+      suppliers: ["entryguard-doors", "golden-windows", "vinyl-bilt"],
+      relatedProducts: ["sliding-patio", "terrace"],
+      metaTitle: "Entry Doors | Shelby Windows & Doors",
+      metaDescription: "Entry doors from Shelby Windows & Doors. Fiberglass, steel, and NHP high performance steel. Secure, insulated, and built to impress."
     }
   ]
 };
