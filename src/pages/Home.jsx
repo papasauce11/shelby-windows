@@ -10,14 +10,18 @@ import CTASection from '../components/shared/CTASection';
 import mapleLeaf from '../assets/canada_flag.png';
 import proudlyCanadianBadge from '../assets/proudly_canadian.png';
 
-// TODO: Import actual post images here once downloaded from Instagram
-// e.g. import igPost1 from '../assets/ig_post1.jpg';
+import igPost1 from '../assets/instagram/ig_post_1.jpg';
+import igPost2 from '../assets/instagram/ig_post_2.jpg';
+import igPost3 from '../assets/instagram/ig_post_3.jpg';
+import igPost4 from '../assets/instagram/ig_post_4.jpg';
+import igPost5 from '../assets/instagram/ig_post_5.jpg';
+
 const instagramPosts = [
-  { url: "https://www.instagram.com/p/DJqJYc8NEft/",  image: null },
-  { url: "https://www.instagram.com/p/DJC-Lg6PluX/",  image: null },
-  { url: "https://www.instagram.com/p/DHGa1hjxkBu/",  image: null },
-  { url: "https://www.instagram.com/p/DHGab6lx8ha/",  image: null },
-  { url: "https://www.instagram.com/p/DHGaps4xAme/",  image: null },
+  { url: "https://www.instagram.com/p/DJqJYc8NEft/",  image: igPost1 },
+  { url: "https://www.instagram.com/p/DJC-Lg6PluX/",  image: igPost2 },
+  { url: "https://www.instagram.com/p/DHGa1hjxkBu/",  image: igPost3 },
+  { url: "https://www.instagram.com/p/DHGab6lx8ha/",  image: igPost4 },
+  { url: "https://www.instagram.com/p/DHGaps4xAme/",  image: igPost5 },
 ];
 
 export default function Home() {
@@ -149,7 +153,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredDoors.map(product => (
               <ProductCard key={product.slug} product={product} />
             ))}

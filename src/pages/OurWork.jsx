@@ -1,16 +1,18 @@
 import HeroBanner from '../components/shared/HeroBanner';
 import CTASection from '../components/shared/CTASection';
 import heroBg from '../assets/2.png';
+import igPost1 from '../assets/instagram/ig_post_1.jpg';
+import igPost2 from '../assets/instagram/ig_post_2.jpg';
+import igPost3 from '../assets/instagram/ig_post_3.jpg';
+import igPost4 from '../assets/instagram/ig_post_4.jpg';
+import igPost5 from '../assets/instagram/ig_post_5.jpg';
 
 const projects = [
-  { image: null, caption: "Grand entryway with pivot door and transom glazing" },
-  { image: null, caption: "Kitchen renovation — floor-to-ceiling windows and sliding patio doors" },
-  { image: null, caption: "Double-height foyer with window wall and modern entrance door" },
-  { image: null, caption: "Dining room — large casement windows and swinging patio doors" },
-  { image: null, caption: "Staircase landing with picture windows and black entrance door" },
-  { image: null, caption: "Home office — corner window installation with patio door access" },
-  { image: null, caption: "Bay window addition in living room" },
-  { image: null, caption: "Multi-slide door system for indoor-outdoor living" },
+  { image: igPost1, caption: "Aluminum storefront entry doors with automatic door systems", url: "https://www.instagram.com/p/DJqJYc8NEft/" },
+  { image: igPost2, caption: "Full window and door package on a new custom build", url: "https://www.instagram.com/p/DJC-Lg6PluX/" },
+  { image: igPost3, caption: "Custom shape windows and large-format glazing installation", url: "https://www.instagram.com/p/DHGa1hjxkBu/" },
+  { image: igPost4, caption: "Complete window replacement on a brick-front home", url: "https://www.instagram.com/p/DHGab6lx8ha/" },
+  { image: igPost5, caption: "Modern window wall with custom shapes and terrace doors", url: "https://www.instagram.com/p/DHGaps4xAme/" },
 ];
 
 export default function OurWork() {
@@ -25,22 +27,21 @@ export default function OurWork() {
       {/* Project grid */}
       <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, i) => (
-              <div key={i} className={`group ${i === 0 ? 'sm:col-span-2 lg:col-span-1' : ''}`}>
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-warm-100 group-hover:border-teal-200 group-hover:shadow-xl transition-all duration-300">
-                  {project.image ? (
-                    <img
-                      src={project.image}
-                      alt={project.caption}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-teal-50 to-warm-100 flex items-center justify-center">
-                      <span className="text-sm text-teal-700/40 text-center px-6">Photo Coming Soon</span>
-                    </div>
-                  )}
+              <a
+                key={i}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group block ${i === 0 ? 'sm:col-span-2 lg:col-span-2 lg:row-span-2' : ''}`}
+              >
+                <div className={`rounded-2xl overflow-hidden border border-warm-100 group-hover:border-teal-200 group-hover:shadow-xl transition-all duration-300 ${i === 0 ? 'aspect-[4/3] lg:aspect-auto lg:h-full' : 'aspect-[4/3]'}`}>
+                  <img
+                    src={project.image}
+                    alt={project.caption}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
                 </div>
                 <div className="mt-3 flex items-start gap-3">
                   <span className="text-xs text-teal-600/60 font-heading font-700 mt-0.5 flex-shrink-0">
@@ -48,9 +49,33 @@ export default function OurWork() {
                   </span>
                   <p className="text-sm text-warm-600 font-medium">{project.caption}</p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Instagram promo */}
+      <section className="py-12 sm:py-16 px-5 sm:px-6 bg-warm-50">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 mb-6">
+            <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </div>
+          <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-4">See more of our work on Instagram</h2>
+          <p className="text-warm-500 text-base leading-relaxed mb-8 max-w-xl mx-auto">We post project updates, before-and-afters, and behind-the-scenes looks at installations across the GTA.</p>
+          <a
+            href="https://www.instagram.com/shelbywindowsanddoors/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-warm-900 text-white font-semibold rounded-full hover:bg-warm-800 shadow-sm hover:shadow-md transition-all"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+            Follow @shelbywindowsanddoors
+          </a>
         </div>
       </section>
 
