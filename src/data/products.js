@@ -211,6 +211,32 @@ Modern sliding patio doors use heavy-duty roller systems for smooth, effortless 
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
       relatedProducts: ["terrace", "fiberglass-entry-doors"],
+      heroImage: "https://goldenwindows.com/img/products/36b5dc8b-3dd2-49ec-8088-4b8507a92b8a-GoldenVinyl-Patio-Door-2.jpg",
+      image: "https://goldenwindows.com/img/products/407f797c-aaed-455a-a5e0-4f24a592b588-GoldenClad-Patio-Door-2.jpg",
+      collections: [
+        {
+          name: "GoldenVinyl",
+          image: "https://goldenwindows.com/img/products/36b5dc8b-3dd2-49ec-8088-4b8507a92b8a-GoldenVinyl-Patio-Door-2.jpg",
+          description: "Reinforced multi-chambered vinyl construction with comfort-enhancing weatherstripping and premium warm edge spacer for strong energy performance."
+        },
+        {
+          name: "GoldenClad",
+          image: "https://goldenwindows.com/img/products/407f797c-aaed-455a-a5e0-4f24a592b588-GoldenClad-Patio-Door-2.jpg",
+          description: "Warm wood interior with extruded aluminum cladding on the exterior for low-maintenance protection. Available in Traditional (Wide Rail) and Contemporary (Narrow Rail) designs."
+        },
+        {
+          name: "GoldenWood",
+          image: "https://goldenwindows.com/img/products/a97a26d5-a5a0-49f0-883e-903fbf592cf6-GoldenWood-Patio-Door-2.jpg",
+          description: "Hand-crafted all-wood construction for an unmatched level of class and warmth. Available in Traditional (Wide Rail) and Contemporary (Narrow Rail) designs."
+        }
+      ],
+      brochures: [
+        { name: "GoldenVinyl 1000 Series Brochure", url: "https://goldenwindows.com/content/img/site/brochure/GW-GoldenVinyl-1000-Brochure-FINAL-Web.pdf" },
+        { name: "GoldenClad & GoldenWood Brochure", url: "https://goldenwindows.com/content/img/site/brochure/GW-GoldenClad-GoldenWood-Brochure-R5.pdf" },
+        { name: "Exterior Doors Brochure", url: "https://goldenwindows.com/content/img/site/brochure/GoldenExteriorDoors2012LR.pdf" },
+        { name: "Multi-Point Door Lock Options", url: "https://goldenwindows.com/content/img/site/brochure/2023-GW-MULTIPOINT-LOCK.pdf" },
+        { name: "Exterior Colour Options", url: "https://goldenwindows.com/content/img/site/brochure/GW25-Colour-Guide-R4.pdf" }
+      ],
       metaTitle: "Sliding Patio Doors | Shelby Windows & Doors",
       metaDescription: "Sliding patio doors from Shelby Windows & Doors. Smooth, space-saving operation for your deck or patio. Canadian-made and installed."
     },
@@ -234,6 +260,26 @@ Terrace doors are available in single-door and double-door configurations, with 
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
       relatedProducts: ["sliding-patio", "fiberglass-entry-doors"],
+      heroImage: "https://goldenwindows.com/img/products/3837b6e9-32f8-44cc-bc8d-fe4145dfd569-GoldenClad-Terrace-Door-2.jpg",
+      image: "https://goldenwindows.com/img/products/69107c8c-5a4e-467f-baef-0f7e9477bb92-GoldenClad-Terrace-Door.jpg",
+      collections: [
+        {
+          name: "GoldenClad",
+          image: "https://goldenwindows.com/img/products/3837b6e9-32f8-44cc-bc8d-fe4145dfd569-GoldenClad-Terrace-Door-2.jpg",
+          description: "Beautiful wood interior with extruded aluminum-clad exterior frame, allowing a choice of exterior colours. Low maintenance with lasting protection."
+        },
+        {
+          name: "GoldenWood",
+          image: "https://goldenwindows.com/img/products/1d0341ca-573b-4533-9445-b13ee4d67697-GoldenWood-Terrace-Door.jpg",
+          description: "Wood frame with brickmould for your choice of stains or paint colours. Ideal for log homes or keeping the authenticity of heritage-style homes."
+        }
+      ],
+      brochures: [
+        { name: "GoldenClad & GoldenWood Brochure", url: "https://goldenwindows.com/content/img/site/brochure/GW-GoldenClad-GoldenWood-Brochure-R5.pdf" },
+        { name: "Exterior Doors Brochure", url: "https://goldenwindows.com/content/img/site/brochure/GoldenExteriorDoors2012LR.pdf" },
+        { name: "Multi-Point Door Lock Options", url: "https://goldenwindows.com/content/img/site/brochure/2023-GW-MULTIPOINT-LOCK.pdf" },
+        { name: "Exterior Colour Options", url: "https://goldenwindows.com/content/img/site/brochure/GW25-Colour-Guide-R4.pdf" }
+      ],
       metaTitle: "Terrace Doors | Shelby Windows & Doors",
       metaDescription: "Terrace doors from Shelby Windows & Doors. Elegant hinged French doors for your patio or garden. Canadian quality."
     },
@@ -241,10 +287,10 @@ Terrace doors are available in single-door and double-door configurations, with 
       slug: "fiberglass-entry-doors",
       name: "Fiberglass Entry Doors",
       category: "doors",
-      shortDescription: "Premium fiberglass entry doors available in six distinct collections — from clean modern lines to classic elegance, all built to resist warping, denting, and Canadian weather.",
+      shortDescription: "Premium fiberglass entry doors available in six distinct collections -- from clean modern lines to classic elegance, all built to resist warping, denting, and Canadian weather.",
       description: `Fiberglass entry doors give you the look of real wood without any of the upkeep. They won't warp, crack, or rot the way a wood door eventually will, and they hold paint and stain finishes better than steel over time. For a front door that needs to look good and perform for years, fiberglass is a smart choice.
 
-We carry Entryguard's full fiberglass lineup, which covers six collections — each with its own design personality. Whether you want something minimal and modern or something with traditional presence, there's a collection that fits. Every door comes with an insulated core for thermal performance and is compatible with sidelites, transoms, and decorative glass inserts.
+We carry Entryguard's full fiberglass lineup, which covers six collections -- each with its own design personality. Whether you want something minimal and modern or something with traditional presence, there's a collection that fits. Every door comes with an insulated core for thermal performance and is compatible with sidelites, transoms, and decorative glass inserts.
 
 All fiberglass entry doors are available with multi-point locking hardware, custom sizing, and a wide range of stain and paint finishes.`,
       features: [
@@ -297,13 +343,13 @@ All fiberglass entry doors are available with multi-point locking hardware, cust
         { name: "Paint Colour Guide", url: "https://entryguarddoors.com/wp-content/uploads/2025/01/Fiberglass-PAINT-COLOUR-GUIDE.pdf" }
       ],
       metaTitle: "Fiberglass Entry Doors | Shelby Windows & Doors",
-      metaDescription: "Fiberglass entry doors from Shelby Windows & Doors. Six collections from Entryguard — Shaker, Modern, Grand, Classic, Vista, and Stainless. Built for Canadian homes."
+      metaDescription: "Fiberglass entry doors from Shelby Windows & Doors. Six collections from Entryguard -- Shaker, Modern, Grand, Classic, Vista, and Stainless. Built for Canadian homes."
     },
     {
       slug: "steel-entry-doors",
       name: "Steel Entry Doors",
       category: "doors",
-      shortDescription: "Strong, secure, and energy-efficient steel entry doors with customizable glass and panel designs — the most popular entry door choice in Canada.",
+      shortDescription: "Strong, secure, and energy-efficient steel entry doors with customizable glass and panel designs -- the most popular entry door choice in Canada.",
       description: `Steel entry doors are the go-to choice for homeowners who want solid security without spending a fortune. They're strong, they insulate well, and they come in more styles than most people expect. If you need a door that does its job reliably, steel is hard to beat.
 
 Entryguard's steel doors feature insulated cores that help keep your home comfortable year-round. The steel skin resists forced entry, weather, and general wear better than most materials at this price point. They're also resistant to fire, moisture, and pests, which means less maintenance over the life of the door.
@@ -335,10 +381,10 @@ With multiple glass collections and panel styles to choose from, steel doors don
       slug: "nhp-steel-entry-doors",
       name: "NHP High Performance Steel Doors",
       category: "doors",
-      shortDescription: "Engineered for superior durability and energy efficiency — NHP high performance steel doors are built to handle the toughest Canadian conditions.",
+      shortDescription: "Engineered for superior durability and energy efficiency -- NHP high performance steel doors are built to handle the toughest Canadian conditions.",
       description: `NHP high performance steel doors are the top tier of Entryguard's steel lineup. If you want the strongest, most energy-efficient steel door available, this is it. They're engineered with advanced materials and tighter construction tolerances than standard steel doors.
 
-Where a regular steel door does the job well, an NHP door does it better — better resistance to wear, weather, and corrosion, better energy efficiency from improved seals and insulation, and a longer service life with less maintenance. These doors are built for homeowners who don't want to think about their front door again for a long time.
+Where a regular steel door does the job well, an NHP door does it better -- better resistance to wear, weather, and corrosion, better energy efficiency from improved seals and insulation, and a longer service life with less maintenance. These doors are built for homeowners who don't want to think about their front door again for a long time.
 
 NHP doors are a particularly strong fit for homes in areas with harsh winter conditions, high wind exposure, or anywhere you want the best performance a steel entry door can deliver.`,
       features: [

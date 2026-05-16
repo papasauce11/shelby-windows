@@ -103,8 +103,9 @@
 ### `products.js`
 - `products.windows[]` and `products.doors[]`
 - Each product: `slug`, `name`, `category`, `shortDescription`, `description`, `features[]`, `suppliers[]`, `relatedProducts[]`
-- Entry door products also have: `heroImage`, `image`, `collections[]` (fiberglass only), `brochures[]`
-- Entry door images are external URLs from EntryGuard's CDN (permission granted) — can be localized later
+- Door products with enriched data have: `heroImage`, `image`, `collections[]`, `brochures[]`
+- Entry door images are external URLs from EntryGuard's CDN (permission granted)
+- Sliding patio + terrace door images are external URLs from Golden Windows' CDN (permission granted)
 - Window products still use placeholder gradient (no images yet)
 
 **Current windows (8):**
@@ -132,6 +133,10 @@ Entry doors are split into 3 separate products with Entryguard content:
 - **Fiberglass**: 6 collections (Shaker, Modern, Grand, Classic, Vista, Stainless) with images + 3 brochure PDFs
 - **Steel**: hero image + 5 brochure PDFs (Novatech Glass, Trimlite Glass, Solid Door, Classic Glass, Executive Panel)
 - **NHP**: hero image + 1 brochure PDF
+
+Golden Windows door products enriched with images + collections + brochures:
+- **Sliding Patio**: 3 collections (GoldenVinyl, GoldenClad, GoldenWood) with images + 5 brochure PDFs
+- **Terrace**: 2 collections (GoldenClad, GoldenWood) with images + 4 brochure PDFs
 
 ### `suppliers.js`
 - 3 suppliers: `golden-windows`, `vinyl-bilt`, `entryguard-doors`
