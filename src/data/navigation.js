@@ -16,11 +16,9 @@ export const navigation = {
             { label: "Bay Windows", path: "/windows/bay" },
             { label: "Casement Windows", path: "/windows/casement" },
             { label: "Double-Hung Windows", path: "/windows/double-hung" },
-            { label: "Folding Windows", path: "/windows/folding" },
-            { label: "Picture Windows", path: "/windows/picture" },
             { label: "Single Hung Windows", path: "/windows/single-hung" },
             { label: "Sliding Windows", path: "/windows/sliding" },
-            { label: "Specialty Windows", path: "/windows/specialty" },
+            { label: "Custom Shape Windows", path: "/windows/custom-shape" },
             { label: "Tilt & Turn Windows", path: "/windows/tilt-turn" }
           ]
         },
