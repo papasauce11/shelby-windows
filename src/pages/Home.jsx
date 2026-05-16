@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import heroBg from '../assets/hero.png';
 import financingImg from '../assets/10.png';
 import { products } from '../data/products';
@@ -25,9 +25,17 @@ const instagramPosts = [
 ];
 
 export default function Home() {
+  const location = useLocation();
   const featuredWindows = products.windows.slice(0, 4);
   const featuredDoors = products.doors;
   const [igIndex, setIgIndex] = useState(0);
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+    }
+  }, [location.hash]);
   const igTotal = instagramPosts.length;
   const igPrev = () => setIgIndex(i => (i - 1 + igTotal) % igTotal);
   const igNext = () => setIgIndex(i => (i + 1) % igTotal);
@@ -202,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* Financing */}
-      <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
+      <section id="financing" className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">

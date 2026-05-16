@@ -114,7 +114,7 @@ export default function Header() {
               Get a Quote
             </Link>
             <Link
-              to="/contact"
+              to="/#financing"
               className="ml-6 text-xs text-warm-400 hover:text-teal-600 transition-colors tracking-wide"
             >
               Financing Available
@@ -194,7 +194,7 @@ export default function Header() {
 
             <div className="pt-6 border-t border-warm-100 space-y-3">
               <Link
-                to="/contact"
+                to="/#financing"
                 className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-base font-medium hover:bg-teal-100 transition-colors"
               >
                 <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
