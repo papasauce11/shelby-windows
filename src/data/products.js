@@ -19,12 +19,12 @@ Awning windows can be installed individually or grouped with fixed picture windo
         "Top-hinged sash opens outward for rain-resistant ventilation",
         "Tight seal when closed for strong energy efficiency",
         "Crank-operated for easy use in hard-to-reach spots",
-        "Pairs well with picture windows for combined views and airflow",
+        "Pairs well with fixed or casement windows for combined views and airflow",
         "Available in a range of sizes, colours, and frame materials",
         "Ideal for bathrooms, kitchens, and basement installations"
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["casement", "picture", "sliding"],
+      relatedProducts: ["casement", "sliding"],
       metaTitle: "Awning Windows | Shelby Windows & Doors",
       metaDescription: "Awning windows from Shelby Windows & Doors. Top-hinged for ventilation rain or shine. Installed across Ontario with Canadian-made products."
     },
@@ -47,7 +47,7 @@ Bay windows are a strong architectural feature. They add visual interest from bo
         "Custom sizing and angle configurations available"
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["picture", "casement", "specialty"],
+      relatedProducts: ["casement", "custom-shape"],
       metaTitle: "Bay Windows | Shelby Windows & Doors",
       metaDescription: "Bay windows from Shelby Windows & Doors. Add depth, light, and character to your home with Canadian-made multi-panel bay windows."
     },
@@ -70,7 +70,7 @@ Casement windows are versatile and work well in nearly any room. You will often 
         "Available in multiple frame materials and finishes"
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["awning", "picture", "double-hung"],
+      relatedProducts: ["awning", "double-hung"],
       metaTitle: "Casement Windows | Shelby Windows & Doors",
       metaDescription: "Casement windows from Shelby Windows & Doors. Side-hinged, crank-operated windows for maximum ventilation. Canadian-made quality."
     },
@@ -96,52 +96,6 @@ Many modern double-hung windows include tilt-in sashes, which let you clean the 
       relatedProducts: ["single-hung", "casement", "sliding"],
       metaTitle: "Double-Hung Windows | Shelby Windows & Doors",
       metaDescription: "Double-hung windows from Shelby Windows & Doors. Two operable sashes for flexible ventilation. A Canadian classic for any home style."
-    },
-    {
-      slug: "folding",
-      name: "Folding Windows",
-      category: "windows",
-      shortDescription: "Multi-panel windows that fold open accordion-style, creating a seamless indoor-outdoor connection.",
-      description: `Folding windows consist of multiple panels that fold against each other like an accordion, stacking neatly to one or both sides. When fully opened, they eliminate the barrier between indoor and outdoor spaces entirely.
-
-This window style is a premium choice for homeowners who want to connect a kitchen, dining area, or living space to a patio, deck, or backyard. The opening can span a wide area, letting in maximum light and air while creating a dramatic visual effect.
-
-When closed, folding windows provide full weather protection with multi-point locking systems and continuous weatherstripping across all panels. They are engineered for smooth, balanced operation even across wide spans.`,
-      features: [
-        "Accordion-style panels fold to one or both sides",
-        "Creates a wide, unobstructed opening between spaces",
-        "Multi-point locking for security when closed",
-        "Continuous weatherstripping across all panels",
-        "Smooth folding operation with precision hardware",
-        "Premium option for indoor-outdoor living"
-      ],
-      suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["sliding", "picture", "specialty"],
-      metaTitle: "Folding Windows | Shelby Windows & Doors",
-      metaDescription: "Folding windows from Shelby Windows & Doors. Accordion-style panels that open your home to the outdoors. Premium Canadian craftsmanship."
-    },
-    {
-      slug: "picture",
-      name: "Picture Windows",
-      category: "windows",
-      shortDescription: "Fixed, non-opening windows designed to maximize views and natural light.",
-      description: `Picture windows are fixed units that do not open. Their purpose is simple: to frame a view and flood the room with natural light. Without any operable hardware or centre rails, they offer the cleanest sightlines of any window type.
-
-Because the sash is permanently sealed to the frame, picture windows provide excellent energy performance. There are no moving parts that can develop air leaks over time, making them one of the most efficient options available.
-
-Picture windows are often used as the centre unit in a window grouping, flanked by operable casement or awning windows that handle ventilation. They work well in living rooms, stairwells, and any space where an expansive, uninterrupted view is the priority.`,
-      features: [
-        "Fixed design for maximum unobstructed views",
-        "No operable parts means superior energy efficiency",
-        "Cleanest sightlines of any window type",
-        "Ideal as a centre unit paired with operable flanking windows",
-        "Available in custom sizes including large format",
-        "Minimal frame profiles to maximize glass area"
-      ],
-      suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["casement", "bay", "awning"],
-      metaTitle: "Picture Windows | Shelby Windows & Doors",
-      metaDescription: "Picture windows from Shelby Windows & Doors. Fixed windows for maximum views and natural light. Canadian-made quality installation."
     },
     {
       slug: "single-hung",
@@ -185,20 +139,20 @@ Modern sliding windows use precision-engineered rollers for smooth, quiet operat
         "Available in two-panel and three-panel configurations"
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["single-hung", "double-hung", "picture"],
+      relatedProducts: ["single-hung", "double-hung"],
       metaTitle: "Sliding Windows | Shelby Windows & Doors",
       metaDescription: "Sliding windows from Shelby Windows & Doors. Smooth horizontal operation for space-saving ventilation. Canadian-made quality."
     },
     {
-      slug: "specialty",
-      name: "Specialty Windows",
+      slug: "custom-shape",
+      name: "Custom Shape Windows",
       category: "windows",
       shortDescription: "Custom-shaped windows including arches, circles, and geometric designs for unique architectural features.",
-      description: `Specialty windows are custom-shaped units designed to fit non-standard openings or to add distinctive architectural character to your home. Common shapes include arches, half-rounds, circles, octagons, triangles, and trapezoids.
+      description: `Custom shape windows are made-to-order units designed to fit non-standard openings or to add distinctive architectural character to your home. Common shapes include arches, half-rounds, circles, octagons, triangles, and trapezoids.
 
-Most specialty windows are fixed units, designed primarily for light and visual impact rather than ventilation. They are often installed above doors, in gable ends, stairwells, or as accent pieces that complement standard rectangular windows below them.
+Most custom shape windows are fixed units, designed primarily for light and visual impact rather than ventilation. They are often installed above doors, in gable ends, stairwells, or as accent pieces that complement standard rectangular windows below them.
 
-Because every specialty window is made to order, the sizing, shape, and finish options are broad. They can be matched to the frame material and colour of your other windows for a cohesive look across the entire home.`,
+Because every custom shape window is made to order, the sizing, shape, and finish options are broad. They can be matched to the frame material and colour of your other windows for a cohesive look across the entire home.`,
       features: [
         "Custom shapes including arches, circles, and geometric forms",
         "Made to order for precise fit in non-standard openings",
@@ -208,9 +162,9 @@ Because every specialty window is made to order, the sizing, shape, and finish o
         "Available with decorative glass and grid options"
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["picture", "bay", "casement"],
-      metaTitle: "Specialty Windows | Shelby Windows & Doors",
-      metaDescription: "Specialty and custom-shaped windows from Shelby Windows & Doors. Arches, circles, and unique geometries. Made-to-order in Canada."
+      relatedProducts: ["bay", "casement"],
+      metaTitle: "Custom Shape Windows | Shelby Windows & Doors",
+      metaDescription: "Custom shape windows from Shelby Windows & Doors. Arches, circles, and unique geometries. Made-to-order in Canada."
     },
     {
       slug: "tilt-turn",
