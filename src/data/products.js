@@ -1,7 +1,15 @@
 // SHELBY WINDOWS & DOORS - Product Data
 // All product content for windows and doors.
 // This is the single source of truth for all product detail pages.
-// Comments marked PLACEHOLDER indicate content that should be confirmed with Vick.
+
+import awningImg from '../assets/windows/awning window 1.png';
+import bayImg from '../assets/windows/bay window 2.png';
+import casementImg from '../assets/windows/casement window.png';
+import doubleHungImg from '../assets/windows/double hung window.png';
+import singleHungImg from '../assets/windows/single hung window.png';
+import slidingImg from '../assets/windows/sliding window.png';
+import customShapeImg from '../assets/windows/custom windows.PNG';
+import tiltImg from '../assets/windows/Tilt windows.png';
 
 export const products = {
   windows: [
@@ -9,6 +17,7 @@ export const products = {
       slug: "awning",
       name: "Awning Windows",
       category: "windows",
+      image: awningImg,
       shortDescription: "Top-hinged windows that open outward for ventilation, even during light rain.",
       description: `Awning windows are hinged along the top edge and swing outward from the bottom when opened. This design creates a natural awning effect that allows fresh air into your home while keeping rain and debris out.
 
@@ -32,6 +41,7 @@ Awning windows can be installed individually or grouped with fixed picture windo
       slug: "bay",
       name: "Bay Windows",
       category: "windows",
+      image: bayImg,
       shortDescription: "Multi-panel windows that project outward, adding depth and natural light to any room.",
       description: `Bay windows extend outward from the wall of your home, typically combining a large centre panel with two angled side panels. This projection creates additional interior space and draws in natural light from multiple directions.
 
@@ -55,6 +65,7 @@ Bay windows are a strong architectural feature. They add visual interest from bo
       slug: "casement",
       name: "Casement Windows",
       category: "windows",
+      image: casementImg,
       shortDescription: "Side-hinged windows that crank open fully for maximum ventilation and unobstructed views.",
       description: `Casement windows are hinged on one side and swing outward using a crank handle. When fully open, the entire sash clears the frame, giving you maximum ventilation and an unobstructed view.
 
@@ -78,6 +89,7 @@ Casement windows are versatile and work well in nearly any room. You will often 
       slug: "double-hung",
       name: "Double-Hung Windows",
       category: "windows",
+      image: doubleHungImg,
       shortDescription: "Classic two-sash windows where both the top and bottom panels slide for flexible ventilation.",
       description: `Double-hung windows feature two sashes that slide vertically within the frame. Both the upper and lower sash can be opened, giving you control over where air enters and exits the room.
 
@@ -101,6 +113,7 @@ Many modern double-hung windows include tilt-in sashes, which let you clean the 
       slug: "single-hung",
       name: "Single Hung Windows",
       category: "windows",
+      image: singleHungImg,
       shortDescription: "A classic window style where the bottom sash slides up while the top panel stays fixed.",
       description: `Single hung windows have a fixed upper sash and an operable lower sash that slides upward for ventilation. This straightforward design has been a staple of residential construction for generations.
 
@@ -124,6 +137,7 @@ Single hung windows are a practical choice for bedrooms, hallways, and general l
       slug: "sliding",
       name: "Sliding Windows",
       category: "windows",
+      image: slidingImg,
       shortDescription: "Horizontal sliding windows that glide sideways on a track for easy, space-saving ventilation.",
       description: `Sliding windows operate on a horizontal track, with one or both sashes gliding sideways to open. They require no clearance above, below, or outside the window, making them an efficient choice where space is limited.
 
@@ -147,6 +161,7 @@ Modern sliding windows use precision-engineered rollers for smooth, quiet operat
       slug: "custom-shape",
       name: "Custom Shape Windows",
       category: "windows",
+      image: customShapeImg,
       shortDescription: "Custom-shaped windows including arches, circles, and geometric designs for unique architectural features.",
       description: `Custom shape windows are made-to-order units designed to fit non-standard openings or to add distinctive architectural character to your home. Common shapes include arches, half-rounds, circles, octagons, triangles, and trapezoids.
 
@@ -170,6 +185,7 @@ Because every custom shape window is made to order, the sizing, shape, and finis
       slug: "tilt",
       name: "Tilt Windows",
       category: "windows",
+      image: tiltImg,
       shortDescription: "European-style windows that tilt inward at the top or swing fully open like a door.",
       description: `Tilt windows offer two distinct opening modes in a single unit. In tilt mode, the top of the sash tilts inward, allowing controlled ventilation while maintaining security and weather protection. In turn mode, the sash swings fully inward like a door, providing wide-open access for cleaning or maximum airflow.
 
