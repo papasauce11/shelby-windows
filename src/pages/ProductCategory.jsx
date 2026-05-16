@@ -46,17 +46,16 @@ export default function ProductCategory() {
       <HeroBanner title={meta.title} subtitle={meta.subtitle} image={meta.hero} />
 
       {/* Category intro strip */}
-      <section className={`py-8 sm:py-12 lg:py-16 px-5 sm:px-6 ${isDoors ? 'bg-warm-50 border-b border-warm-100' : 'bg-teal-50 border-b border-teal-100'}`}>
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
+      <section className={`py-4 sm:py-6 lg:py-8 px-5 sm:px-6 ${isDoors ? 'bg-warm-50 border-b border-warm-100' : 'bg-teal-50 border-b border-teal-100'}`}>
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8">
           <div className="flex-1">
-            <div className={`w-10 h-px mb-4 ${isDoors ? 'bg-warm-400' : 'bg-teal-600'}`} />
-            <p className={`text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl ${isDoors ? 'text-warm-600' : 'text-teal-900'}`}>
+            <p className={`text-sm sm:text-base leading-relaxed max-w-2xl ${isDoors ? 'text-warm-600' : 'text-teal-900'}`}>
               {meta.intro}
             </p>
           </div>
-          <div className={`flex-shrink-0 rounded-2xl border px-8 py-6 text-center bg-white self-start lg:self-auto ${isDoors ? 'border-warm-200' : 'border-teal-200'}`}>
-            <span className={`font-heading font-800 text-4xl sm:text-5xl block ${isDoors ? 'text-warm-800' : 'text-teal-700'}`}>{meta.stat.value}</span>
-            <span className="text-warm-500 text-sm mt-1 block">{meta.stat.label}</span>
+          <div className={`flex-shrink-0 rounded-xl border px-6 py-4 text-center bg-white self-start lg:self-auto ${isDoors ? 'border-warm-200' : 'border-teal-200'}`}>
+            <span className={`font-heading font-800 text-3xl sm:text-4xl block ${isDoors ? 'text-warm-800' : 'text-teal-700'}`}>{meta.stat.value}</span>
+            <span className="text-warm-500 text-xs mt-1 block">{meta.stat.label}</span>
           </div>
         </div>
       </section>
