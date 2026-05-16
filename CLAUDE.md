@@ -43,11 +43,17 @@
 - `hero.png` — home page hero (**lowercase h** — Vercel is Linux/case-sensitive)
 - `10.png` — financing section photo
 - `2.png` — OurWork hero
-- `shelby_logo3.png` + `shelbybranding_.png` — logo pair (used together in Header + Footer)
+- `shelby_logo.png`, `shelby_logo2.png`, `shelby_logo3.png` — logo variants
+- `shelbybranding_.png` — branding text (used with `shelby_logo3.png` in Header + Footer)
 - `canada_flag.png` — maple leaf icon (small, inline)
+- `maple-leaf.png` — alternate maple leaf asset
 - `proudly_canadian.png` — circular badge (used in Home + About floating badge)
+- `proudly-canadian-badge.png` — alternate Canadian badge asset
 - Supplier logos: `golden_windows_logo.png`, `vinylbilt_logo.png`, `entryguard_logo.png`
-- ⚠️ All asset imports must use exact lowercase filenames — Linux build will fail otherwise
+- `windows/` — 8 window product images (awning, bay, casement, double-hung, single-hung, sliding, custom, tilt)
+- `doors/fiberglass/shaker.jpg` — local copy of fiberglass door image
+- `instagram/` — 5 downloaded IG post images (`ig_post_1.jpg` through `ig_post_5.jpg`)
+- ⚠️ All asset imports must use exact filenames — Vercel is Linux/case-sensitive (note: `custom windows.PNG` and `Tilt windows.png` have uppercase extensions)
 
 ---
 
@@ -106,7 +112,7 @@
 - Door products with enriched data have: `heroImage`, `image`, `collections[]`, `brochures[]`
 - Entry door images are external URLs from EntryGuard's CDN (permission granted)
 - Sliding patio + terrace door images are external URLs from Golden Windows' CDN (permission granted)
-- Window products still use placeholder gradient (no images yet)
+- Window products now have local images imported from `src/assets/windows/` (all 8 types)
 
 **Current windows (8):**
 | Name | Slug |
@@ -161,8 +167,8 @@ Golden Windows door products enriched with images + collections + brochures:
 - Supplier strip: all 3 suppliers
 - Proudly Canadian: large badge + updated human-sounding copy
 - Financing: photo left (with text-shadow overlay), feature cards right (white bg, shadow-sm)
-- Reviews: **3 placeholder skeleton cards** — needs real Google reviews from Vick
-- Instagram: 5 posts, **all `image: null`** — needs real downloaded images
+- Reviews: 3 real Google reviews (Herbert Lemcke, Petra Hamann, Nexus 303) with star ratings + "Read more on Google" link
+- Instagram: 5 posts with real downloaded images (`ig_post_1.jpg`–`ig_post_5.jpg`) and real IG URLs, carousel with dot nav
 - CTA: CTASection default
 
 ### `About.jsx`
@@ -190,8 +196,8 @@ Golden Windows door products enriched with images + collections + brochures:
 ### `OurWork.jsx`
 - HeroBanner with 2.png
 - Intro statement strip (warm-50)
-- 8 project cards, **all `image: null`** — needs real project photos
-- Numbered captions (01–08)
+- 5 project cards using real IG images with descriptive captions and links to Instagram posts
+- 2-up + 3-up grid layout (first 2 large, remaining 3 smaller)
 
 ### `ProductCategory.jsx`
 - HeroBanner + intro strip + stat block + product grid
@@ -222,21 +228,19 @@ Golden Windows door products enriched with images + collections + brochures:
 
 | Step | Phase | Status |
 |---|---|---|
-| 1 | Content Collection (Vick) | ⏳ Waiting on Vick |
+| 1 | Content Collection (Vick) | 🟡 Mostly done — a few items remain |
 | 2 | Polish + Depth Pass | 🟡 Visual done — copy rewrites remain |
-| 3 | Our Work Page Rebuild (hero + IG grid) | ⏳ Needs IG photos |
-| 4 | Content Integration (product images, reviews, team photo, maps) | ⏳ Needs Step 1 |
+| 3 | Our Work Page Rebuild (hero + IG grid) | ✅ Done — 5 IG projects wired up |
+| 4 | Content Integration (product images, reviews, team photo, maps) | 🟡 Mostly done — team photo + maps remain |
 | 5 | Form Backend (Formspree/EmailJS) | 🟢 Can start now |
 | 6 | QA + SEO (meta tags, 404, OG tags, favicon) | 🟢 Can start now |
 | 7 | Launch (shelbywindows.ca, DNS, SSL, Search Console) | ⏳ Last step |
 
 ### Step 1 — Content needed from Vick
-- [ ] Photo of each window type (8 types)
-- [ ] Photo of each door type (3 types)
+- [x] Photo of each window type (8 types) — ✅ all 8 in `src/assets/windows/`
+- [x] 5 Instagram post images (for Home feed) — ✅ downloaded to `src/assets/instagram/`
+- [x] Real Google reviews (3+ for Home page) — ✅ 3 real reviews integrated
 - [ ] Team photo (for About page)
-- [ ] 5 Instagram post images (for Home feed)
-- [ ] 8 past project photos (for Our Work)
-- [ ] Real Google reviews (3+ for Home page)
 - [ ] Confirm postal code (currently `L4K 2C8` — placeholder)
 - [ ] Real Google Maps embed URL for 10 Planchet Rd, Unit 4, Vaughan
 
@@ -262,10 +266,13 @@ Golden Windows door products enriched with images + collections + brochures:
 ## Known Issues / Placeholders
 - Postal code in `navigation.js` → `L4K 2C8` — needs confirmation
 - Google Maps iframe src in `Contact.jsx` → placeholder coordinates, not real address
-- All `instagramPosts` images in `Home.jsx` → `null`
-- All product images in `ProductCard` → placeholder gradient
-- All 8 OurWork project images → `null`
-- Reviews section → skeleton placeholder cards
-- Team photo in `About.jsx` → placeholder text box
-- About story copy → marked PLACEHOLDER
-- Contact form → no email sending (frontend only)
+- Team photo in `About.jsx` → placeholder text box with "Coming Soon"
+- About story copy → marked PLACEHOLDER, needs Vick's actual company story
+- About team copy → marked PLACEHOLDER, needs Vick's actual bio/quote
+- Contact form → no email sending (frontend only, sets `submitted=true`)
+
+### Resolved (previously placeholders)
+- ~~Instagram images~~ → 5 real IG images downloaded and wired up
+- ~~Window product images~~ → all 8 local images in `src/assets/windows/`
+- ~~OurWork project images~~ → 5 projects with real IG images
+- ~~Reviews section~~ → 3 real Google reviews integrated

@@ -2,7 +2,44 @@ import { useParams, Link } from 'react-router-dom';
 import { getSupplierBySlug } from '../data/suppliers';
 import { getProductBySlug } from '../data/products';
 import SupplierLogo from '../components/shared/SupplierLogo';
+import ProductCard from '../components/shared/ProductCard';
 import CTASection from '../components/shared/CTASection';
+
+const themes = {
+  amber: {
+    heroBg: 'bg-amber-50',
+    heroBorder: 'border-amber-100',
+    accent: 'text-amber-600',
+    accentBg: 'bg-amber-600',
+    taglineBg: 'bg-amber-100 text-amber-800',
+    visitBtn: 'border-amber-300 text-amber-700 hover:bg-amber-100',
+    sectionBg: 'bg-amber-50',
+    sectionBorder: 'border-amber-100',
+    productLabel: 'text-amber-600',
+  },
+  teal: {
+    heroBg: 'bg-teal-50',
+    heroBorder: 'border-teal-100',
+    accent: 'text-teal-600',
+    accentBg: 'bg-teal-600',
+    taglineBg: 'bg-teal-100 text-teal-800',
+    visitBtn: 'border-teal-300 text-teal-700 hover:bg-teal-100',
+    sectionBg: 'bg-teal-50',
+    sectionBorder: 'border-teal-100',
+    productLabel: 'text-teal-600',
+  },
+  navy: {
+    heroBg: 'bg-slate-50',
+    heroBorder: 'border-slate-200',
+    accent: 'text-slate-700',
+    accentBg: 'bg-slate-800',
+    taglineBg: 'bg-slate-200 text-slate-700',
+    visitBtn: 'border-slate-300 text-slate-700 hover:bg-slate-100',
+    sectionBg: 'bg-slate-50',
+    sectionBorder: 'border-slate-200',
+    productLabel: 'text-slate-600',
+  },
+};
 
 export default function SupplierDetail() {
   const { slug } = useParams();
@@ -19,86 +56,67 @@ export default function SupplierDetail() {
     );
   }
 
-  const paragraphs = supplier.description.split('\n\n');
-  const supplierProducts = supplier.productsOffered
+  const t = themes[supplier.theme] || themes.teal;
+  const featured = (supplier.featuredProducts || supplier.productsOffered)
     .map(s => getProductBySlug(s))
     .filter(Boolean);
 
   return (
     <>
-      {/* Editorial header — light with teal accent */}
-      <section className="bg-teal-50 border-b border-teal-100 pt-32 pb-16 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center gap-10">
-          {/* Logo area */}
-          <div className="flex-shrink-0">
-            <div className="w-36 h-36 rounded-2xl bg-white border border-warm-200 flex items-center justify-center p-4 shadow-sm">
-              <SupplierLogo supplier={supplier} size="large" linkable={false} />
+      {/* Themed hero header */}
+      <section className={`${t.heroBg} border-b ${t.heroBorder} pt-28 sm:pt-32 pb-12 sm:pb-16 px-5 sm:px-6`}>
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Logo */}
+          <div className="inline-flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-white border border-warm-200 p-4 shadow-sm mb-6">
+            <SupplierLogo supplier={supplier} size="large" linkable={false} />
+          </div>
+
+          {/* Tagline badge */}
+          {supplier.tagline && (
+            <div className="mb-4">
+              <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-heading font-700 uppercase tracking-widest ${t.taglineBg}`}>
+                {supplier.tagline}
+              </span>
             </div>
-          </div>
+          )}
 
-          {/* Header text */}
-          <div className="flex-1">
-            <div className="w-10 h-px bg-teal-600 mb-4" />
-            <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block">Our Supplier</span>
-            <h1 className="text-4xl lg:text-5xl font-heading font-800 text-warm-900 mb-3">{supplier.name}</h1>
-            <p className="text-warm-500 text-lg">Trusted Canadian manufacturer</p>
-          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-800 text-warm-900 mb-4">
+            {supplier.name}
+          </h1>
 
-          {/* Website link */}
-          <div className="flex-shrink-0">
-            <a
-              href={supplier.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-teal-200 text-teal-700 text-sm font-medium rounded-full hover:bg-teal-100 transition-colors bg-white"
-            >
-              Visit Website
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-          </div>
+          <p className="text-warm-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-8">
+            {supplier.description}
+          </p>
+
+          <a
+            href={supplier.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center gap-2 px-6 py-3 border text-sm font-medium rounded-full transition-colors bg-white ${t.visitBtn}`}
+          >
+            Visit {supplier.shortName}
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
       </section>
 
-      {/* Description */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-16">
-          <div className="lg:col-span-1">
-            <div className="lg:sticky lg:top-36">
-              <div className="w-10 h-px bg-teal-600 mb-4" />
-              <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 block">About</span>
-            </div>
-          </div>
-          <div className="lg:col-span-4 space-y-6 text-warm-600 text-lg leading-relaxed">
-            {paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Products from this supplier */}
-      {supplierProducts.length > 0 && (
-        <section className="py-24 px-6 bg-warm-50">
+      {/* Featured products */}
+      {featured.length > 0 && (
+        <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="w-10 h-px bg-teal-600 mb-4" />
-            <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block">Products</span>
-            <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-12">
-              {supplier.shortName} products we install
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              {supplierProducts.map(product => (
-                <Link
-                  key={product.slug}
-                  to={`/${product.category}/${product.slug}`}
-                  className="bg-white rounded-xl p-5 border border-warm-100 hover:border-teal-200 hover:shadow-md transition-all text-center group"
-                >
-                  <span className="text-xs text-warm-400 font-medium uppercase tracking-wide block mb-1">{product.category}</span>
-                  <span className="font-heading font-600 text-warm-700 group-hover:text-teal-700 transition-colors text-sm">
-                    {product.name}
-                  </span>
-                </Link>
+            <div className="text-center mb-10 sm:mb-14">
+              <span className={`text-xs font-heading font-700 uppercase tracking-widest ${t.productLabel} mb-2 block`}>
+                Available Through Shelby
+              </span>
+              <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900">
+                {supplier.shortName} products we carry
+              </h2>
+            </div>
+            <div className={`grid grid-cols-1 sm:grid-cols-2 ${featured.length >= 4 ? 'lg:grid-cols-4' : featured.length === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-5 sm:gap-6`}>
+              {featured.map(product => (
+                <ProductCard key={product.slug} product={product} />
               ))}
             </div>
           </div>
