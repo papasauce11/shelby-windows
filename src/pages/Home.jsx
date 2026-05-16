@@ -22,7 +22,7 @@ const instagramPosts = [
 
 export default function Home() {
   const featuredWindows = products.windows.slice(0, 4);
-  const featuredDoors = products.doors.slice(0, 3);
+  const featuredDoors = products.doors;
   const [igIndex, setIgIndex] = useState(0);
   const igTotal = instagramPosts.length;
   const igPrev = () => setIgIndex(i => (i - 1 + igTotal) % igTotal);

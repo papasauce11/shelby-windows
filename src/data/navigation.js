@@ -28,7 +28,9 @@ export const navigation = {
           items: [
             { label: "Sliding Patio Doors", path: "/doors/sliding-patio" },
             { label: "Terrace Doors", path: "/doors/terrace" },
-            { label: "Entry Doors", path: "/doors/entry" }
+            { label: "Fiberglass Entry Doors", path: "/doors/fiberglass-entry-doors" },
+            { label: "Steel Entry Doors", path: "/doors/steel-entry-doors" },
+            { label: "NHP Steel Entry Doors", path: "/doors/nhp-steel-entry-doors" }
           ]
         },
         suppliers: {

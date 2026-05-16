@@ -73,6 +73,7 @@
 - Subtitle: `text-white/80` + `[text-shadow:0_1px_8px_rgba(0,0,0,0.5)]`
 
 ### `ProductCard.jsx`
+- Shows actual product image when `product.image` exists; falls back to placeholder gradient
 - Placeholder image area: teal-50→warm-100 gradient, product name centered
 - Base: `shadow-sm border border-warm-100`
 - Hover: `border-teal-200 shadow-xl`, scale image 105%
@@ -101,7 +102,9 @@
 ### `products.js`
 - `products.windows[]` and `products.doors[]`
 - Each product: `slug`, `name`, `category`, `shortDescription`, `description`, `features[]`, `suppliers[]`, `relatedProducts[]`
-- No product images yet — all placeholder gradient
+- Entry door products also have: `heroImage`, `image`, `collections[]` (fiberglass only), `brochures[]`
+- Entry door images are external URLs from EntryGuard's CDN (permission granted) — can be localized later
+- Window products still use placeholder gradient (no images yet)
 
 **Current windows (8):**
 | Name | Slug |
@@ -115,14 +118,19 @@
 | Custom Shape Windows | `custom-shape` |
 | Tilt Windows | `tilt` |
 
-**Current doors (3):**
+**Current doors (5):**
 | Name | Slug |
 |---|---|
 | Sliding Patio Doors | `sliding-patio` |
 | Terrace Doors | `terrace` |
-| Entry Doors | `entry` |
+| Fiberglass Entry Doors | `fiberglass-entry-doors` |
+| Steel Entry Doors | `steel-entry-doors` |
+| NHP High Performance Steel Doors | `nhp-steel-entry-doors` |
 
-Entry Doors description covers fiberglass, steel, and NHP high performance steel.
+Entry doors are split into 3 separate products with Entryguard content:
+- **Fiberglass**: 6 collections (Shaker, Modern, Grand, Classic, Vista, Stainless) with images + 3 brochure PDFs
+- **Steel**: hero image + 5 brochure PDFs (Novatech Glass, Trimlite Glass, Solid Door, Classic Glass, Executive Panel)
+- **NHP**: hero image + 1 brochure PDF
 
 ### `suppliers.js`
 - 3 suppliers: `golden-windows`, `vinyl-bilt`, `entryguard-doors`
@@ -142,7 +150,7 @@ Entry Doors description covers fiberglass, steel, and NHP high performance steel
 - Hero subtitle: "Locally installed. Canadian-made. Every window and door we carry comes from manufacturers we trust — built for our winters, backed by real warranties."
 - Trust strip: 4 icons — "Fast, Clean Installs" / "Free In-Home Measure" / "Manufacturer Backed" / "Hundreds of Styles"
 - Windows preview: 4 cards, Browse all link
-- Doors preview: 3 cards, Browse all link
+- Doors preview: all 5 door cards, Browse all link
 - Wave dividers between sections (hardcoded fill colors)
 - Supplier strip: all 3 suppliers
 - Proudly Canadian: large badge + updated human-sounding copy

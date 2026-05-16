@@ -2,23 +2,35 @@ import { Link } from 'react-router-dom';
 
 export default function ProductCard({ product }) {
   const path = `/${product.category}/${product.slug}`;
+  const hasImage = !!product.image;
 
   return (
     <Link
       to={path}
       className="group block bg-white rounded-2xl overflow-hidden border border-warm-100 shadow-sm hover:border-teal-200 hover:shadow-xl transition-all duration-300"
     >
-      {/* Image */}
-      <div className="aspect-[4/3] bg-gradient-to-br from-teal-50 to-warm-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-teal-600/5 group-hover:bg-teal-600/10 transition-colors duration-500 z-10" />
-        <div className="w-full h-full flex items-center justify-center p-6 transform group-hover:scale-105 transition-transform duration-500 ease-out">
-          <span className="text-sm text-teal-700/60 font-medium text-center relative z-10">
-            {product.name}
-          </span>
-        </div>
+      <div className="aspect-[4/3] relative overflow-hidden">
+        {hasImage ? (
+          <>
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out"
+            />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 z-10" />
+          </>
+        ) : (
+          <>
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-50 to-warm-100" />
+            <div className="absolute inset-0 bg-teal-600/5 group-hover:bg-teal-600/10 transition-colors duration-500 z-10" />
+            <div className="w-full h-full flex items-center justify-center p-6 transform group-hover:scale-105 transition-transform duration-500 ease-out">
+              <span className="text-sm text-teal-700/60 font-medium text-center relative z-10">
+                {product.name}
+              </span>
+            </div>
+          </>
+        )}
       </div>
-
-      {/* Content */}
       <div className="p-6">
         <h3 className="font-heading text-lg font-700 text-warm-900 group-hover:text-teal-700 transition-colors">
           {product.name}

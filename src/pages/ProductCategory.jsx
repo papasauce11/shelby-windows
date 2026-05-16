@@ -21,7 +21,7 @@ const categoryMeta = {
     intro: "Your doors define how you enter, exit, and connect with the spaces around your home. We offer everything from secure entrance doors to expansive multi-panel systems that open your living area to the outdoors, all built for Canadian conditions.",
     hero: doorsHero,
     accent: "warm",
-    stat: { value: "6", label: "Door systems available" }
+    stat: { value: "5", label: "Door systems available" }
   }
 };
 

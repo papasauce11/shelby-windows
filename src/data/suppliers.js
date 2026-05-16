@@ -42,7 +42,7 @@ As a Shelby Windows supplier, Vinyl Bilt gives us access to a well-rounded produ
 Entryguard door systems feature insulated cores, multi-point locking hardware, and a wide selection of decorative glass and panel designs. Their products are engineered to withstand the temperature extremes and weather conditions typical of Ontario and the broader Canadian climate.
 
 As a Shelby Windows supplier, Entryguard provides us with specialized entrance door products that deliver the security and visual presence that homeowners expect from their front entry.`,
-    productsOffered: ["entrance", "swinging-patio"],
+    productsOffered: ["fiberglass-entry-doors", "steel-entry-doors", "nhp-steel-entry-doors"],
     metaTitle: "Entryguard Doors | Our Suppliers | Shelby Windows & Doors",
     metaDescription: "Entryguard Doors - Canadian entry door manufacturer. See why Shelby Windows partners with Entryguard for secure, stylish entrance doors."
   }

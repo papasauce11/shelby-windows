@@ -210,7 +210,7 @@ Modern sliding patio doors use heavy-duty roller systems for smooth, effortless 
         "Double and triple glazing options for energy efficiency"
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["terrace", "entry"],
+      relatedProducts: ["terrace", "fiberglass-entry-doors"],
       metaTitle: "Sliding Patio Doors | Shelby Windows & Doors",
       metaDescription: "Sliding patio doors from Shelby Windows & Doors. Smooth, space-saving operation for your deck or patio. Canadian-made and installed."
     },
@@ -233,32 +233,131 @@ Terrace doors are available in single-door and double-door configurations, with 
         "Available in traditional and contemporary profiles"
       ],
       suppliers: ["golden-windows", "vinyl-bilt"],
-      relatedProducts: ["sliding-patio", "entry"],
+      relatedProducts: ["sliding-patio", "fiberglass-entry-doors"],
       metaTitle: "Terrace Doors | Shelby Windows & Doors",
       metaDescription: "Terrace doors from Shelby Windows & Doors. Elegant hinged French doors for your patio or garden. Canadian quality."
     },
     {
-      slug: "entry",
-      name: "Entry Doors",
+      slug: "fiberglass-entry-doors",
+      name: "Fiberglass Entry Doors",
       category: "doors",
-      shortDescription: "Front entry doors available in fiberglass, steel, and NHP high performance steel — built for security, insulation, and curb appeal.",
-      description: `Your entry door is the first thing visitors see and the last line of defence against the elements. A well-chosen entry door combines visual impact with practical performance: thermal insulation, weather resistance, and physical security.
+      shortDescription: "Premium fiberglass entry doors available in six distinct collections — from clean modern lines to classic elegance, all built to resist warping, denting, and Canadian weather.",
+      description: `Fiberglass entry doors give you the look of real wood without any of the upkeep. They won't warp, crack, or rot the way a wood door eventually will, and they hold paint and stain finishes better than steel over time. For a front door that needs to look good and perform for years, fiberglass is a smart choice.
 
-We carry entry doors in three core materials. Fiberglass doors resist denting and warping, hold paint and stain beautifully, and can replicate the look of real wood without the maintenance. Steel doors deliver the strongest security at an accessible price point, with insulated cores that perform well year-round. For the highest level of durability and energy performance, NHP high performance steel doors offer an engineered step up — built to handle the demands of the Canadian climate with tighter seals and reinforced construction.
+We carry Entryguard's full fiberglass lineup, which covers six collections — each with its own design personality. Whether you want something minimal and modern or something with traditional presence, there's a collection that fits. Every door comes with an insulated core for thermal performance and is compatible with sidelites, transoms, and decorative glass inserts.
 
-Sidelites, transoms, and decorative glass inserts allow you to customize the look and control how much natural light enters your foyer. Multi-point locking hardware and reinforced frames are standard across all entry door systems.`,
+All fiberglass entry doors are available with multi-point locking hardware, custom sizing, and a wide range of stain and paint finishes.`,
       features: [
-        "Available in fiberglass, steel, and NHP high performance steel",
-        "NHP steel for maximum durability and energy performance",
-        "Multi-point locking systems for enhanced security",
-        "Sidelite and transom options for added light and style",
-        "Decorative and privacy glass insert options",
-        "Custom sizing, colours, and hardware finishes available"
+        "Six distinct collections: Shaker, Modern, Grand, Classic, Vista, and Stainless",
+        "Won't warp, crack, dent, or rot like wood or steel",
+        "Holds stain and paint finishes exceptionally well",
+        "Insulated core for strong thermal performance",
+        "Sidelite and transom options for added light",
+        "Multi-point locking and custom hardware available"
       ],
-      suppliers: ["entryguard-doors", "golden-windows", "vinyl-bilt"],
-      relatedProducts: ["sliding-patio", "terrace"],
-      metaTitle: "Entry Doors | Shelby Windows & Doors",
-      metaDescription: "Entry doors from Shelby Windows & Doors. Fiberglass, steel, and NHP high performance steel. Secure, insulated, and built to impress."
+      suppliers: ["entryguard-doors"],
+      relatedProducts: ["steel-entry-doors", "nhp-steel-entry-doors", "terrace"],
+      heroImage: "https://entryguarddoors.com/wp-content/uploads/2024/12/Hero-4.jpg",
+      image: "https://entryguarddoors.com/wp-content/uploads/2025/01/shaker.jpg",
+      collections: [
+        {
+          name: "Shaker",
+          image: "https://entryguarddoors.com/wp-content/uploads/2025/01/shaker.jpg",
+          description: "Clean lines and a minimalist aesthetic that suits any architectural style. Timeless simplicity with premium durability."
+        },
+        {
+          name: "Modern",
+          image: "https://entryguarddoors.com/wp-content/uploads/2025/01/MODERN_1.jpg",
+          description: "Sleek contemporary lines with innovative glass designs. A perfect blend of style and functionality."
+        },
+        {
+          name: "Grand",
+          image: "https://entryguarddoors.com/wp-content/uploads/2025/01/GRAND_2.jpg",
+          description: "Timeless designs that enhance the elegance of traditional homes. Bold statements with classic aesthetics."
+        },
+        {
+          name: "Classic",
+          image: "https://entryguarddoors.com/wp-content/uploads/2025/01/CLASSIC_1.jpg",
+          description: "Enduring style that blends traditional craftsmanship with modern durability. A perfect fit for any home, year after year."
+        },
+        {
+          name: "Vista",
+          image: "https://entryguarddoors.com/wp-content/uploads/2025/01/vista.jpg",
+          description: "Unique glass styles designed for contemporary aesthetics. Sleek lines and modern detailing for any entryway."
+        },
+        {
+          name: "Stainless",
+          image: "https://entryguarddoors.com/wp-content/uploads/2025/01/STAINLESS_1.jpg",
+          description: "Fiberglass doors with stainless steel accents. Timeless elegance meets modern sophistication."
+        }
+      ],
+      brochures: [
+        { name: "Fiberglass Door Catalogue", url: "https://entryguarddoors.com/wp-content/uploads/2025/01/ENTRYGUARD-PREMIUM-FIBERGLASS-2023_compressed.pdf" },
+        { name: "Stain Colour Guide", url: "https://entryguarddoors.com/wp-content/uploads/2025/01/ENTRYGUARD_FIBERGLASS_STAINS.pdf" },
+        { name: "Paint Colour Guide", url: "https://entryguarddoors.com/wp-content/uploads/2025/01/Fiberglass-PAINT-COLOUR-GUIDE.pdf" }
+      ],
+      metaTitle: "Fiberglass Entry Doors | Shelby Windows & Doors",
+      metaDescription: "Fiberglass entry doors from Shelby Windows & Doors. Six collections from Entryguard — Shaker, Modern, Grand, Classic, Vista, and Stainless. Built for Canadian homes."
+    },
+    {
+      slug: "steel-entry-doors",
+      name: "Steel Entry Doors",
+      category: "doors",
+      shortDescription: "Strong, secure, and energy-efficient steel entry doors with customizable glass and panel designs — the most popular entry door choice in Canada.",
+      description: `Steel entry doors are the go-to choice for homeowners who want solid security without spending a fortune. They're strong, they insulate well, and they come in more styles than most people expect. If you need a door that does its job reliably, steel is hard to beat.
+
+Entryguard's steel doors feature insulated cores that help keep your home comfortable year-round. The steel skin resists forced entry, weather, and general wear better than most materials at this price point. They're also resistant to fire, moisture, and pests, which means less maintenance over the life of the door.
+
+With multiple glass collections and panel styles to choose from, steel doors don't have to look industrial. Novatech and Trimlite glass options, solid panel designs, classic inserts, and executive panel configurations give you plenty of room to match your home's look.`,
+      features: [
+        "Exceptional strength and forced-entry resistance",
+        "Insulated core for strong thermal efficiency",
+        "Fire, moisture, and pest resistant",
+        "Multiple glass collections: Novatech, Trimlite, Classic",
+        "Solid door and executive panel options available",
+        "Customizable finishes for residential and commercial use"
+      ],
+      suppliers: ["entryguard-doors"],
+      relatedProducts: ["fiberglass-entry-doors", "nhp-steel-entry-doors", "sliding-patio"],
+      heroImage: "https://entryguarddoors.com/wp-content/uploads/2025/01/STEEL_DOOR_1_banner-scaled.jpg",
+      image: "https://entryguarddoors.com/wp-content/uploads/2024/12/Steel.jpg",
+      brochures: [
+        { name: "Novatech Glass Collection", url: "https://entryguarddoors.com/wp-content/uploads/2025/05/Novatech_Style-guide-2025_EN_Entryguard.pdf" },
+        { name: "Trimlite Glass Collection", url: "https://entryguarddoors.com/wp-content/uploads/2025/06/2025_EntryGuard_Doorlite_Brochure_InsidePageswCover.pdf" },
+        { name: "Solid Door Collection", url: "https://entryguarddoors.com/wp-content/uploads/2025/04/ENTRYGUARD_SOLID-STEEL-DOORS.pdf" },
+        { name: "Classic Glass Collection", url: "https://entryguarddoors.com/wp-content/uploads/2025/04/CLASSIC_GLASS_COLLECTION_1.pdf" },
+        { name: "Executive Panel Collection", url: "https://entryguarddoors.com/wp-content/uploads/2025/04/EXECUTIVE_PANEL_COLLECTION.pdf" }
+      ],
+      metaTitle: "Steel Entry Doors | Shelby Windows & Doors",
+      metaDescription: "Steel entry doors from Shelby Windows & Doors. Entryguard steel doors with Novatech and Trimlite glass options. Secure, insulated, customizable."
+    },
+    {
+      slug: "nhp-steel-entry-doors",
+      name: "NHP High Performance Steel Doors",
+      category: "doors",
+      shortDescription: "Engineered for superior durability and energy efficiency — NHP high performance steel doors are built to handle the toughest Canadian conditions.",
+      description: `NHP high performance steel doors are the top tier of Entryguard's steel lineup. If you want the strongest, most energy-efficient steel door available, this is it. They're engineered with advanced materials and tighter construction tolerances than standard steel doors.
+
+Where a regular steel door does the job well, an NHP door does it better — better resistance to wear, weather, and corrosion, better energy efficiency from improved seals and insulation, and a longer service life with less maintenance. These doors are built for homeowners who don't want to think about their front door again for a long time.
+
+NHP doors are a particularly strong fit for homes in areas with harsh winter conditions, high wind exposure, or anywhere you want the best performance a steel entry door can deliver.`,
+      features: [
+        "Superior strength and corrosion resistance over standard steel",
+        "Advanced insulation for maximum energy efficiency",
+        "Tighter construction tolerances for better weather sealing",
+        "Low-maintenance, long-lasting build quality",
+        "Enhanced security with reinforced construction",
+        "Designed specifically for demanding Canadian climates"
+      ],
+      suppliers: ["entryguard-doors"],
+      relatedProducts: ["steel-entry-doors", "fiberglass-entry-doors", "terrace"],
+      heroImage: "https://entryguarddoors.com/wp-content/uploads/2025/01/NHP_PERF_DOOR_2-scaled.jpg",
+      image: "https://entryguarddoors.com/wp-content/uploads/2024/12/NHP.jpg",
+      brochures: [
+        { name: "NHP High Performance Steel Doors Catalogue", url: "https://entryguarddoors.com/wp-content/uploads/2025/01/01_Entryguard.pdf" }
+      ],
+      metaTitle: "NHP High Performance Steel Doors | Shelby Windows & Doors",
+      metaDescription: "NHP high performance steel entry doors from Shelby Windows & Doors. Maximum durability and energy efficiency for Canadian homes."
     }
   ]
 };
