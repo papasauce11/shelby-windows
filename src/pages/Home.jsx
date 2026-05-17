@@ -74,8 +74,8 @@ export default function Home() {
       </section>
 
       {/* Trust Strip */}
-      <section className="pt-0 -mt-9 pb-7 sm:-mt-3 sm:pt-0 sm:pb-12 px-5 sm:px-6 bg-warm-100 relative z-10">
-        <p className="text-2xl sm:text-4xl text-warm-400 italic font-light tracking-wide text-center mb-4 sm:mb-8" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Experience the Shelby Way</p>
+      <section className="pt-0 -mt-9 pb-7 sm:mt-0 sm:pt-5 sm:pb-12 px-5 sm:px-6 bg-warm-100 relative z-10">
+        <p className="text-[1.35rem] sm:text-4xl text-warm-400 italic font-light tracking-wide text-center mb-4 sm:mb-8" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Experience the Shelby Way</p>
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {[
             { icon: (
