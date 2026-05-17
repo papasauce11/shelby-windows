@@ -75,7 +75,7 @@ export default function SupplierDetail() {
               alt=""
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className={`absolute inset-0 ${t.heroBg} opacity-10`} />
+            <div className="absolute inset-0 bg-black/40" />
           </>
         )}
         {!heroImg && <div className={`absolute inset-0 ${t.heroBg}`} />}
@@ -86,16 +86,16 @@ export default function SupplierDetail() {
             <SupplierLogo supplier={supplier} size={supplier.slug === 'golden-windows' ? 'heroGolden' : 'hero'} linkable={false} />
           </div>
 
-          {/* Tagline badge */}
+          {/* Tagline */}
           {supplier.tagline && (
             <div className="mb-6">
-              <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-heading font-700 uppercase tracking-widest ${t.taglineBg}`}>
+              <span className="inline-block px-4 py-1.5 text-xs font-heading font-700 uppercase tracking-widest text-white/90 [text-shadow:0_1px_4px_rgba(0,0,0,0.4)]">
                 {supplier.tagline}
               </span>
             </div>
           )}
 
-          <p className="text-warm-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="text-white/85 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">
             {supplier.description}
           </p>
 
@@ -103,7 +103,7 @@ export default function SupplierDetail() {
             href={supplier.website}
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center gap-2 px-6 py-3 border text-sm font-medium rounded-full transition-colors bg-white ${t.visitBtn}`}
+            className="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-sm font-medium rounded-full transition-colors bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm"
           >
             Visit {supplier.shortName}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
