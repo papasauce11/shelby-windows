@@ -73,7 +73,7 @@ export default function SupplierDetail() {
               alt=""
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className={`absolute inset-0 ${t.heroBg} opacity-85`} />
+            <div className={`absolute inset-0 ${t.heroBg} opacity-10`} />
           </>
         )}
         {!supplier.heroImage && <div className={`absolute inset-0 ${t.heroBg}`} />}
