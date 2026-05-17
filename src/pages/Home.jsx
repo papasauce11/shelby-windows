@@ -56,16 +56,16 @@ export default function Home() {
           <p className="mt-5 sm:mt-8 text-white text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.7)]">
             Locally installed. Canadian-made. Every window and door we carry comes from manufacturers we trust — built for our winters, backed by real warranties.
           </p>
-          <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-sm sm:max-w-none mx-auto">
+          <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
               to="/contact"
-              className="px-8 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
+              className="px-5 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
             >
               Get a Free Quote
             </Link>
             <Link
               to="/contact?reason=showroom"
-              className="px-8 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
+              className="px-5 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
             >
               Book a Showroom Visit
             </Link>
