@@ -43,7 +43,7 @@ export default function About() {
       </section>
 
       {/* Values — light background */}
-      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-75">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 sm:mb-16">
             <span className="text-xs sm:text-base font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 sm:mb-3 block">What Sets Us Apart</span>

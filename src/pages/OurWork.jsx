@@ -95,7 +95,7 @@ export default function OurWork() {
       </section>
 
       {/* Instagram promo */}
-      <section className="py-12 sm:py-16 px-5 sm:px-6 bg-warm-50 border-t border-warm-100">
+      <section className="py-12 sm:py-16 px-5 sm:px-6 bg-warm-75 border-t border-warm-100">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 mb-6">
             <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
