@@ -28,9 +28,9 @@ export default function ProductDetail() {
   return (
     <>
       <section className="grid grid-cols-1 lg:grid-cols-2">
-        <div className={`relative flex items-center justify-center min-h-[36vh] sm:min-h-[44vh] lg:min-h-[70vh] overflow-hidden ${!hasImage ? 'bg-gradient-to-br from-teal-50 via-warm-50 to-teal-100' : ''}`}>
+        <div className={`relative flex items-center justify-center min-h-[36vh] sm:min-h-[44vh] lg:min-h-[70vh] overflow-hidden ${!hasImage ? 'bg-gradient-to-br from-teal-50 via-warm-50 to-teal-100' : product.imageContain ? 'bg-warm-50' : ''}`}>
           {hasImage ? (
-            <img src={heroImg} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
+            <img src={heroImg} alt={product.name} className={`absolute inset-0 w-full h-full ${product.imageContain ? 'object-contain p-6' : 'object-cover'}`} />
           ) : (
             <div className="text-center">
               <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-2xl bg-white/80 border border-teal-200 flex items-center justify-center mb-4 sm:mb-6">

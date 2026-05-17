@@ -44,7 +44,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-90" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 text-center">

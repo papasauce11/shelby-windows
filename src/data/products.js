@@ -162,6 +162,7 @@ Modern sliding windows use precision-engineered rollers for smooth, quiet operat
       name: "Custom Shape Windows",
       category: "windows",
       image: customShapeImg,
+      imageContain: true,
       shortDescription: "Custom-shaped windows including arches, circles, and geometric designs for unique architectural features.",
       description: `Custom shape windows are made-to-order units designed to fit non-standard openings or to add distinctive architectural character to your home. Common shapes include arches, half-rounds, circles, octagons, triangles, and trapezoids.
 
@@ -186,6 +187,7 @@ Because every custom shape window is made to order, the sizing, shape, and finis
       name: "Tilt Windows",
       category: "windows",
       image: tiltImg,
+      imageContain: true,
       shortDescription: "European-style windows that tilt inward at the top or swing fully open like a door.",
       description: `Tilt windows offer two distinct opening modes in a single unit. In tilt mode, the top of the sash tilts inward, allowing controlled ventilation while maintaining security and weather protection. In turn mode, the sash swings fully inward like a door, providing wide-open access for cleaning or maximum airflow.
 
