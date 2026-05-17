@@ -179,15 +179,12 @@ export default function Home() {
       <div className="h-16 bg-gradient-to-b from-white to-white/0" />
 
       {/* Supplier Strip */}
-      <section className="py-8 sm:py-10 px-5 sm:px-6 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="pt-2 sm:pt-4 pb-8 sm:pb-10 px-5 sm:px-6 bg-white">
+        <div className="max-w-5xl mx-auto flex flex-col items-center justify-center text-center">
           <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 block">Our Trusted Suppliers</span>
-          <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-3">
+          <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-6">
             Canadian manufacturers you can count on
           </h2>
-          <p className="text-warm-500 max-w-xl mx-auto mb-8">
-            Every product we install is sourced from established Canadian manufacturers committed to quality and performance.
-          </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             {suppliers.map(supplier => (
               <SupplierLogo key={supplier.slug} supplier={supplier} size="large" />
