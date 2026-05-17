@@ -1,13 +1,38 @@
-# Shelby Windows & Doors — Session Handoff
+# Shelby Windows & Doors -- Session Handoff
+
+## Quick Reference (start every session here)
+
+**Find your bash mount path:**
+```bash
+ls /sessions/*/mnt/
+```
+
+**Build command** (EPERM on `dist/`, always use alt output dir):
+```bash
+cd /sessions/<session>/mnt/shelby-windows && npx vite build --outDir /tmp/shelby-build
+```
+
+**Push command** (give this to Josh as PowerShell):
+```powershell
+cd C:\Users\Varai\Desktop\Varaico\shelby-windows; git add -A; git commit -m "message"; git push origin main
+```
+
+**Gotchas:**
+- The Edit tool injects null bytes (`\x00`) into files frequently. Fix: `perl -pi -e 's/\x00//g' file` then check `tail` for truncation. For critical edits, prefer writing via `cat > file << 'EOF'` in bash.
+- After null byte cleanup, always check if the file got truncated (`tail -10 file`). Rebuild the ending via bash if needed.
+- Vercel is Linux/case-sensitive -- asset filenames must match exactly (note: `custom windows.PNG` and `Tilt windows.png` have uppercase extensions).
+- Vercel CDN caches aggressively -- if Josh sees stale content on another device, tell him Ctrl+Shift+R or incognito.
+- Sandbox disk fills up after many builds. Clean with `rm -rf /tmp/shelby-build*` or use a single output dir name.
+
+---
 
 ## Project
 - **Client:** Shelby Windows & Doors Inc. (Vick)
-- **Site:** shelbywindows.ca (live on Vercel — not custom domain yet)
+- **Site:** shelbywindows.ca (live on Vercel -- not custom domain yet)
 - **GitHub:** github.com/papasauce11/shelby-windows (private)
 - **Stack:** Vite + React + Tailwind v4 (`@tailwindcss/vite`, `@theme` in `index.css`)
 - **Router:** React Router v6
 - **Repo path:** `C:\Users\Varai\Desktop\Varaico\shelby-windows`
-- **Bash path (update each session):** check `ls /sessions/*/mnt/` to find current mount
 - **Push workflow:** Always provide a single copy-paste PowerShell command to commit and push. Format: `git add -A; git commit -m "message"; git push origin main`
 
 ---
