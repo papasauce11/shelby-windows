@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[70vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden bg-warm-100">
         <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-90" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
 
@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* Trust Strip */}
-      <section className="py-8 sm:py-14 px-5 sm:px-6 bg-white">
+      <section className="py-8 sm:py-14 px-5 sm:px-6 bg-warm-100">
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {[
             { icon: (
@@ -108,7 +108,7 @@ export default function Home() {
 
       {/* Motto */}
       <div className="pt-6 pb-2 sm:pt-10 sm:pb-4 text-center bg-white">
-        <p className="text-2xl sm:text-4xl text-warm-400 font-heading font-800 tracking-wide">
+        <p className="text-2xl sm:text-4xl text-warm-400 italic font-light tracking-wide" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
           Experience the Shelby Way
         </p>
       </div>

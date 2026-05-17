@@ -31,7 +31,7 @@ export default function CTASection({
         backgroundSize: '32px 32px'
       }} />
       <div className="relative max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-white mb-4 [text-shadow:0_2px_12px_rgba(0,0,0,0.3)]">{heading}</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white mb-4 italic font-light tracking-wide [text-shadow:0_2px_12px_rgba(0,0,0,0.3)]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{heading}</h2>
         <p className="text-teal-100 text-base sm:text-lg mb-8 max-w-xl mx-auto [text-shadow:0_1px_6px_rgba(0,0,0,0.2)]">{text}</p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-sm sm:max-w-none mx-auto">
           <Link
