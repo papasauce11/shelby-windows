@@ -238,12 +238,14 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+              <div className="text-center sm:text-left">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3.5 bg-teal-700 text-white font-semibold rounded-full hover:bg-teal-800 shadow-sm hover:shadow-md transition-all"
               >
                 Ask about financing
               </Link>
+              </div>
             </div>
           </div>
         </div>
