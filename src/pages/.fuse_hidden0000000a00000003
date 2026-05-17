@@ -383,7 +383,7 @@ export default function Home() {
 
       {/* CTA */}
       <CTASection
-        heading="Experience the Shelby Way"
+        heading="Let's talk about your project"
         text="Whether you're replacing a single window or outfitting an entire home, we're here to help. Reach out for a free consultation."
         buttonText="Get in Touch"
       />
