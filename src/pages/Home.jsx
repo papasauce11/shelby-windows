@@ -74,7 +74,8 @@ export default function Home() {
       </section>
 
       {/* Trust Strip */}
-      <section className="py-8 sm:py-14 px-5 sm:px-6 bg-warm-100">
+      <section className="pt-12 pb-8 sm:pt-20 sm:pb-14 px-5 sm:px-6 bg-warm-100">
+        <p className="text-2xl sm:text-4xl text-warm-400 italic font-light tracking-wide text-center mb-6 sm:mb-10" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Experience the Shelby Way</p>
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {[
             { icon: (
@@ -105,13 +106,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* Motto */}
-      <div className="pt-1 pb-0 sm:pt-5 sm:pb-0 text-center bg-white">
-        <p className="text-2xl sm:text-4xl text-warm-400 italic font-light tracking-wide" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-          Experience the Shelby Way
-        </p>
-      </div>
 
       {/* Windows Preview */}
       <section className="pt-0.5 pb-8 sm:pt-[34px] sm:pb-16 lg:pt-[66px] lg:pb-24 px-5 sm:px-6 bg-white">
