@@ -80,7 +80,7 @@ export default function SupplierDetail() {
         )}
         {!heroImg && <div className={`absolute inset-0 ${t.heroBg}`} />}
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center [filter:drop-shadow(0_2px_8px_rgba(0,0,0,0.4))]">
+        <div className="relative z-10 max-w-4xl mx-auto text-center [filter:drop-shadow(0_1px_3px_rgba(0,0,0,0.5))]">
           {/* Logo — no box, large */}
           <div className="mb-6">
             <SupplierLogo supplier={supplier} size={supplier.slug === 'golden-windows' ? 'heroGolden' : 'hero'} linkable={false} />
@@ -89,13 +89,13 @@ export default function SupplierDetail() {
           {/* Tagline */}
           {supplier.tagline && (
             <div className="mb-6">
-              <span className="inline-block px-4 py-1.5 text-xs font-heading font-700 uppercase tracking-widest text-white/90 [text-shadow:0_1px_4px_rgba(0,0,0,0.4)]">
+              <span className="inline-block px-4 py-1.5 text-xs font-heading font-700 uppercase tracking-widest text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
                 {supplier.tagline}
               </span>
             </div>
           )}
 
-          <p className="text-white/85 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">
+          <p className="text-white text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
             {supplier.description}
           </p>
 
@@ -103,7 +103,7 @@ export default function SupplierDetail() {
             href={supplier.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-sm font-medium rounded-full transition-colors bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm"
+            className={`inline-flex items-center gap-2 px-6 py-3 border text-sm font-medium rounded-full transition-colors bg-white ${t.visitBtn}`}
           >
             Visit {supplier.shortName}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
