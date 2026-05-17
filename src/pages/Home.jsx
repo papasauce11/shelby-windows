@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* Trust Strip */}
-      <section className="py-8 sm:py-14 px-5 sm:px-6 bg-warm-100 border-b border-warm-200">
+      <section className="py-8 sm:py-14 px-5 sm:px-6 bg-warm-100">
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {[
             { icon: (
@@ -148,7 +148,7 @@ export default function Home() {
             <div>
               <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block animate-on-scroll">Our Doors</span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-warm-900 animate-on-scroll">
-                Make an entrance
+                Every entrance tells a story
               </h2>
             </div>
             <Link
@@ -177,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* Supplier Strip */}
-      <section className="pt-[30px] pb-13 sm:pb-15 px-5 sm:px-6 bg-white">
+      <section className="pt-[60px] pb-13 sm:pb-15 px-5 sm:px-6 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col items-center justify-center text-center">
           <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 block">Our Trusted Suppliers</span>
           <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-6">
