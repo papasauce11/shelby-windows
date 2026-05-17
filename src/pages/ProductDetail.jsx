@@ -69,7 +69,7 @@ export default function ProductDetail() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {product.collections.map((collection, i) => (
                 <div key={i} className="group bg-white rounded-2xl overflow-hidden border border-warm-100 shadow-sm hover:border-teal-200 hover:shadow-xl transition-all duration-300">
-                  <div className="aspect-[4/3] relative overflow-hidden">
+                  <div className="aspect-[3/4] relative overflow-hidden">
                     <img src={collection.image} alt={`${collection.name} Collection`} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out" />
                   </div>
                   <div className="p-6">
