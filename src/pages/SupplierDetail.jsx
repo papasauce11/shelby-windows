@@ -64,8 +64,21 @@ export default function SupplierDetail() {
   return (
     <>
       {/* Themed hero header */}
-      <section className={`${t.heroBg} border-b ${t.heroBorder} pt-28 sm:pt-32 pb-12 sm:pb-16 px-5 sm:px-6`}>
-        <div className="max-w-4xl mx-auto text-center">
+      <section className={`relative overflow-hidden border-b ${t.heroBorder} pt-28 sm:pt-32 pb-12 sm:pb-16 px-5 sm:px-6`}>
+        {/* Faded product imagery background */}
+        {supplier.heroImage && (
+          <>
+            <img
+              src={supplier.heroImage}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className={`absolute inset-0 ${t.heroBg} opacity-85`} />
+          </>
+        )}
+        {!supplier.heroImage && <div className={`absolute inset-0 ${t.heroBg}`} />}
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           {/* Logo — no box, large */}
           <div className="mb-6">
             <SupplierLogo supplier={supplier} size={supplier.slug === 'golden-windows' ? 'heroGolden' : 'hero'} linkable={false} />
