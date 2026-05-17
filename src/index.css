@@ -42,7 +42,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2 {
+h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h2 {
   font-family: var(--font-display);
   font-weight: 400;
   line-height: 1.15;
