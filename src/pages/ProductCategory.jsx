@@ -50,6 +50,9 @@ export default function ProductCategory() {
         </div>
       </section>
 
+      {/* Divider: intro → grid */}
+      <div className={`h-8 sm:h-12 bg-gradient-to-b ${isDoors ? 'from-warm-50 to-white' : 'from-teal-50 to-white'}`} />
+
       {/* Product grid */}
       <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">

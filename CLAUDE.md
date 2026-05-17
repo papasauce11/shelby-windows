@@ -39,7 +39,7 @@
 - `teal-*` — brand accent
 
 ### Assets (`src/assets/`)
-- `1.png`–`6.png` — lifestyle photos
+- `1.png`, `2.png`, `3.png`, `5.png`, `6.png` — lifestyle photos (no `4.png`)
 - `hero.png` — home page hero (**lowercase h** — Vercel is Linux/case-sensitive)
 - `10.png` — financing section photo
 - `2.png` — OurWork hero
@@ -148,7 +148,10 @@ Golden Windows door products enriched with images + collections + brochures:
 
 ### `suppliers.js`
 - 3 suppliers: `golden-windows`, `vinyl-bilt`, `entryguard-doors`
-- Each: `slug`, `name`, `logo`, `website`, `description`, `products[]`
+- Each: `slug`, `name`, `shortName`, `website`, `description`, `productsOffered[]`, `theme`, `tagline`, `heroImage`, `featuredProducts[]`
+- Themes: amber (Golden Windows), teal (Vinyl Bilt), navy (Entryguard)
+- Logos are NOT in the data file — they're mapped by slug in `SupplierLogo.jsx`
+- Helper functions: `getSupplierBySlug()`, `getSuppliersForProduct()`
 
 ### `faq.js`
 - 13 items — removed heritage homes Q, softened unverified claims
@@ -287,7 +290,7 @@ Golden Windows door products enriched with images + collections + brochures:
 ---
 
 ## Known Issues / Placeholders
-- ~~Postal code~~ → `L4K 2C8` confirmed ✅
+- Postal code in `navigation.js` → `L4K 2C8` is still a PLACEHOLDER, needs confirmation from Vick
 - Google Maps iframe src in `Contact.jsx` → placeholder coordinates, not real address
 - Team photo in `About.jsx` → placeholder text box with "Coming Soon"
 - About story copy → marked PLACEHOLDER, needs Vick's actual company story

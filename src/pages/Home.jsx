@@ -106,6 +106,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Divider: trust → windows */}
+      <div className="h-10 sm:h-16 bg-gradient-to-b from-warm-100 to-white" />
+
       {/* Windows Preview */}
       <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -140,6 +143,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Divider: windows → doors */}
+      <div className="h-10 sm:h-16 bg-gradient-to-b from-white to-warm-50" />
 
       {/* Doors Preview */}
       <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
@@ -176,8 +182,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gradient fade divider */}
-      <div className="h-16 bg-gradient-to-b from-white to-white/0" />
+      {/* Divider: doors → suppliers */}
+      <div className="h-10 sm:h-16 bg-gradient-to-b from-warm-50 to-white" />
 
       {/* Supplier Strip */}
       <section className="pt-2 sm:pt-4 pb-13 sm:pb-15 px-5 sm:px-6 bg-white">
@@ -194,6 +200,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Divider: suppliers → canadian */}
+      <div className="h-10 sm:h-16 bg-gradient-to-b from-white to-warm-50" />
+
       {/* Proudly Canadian */}
       <section className="py-8 sm:py-14 lg:py-20 px-5 sm:px-6 bg-warm-50">
         <div className="max-w-4xl mx-auto text-center">
@@ -206,6 +215,9 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* Divider: canadian → financing */}
+      <div className="h-10 sm:h-16 bg-gradient-to-b from-warm-50 to-white" />
 
       {/* Financing */}
       <section id="financing" className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white scroll-mt-24">
@@ -250,6 +262,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Divider: financing → reviews */}
+      <div className="h-10 sm:h-16 bg-gradient-to-b from-white to-warm-50" />
 
       {/* Reviews — Real Google Reviews (5.0 / 20 reviews) */}
       <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
@@ -319,6 +334,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Divider: reviews → instagram */}
+      <div className="h-10 sm:h-16 bg-gradient-to-b from-warm-50 to-white" />
 
       {/* Instagram Feed */}
       <section className="py-8 sm:py-14 lg:py-20 px-5 sm:px-6 bg-white">
