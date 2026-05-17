@@ -28,7 +28,7 @@ export default function ProductDetail() {
   return (
     <>
       <section className="grid grid-cols-1 lg:grid-cols-2">
-        <div className={`relative flex items-center justify-center min-h-[36vh] sm:min-h-[44vh] lg:min-h-[70vh] overflow-hidden ${!hasImage ? 'bg-gradient-to-br from-teal-50 via-warm-50 to-teal-100' : product.imageContain ? 'bg-warm-50' : ''}`}>
+        <div className={`relative flex items-center justify-center min-h-[36vh] sm:min-h-[44vh] lg:min-h-[70vh] overflow-hidden ${!hasImage ? 'bg-gradient-to-br from-teal-50 via-warm-50 to-teal-100' : product.imageContain ? 'bg-white' : ''}`}>
           {hasImage ? (
             <img src={heroImg} alt={product.name} className={`absolute inset-0 w-full h-full ${product.imageContain ? 'object-contain p-6' : 'object-cover'}`} />
           ) : (

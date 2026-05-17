@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
       to={path}
       className="group block bg-white rounded-2xl overflow-hidden border border-warm-100 shadow-sm hover:border-teal-200 hover:shadow-xl transition-all duration-300"
     >
-      <div className={`aspect-[4/3] relative overflow-hidden ${product.imageContain ? 'bg-warm-50' : ''}`}>
+      <div className={`aspect-[4/3] relative overflow-hidden ${product.imageContain ? 'bg-white' : ''}`}>
         {hasImage ? (
           <>
             <img
