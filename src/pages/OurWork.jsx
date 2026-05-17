@@ -61,12 +61,7 @@ export default function OurWork() {
                     <p className="text-white text-sm font-medium [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">{project.caption}</p>
                   </div>
                 </div>
-                <div className="mt-3 flex items-start gap-3">
-                  <span className="text-xs text-teal-600/60 font-heading font-700 mt-0.5 flex-shrink-0">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <p className="text-sm text-warm-600">{project.caption}</p>
-                </div>
+                <p className="mt-2 text-sm text-warm-600">{project.caption}</p>
               </a>
             ))}
           </div>
@@ -92,12 +87,7 @@ export default function OurWork() {
                     <p className="text-white text-sm font-medium [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">{project.caption}</p>
                   </div>
                 </div>
-                <div className="mt-3 flex items-start gap-3">
-                  <span className="text-xs text-teal-600/60 font-heading font-700 mt-0.5 flex-shrink-0">
-                    {String(i + 3).padStart(2, '0')}
-                  </span>
-                  <p className="text-sm text-warm-600">{project.caption}</p>
-                </div>
+                <p className="mt-2 text-sm text-warm-600">{project.caption}</p>
               </a>
             ))}
           </div>
