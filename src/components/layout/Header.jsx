@@ -33,116 +33,118 @@ export default function Header() {
   const productsData = navigation.main.find(n => n.label === 'Products');
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-200 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-1">
-            <img src={shelbyBranding} alt="" className="h-[48px] sm:h-[66px] w-auto" />
-            <img src={shelbyLogo} alt="Shelby Windows & Doors" className="h-[48px] sm:h-[66px] w-auto" />
-          </Link>
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link to="/" className="flex items-center gap-1">
+              <img src={shelbyBranding} alt="" className="h-[48px] sm:h-[66px] w-auto" />
+              <img src={shelbyLogo} alt="Shelby Windows & Doors" className="h-[48px] sm:h-[66px] w-auto" />
+            </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {navigation.main.map((item) => {
-              if (item.label === 'Products') {
+            {/* Desktop Nav */}
+            <nav className="hidden lg:flex items-center gap-1">
+              {navigation.main.map((item) => {
+                if (item.label === 'Products') {
+                  return (
+                    <div key={item.label} ref={dropdownRef} className="relative">
+                      <button
+                        onClick={() => setProductsOpen(!productsOpen)}
+                        className={`px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-lg
+                          ${productsOpen ? 'text-teal-700 bg-teal-50' : 'text-warm-700 hover:text-teal-700 hover:bg-warm-50'}`}
+                      >
+                        Products
+                        <svg className={`inline-block w-4 h-4 ml-1 transition-transform ${productsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+
+                      {/* Mega Dropdown */}
+                      {productsOpen && (
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[720px] bg-white rounded-2xl shadow-xl border border-warm-100 p-8 grid grid-cols-3 gap-8">
+                          {Object.values(productsData.children).map((section) => (
+                            <div key={section.label}>
+                              <Link
+                                to={section.path}
+                                className="text-xs font-heading font-700 uppercase tracking-widest text-teal-700 mb-4 block hover:text-teal-600"
+                                onClick={() => setProductsOpen(false)}
+                              >
+                                {section.label}
+                              </Link>
+                              <ul className="space-y-2">
+                                {section.items.map((sub) => (
+                                  <li key={sub.path}>
+                                    <Link
+                                      to={sub.path}
+                                      className="text-sm text-warm-600 hover:text-teal-700 hover:pl-1 transition-all block"
+                                      onClick={() => setProductsOpen(false)}
+                                    >
+                                      {sub.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
                 return (
-                  <div key={item.label} ref={dropdownRef} className="relative">
-                    <button
-                      onClick={() => setProductsOpen(!productsOpen)}
-                      className={`px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-lg
-                        ${productsOpen ? 'text-teal-700 bg-teal-50' : 'text-warm-700 hover:text-teal-700 hover:bg-warm-50'}`}
-                    >
-                      Products
-                      <svg className={`inline-block w-4 h-4 ml-1 transition-transform ${productsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-
-                    {/* Mega Dropdown */}
-                    {productsOpen && (
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[720px] bg-white rounded-2xl shadow-xl border border-warm-100 p-8 grid grid-cols-3 gap-8">
-                        {Object.values(productsData.children).map((section) => (
-                          <div key={section.label}>
-                            <Link
-                              to={section.path}
-                              className="text-xs font-heading font-700 uppercase tracking-widest text-teal-700 mb-4 block hover:text-teal-600"
-                              onClick={() => setProductsOpen(false)}
-                            >
-                              {section.label}
-                            </Link>
-                            <ul className="space-y-2">
-                              {section.items.map((sub) => (
-                                <li key={sub.path}>
-                                  <Link
-                                    to={sub.path}
-                                    className="text-sm text-warm-600 hover:text-teal-700 hover:pl-1 transition-all block"
-                                    onClick={() => setProductsOpen(false)}
-                                  >
-                                    {sub.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                  <Link
+                    key={item.label}
+                    to={item.path}
+                    className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors group
+                      ${location.pathname === item.path ? 'text-teal-700' : 'text-warm-700 hover:text-teal-700'}`}
+                  >
+                    {item.label}
+                    <span className={`absolute bottom-0 left-4 right-4 h-px bg-teal-600 transition-transform origin-left duration-300
+                      ${location.pathname === item.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
+                  </Link>
                 );
-              }
+              })}
 
-              return (
-                <Link
-                  key={item.label}
-                  to={item.path}
-                  className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors group
-                    ${location.pathname === item.path ? 'text-teal-700' : 'text-warm-700 hover:text-teal-700'}`}
-                >
-                  {item.label}
-                  <span className={`absolute bottom-0 left-4 right-4 h-px bg-teal-600 transition-transform origin-left duration-300
-                    ${location.pathname === item.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
-                </Link>
-              );
-            })}
+              {/* Desktop CTAs */}
+              <Link
+                to="/contact"
+                className="px-5 py-2.5 bg-teal-700 text-white text-sm font-semibold rounded-full hover:bg-teal-800 shadow-sm hover:shadow-md ml-4"
+              >
+                Get a Quote
+              </Link>
+              <Link
+                to="/#financing"
+                className="ml-6 text-xs text-warm-400 hover:text-teal-600 transition-colors tracking-wide"
+              >
+                Financing Available
+              </Link>
+            </nav>
 
-            {/* Desktop CTAs */}
-            <Link
-              to="/contact"
-              className="px-5 py-2.5 bg-teal-700 text-white text-sm font-semibold rounded-full hover:bg-teal-800 shadow-sm hover:shadow-md ml-4"
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden p-2 text-warm-700 hover:text-teal-700"
+              aria-label="Toggle menu"
             >
-              Get a Quote
-            </Link>
-            <Link
-              to="/#financing"
-              className="ml-6 text-xs text-warm-400 hover:text-teal-600 transition-colors tracking-wide"
-            >
-              Financing Available
-            </Link>
-          </nav>
-
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-warm-700 hover:text-teal-700"
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+              {mobileOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — OUTSIDE header to avoid backdrop-filter containing block */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 top-20 bg-white z-40 overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 top-20 bg-white z-50 overflow-y-auto">
           <nav className="max-w-7xl mx-auto px-6 py-8 space-y-2">
             {navigation.main.map((item) => {
               if (item.label === 'Products') {
@@ -212,6 +214,6 @@ export default function Header() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }

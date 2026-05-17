@@ -236,6 +236,14 @@ Golden Windows door products enriched with images + collections + brochures:
 - Gradient fade dividers replaced wave SVGs site-wide
 - Sticky CTA bar: mobile only
 
+## Mobile Patterns (follow these for all future work)
+- **Short sentence pairs on separate lines (mobile):** When a heading or label has 2 short sentences (e.g., "Proudly Canadian. Built for Canadian homes."), insert `<br className="sm:hidden" />` between them so each sentence gets its own line on mobile. On desktop they stay inline.
+- **Review cards compact with "see more":** Review cards show truncated text (3 lines via `line-clamp-3`) with a "... see more" toggle that expands to full text on tap. Keeps initial view tight on mobile.
+- **Supplier logos single row:** All supplier logos must fit on one horizontal line on mobile. Use smaller sizes at mobile breakpoint (e.g., `h-16` mobile, `sm:h-24` desktop).
+- **2-column product grids on mobile:** All product card grids use `grid-cols-2` as mobile default.
+- **Section padding pattern:** `py-8 sm:py-12/16 lg:py-20/24` — never use `py-16`+ as the unprefixed (mobile) value.
+- **ProductCard compact on mobile:** `p-3 sm:p-6`, `text-sm sm:text-lg` for title, `text-xs sm:text-sm` for description.
+
 ---
 
 ## Remaining Build Plan

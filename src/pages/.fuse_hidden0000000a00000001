@@ -363,8 +363,6 @@ export default function Home() {
             </div>
 
             {/* Desktop: all 5 in one row */}
-
-            {/* Desktop: all 5 in one row */}
             <div className="hidden sm:flex gap-3">
               {instagramPosts.map((post, i) => (
                 <a key={i} href={post.url} target="_blank" rel="noopener noreferrer" className="flex-1 aspect-square block overflow-hidden rounded-xl bg-warm-100 hover:opacity-90 transition-opacity">
