@@ -305,7 +305,7 @@ Terrace doors are available in single-door and double-door configurations, with 
       slug: "fiberglass-entry-doors",
       name: "Fiberglass Entry Doors",
       category: "doors",
-      imagePosition: "33% center",
+      imagePosition: "37% center",
       shortDescription: "Premium fiberglass entry doors available in six distinct collections -- from clean modern lines to classic elegance, all built to resist warping, denting, and Canadian weather.",
       description: `Fiberglass entry doors give you the look of real wood without any of the upkeep. They won't warp, crack, or rot the way a wood door eventually will, and they hold paint and stain finishes better than steel over time. For a front door that needs to look good and perform for years, fiberglass is a smart choice.
 
