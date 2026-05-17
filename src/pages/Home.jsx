@@ -46,7 +46,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative min-h-[70vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden -mb-1">
         <div className="absolute inset-0 -bottom-2 bg-warm-100" />
-        <img src={heroBg} alt="" className="absolute -inset-x-0 top-0 -bottom-4 w-full h-[calc(100%+16px)] object-cover object-center opacity-90" />
+        <img src={heroBg} alt="" className="absolute -inset-x-0 top-0 -bottom-4 w-full h-[calc(100%+16px)] object-cover object-center opacity-70" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 text-center">
           <h1 className="font-heading font-800 text-white text-3xl sm:text-5xl lg:text-7xl leading-tight [text-shadow:0_1px_4px_rgba(0,0,0,0.6),0_2px_10px_rgba(0,0,0,0.3)]">
@@ -59,13 +59,13 @@ export default function Home() {
           <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
               to="/contact"
-              className="min-w-[240px] sm:min-w-0 px-5 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
+              className="min-w-[240px] sm:min-w-0 px-5 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-[0_2px_8px_rgba(0,0,0,0.5),0_0_4px_rgba(0,0,0,0.3)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.6)] transition-all text-base sm:text-lg text-center"
             >
               Get a Free Quote
             </Link>
             <Link
               to="/contact?reason=showroom"
-              className="min-w-[240px] sm:min-w-0 px-5 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
+              className="min-w-[240px] sm:min-w-0 px-5 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-[0_2px_8px_rgba(0,0,0,0.5),0_0_4px_rgba(0,0,0,0.3)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.6)] transition-all text-base sm:text-lg text-center"
             >
               Book a Showroom Visit
             </Link>
