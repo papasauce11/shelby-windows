@@ -93,8 +93,10 @@
 
 ### `CTASection.jsx`
 - Default variant: teal gradient bg, two white pill buttons (full-width on mobile)
+- Heading uses Cormorant Garamond italic (`fontFamily: "'Cormorant Garamond', serif"`, `italic font-light tracking-wide`)
 - Heading: `[text-shadow:0_2px_12px_rgba(0,0,0,0.3)]`
 - Body text: `[text-shadow:0_1px_6px_rgba(0,0,0,0.2)]`
+- Default heading text: "Experience the Shelby Way"
 - Minimal variant: plain, text + single button
 - Padding: `py-14 md:py-24`
 
@@ -105,7 +107,7 @@
 ### `navigation.js`
 - `navigation.main` — nav structure with Products mega-menu children
 - `companyInfo` — address, phone, email, hours, social
-  - ⚠️ **Postal code `L4K 2C8` is a PLACEHOLDER** — confirm with Vick
+  - Postal code `L4K 2C8` — confirmed
 
 ### `products.js`
 - `products.windows[]` and `products.doors[]`
@@ -162,19 +164,23 @@ Golden Windows door products enriched with images + collections + brochures:
 ## Page-by-Page State
 
 ### `Home.jsx`
-- Hero: `min-h-[85vh] sm:min-h-[90vh]`, full-bleed `hero.png`, two teal CTA buttons
-- Hero h1: `[text-shadow:0_2px_20px_rgba(0,0,0,0.5)]`
-- Hero subtitle: "Locally installed. Canadian-made. Every window and door we carry comes from manufacturers we trust — built for our winters, backed by real warranties."
-- Trust strip: 4 icons — "Fast, Clean Installs" / "Free In-Home Measure" / "Manufacturer Backed" / "Hundreds of Styles"
-- Windows preview: 4 cards, Browse all link
-- Doors preview: all 5 door cards, Browse all link
-- Gradient fade dividers between sections (replaced wave SVGs)
-- Supplier strip: all 3 suppliers, no description paragraph, reduced top padding (`pt-2 sm:pt-4`), centered
-- Proudly Canadian: large badge + updated human-sounding copy
+- Hero: `min-h-[70vh] sm:min-h-[90vh]`, full-bleed `hero.png`, two teal CTA buttons with tight drop shadows
+- Hero layers (bottom to top): `bg-warm-100` fill → hero image (extends `-bottom-4`, `object-[47%_center] sm:object-center`) → dark overlay (25% black, fades to transparent at top 10% and bottom 90%)
+- Hero section uses `-mb-1` and image extends past bounds to prevent gap with trust strip
+- Hero h1: `[text-shadow:0_1px_4px_rgba(0,0,0,0.6),0_2px_10px_rgba(0,0,0,0.3)]`
+- Hero subtitle: tight multi-layer text-shadow for pop; uses `&nbsp;` to prevent "warranties" orphaning
+- Hero buttons: `bg-teal-600`, `min-w-[240px] sm:min-w-0`, tight custom box-shadows
+- Trust strip: `bg-warm-100`, includes "Experience the Shelby Way" motto (Cormorant Garamond italic, `text-[1.35rem] sm:text-4xl`, `text-warm-400`) above 4 icon cards
+- Trust strip padding: `pt-0 -mt-9 sm:mt-0 sm:pt-5` (overlaps into hero on mobile)
+- Windows preview: 4 cards, Browse all link, `pt-8` mobile
+- Doors heading: "Every entrance tells a story"
+- Doors preview: all 5 door cards, Browse all link, `bg-warm-75`
+- Supplier strip: all 3 suppliers, `pt-[60px]`, centered
+- Proudly Canadian: large badge + updated human-sounding copy, `bg-warm-75`
 - Financing: photo left (with text-shadow overlay), feature cards right (white bg, shadow-sm)
-- Reviews: 3 real Google reviews (Herbert Lemcke, Petra Hamann, Nexus 303) with star ratings + "Read more on Google" link
-- Instagram: 5 posts with real downloaded images (`ig_post_1.jpg`–`ig_post_5.jpg`) and real IG URLs, carousel with dot nav
-- CTA: CTASection default
+- Reviews: 3 real Google reviews, `bg-warm-75`, compact with "see more" toggle
+- Instagram: 5 posts with real downloaded images, carousel with dot nav
+- CTA: "Experience the Shelby Way" heading (Cormorant Garamond italic)
 
 ### `About.jsx`
 - No HeroBanner
@@ -229,15 +235,18 @@ Golden Windows door products enriched with images + collections + brochures:
 ## Visual Polish (completed)
 - ProductCard: `shadow-sm` base, `shadow-xl` hover; supports `imageContain` for cutout images
 - HeroBanner: gradient overlay (not flat), text-shadow on title + subtitle
-- Home hero: `opacity-90` on hero image, `[text-shadow:0_2px_20px_rgba(0,0,0,0.5)]` on h1
-- CTASection: text-shadow on heading + body text
+- Home hero: layered bg (warm-100 → image → 25% dark overlay fading to transparent at edges), tight text-shadows
+- Home hero image position: `object-[47%_center]` on mobile, `object-center` on desktop
+- CTASection: Cormorant Garamond italic heading, text-shadow on heading + body text
+- "Experience the Shelby Way" motto: appears in trust strip (above cards) and as CTA heading, both in Cormorant Garamond italic
 - Financing overlay text: text-shadow on heading + label
 - Financing feature cards: `bg-white shadow-sm hover:shadow-md` (was flat warm-50)
 - All hero copy and trust strip labels rewritten (non-AI sounding)
 - Supplier pages: full-bleed hero imagery with 10% themed tint, white text + drop shadows
 - About values: 3 cards (no icons), clean `sm:grid-cols-3` layout
-- Gradient fade dividers replaced wave SVGs site-wide
+- Section backgrounds alternate: white / `bg-warm-75` / `bg-warm-100` for visual separation
 - Sticky CTA bar: mobile only
+- Google Fonts: DM Serif Display, Plus Jakarta Sans, DM Sans, Cormorant Garamond (italic 300/400)
 
 ## Mobile Patterns (follow these for all future work)
 - **Short sentence pairs on separate lines (mobile):** When a heading or label has 2 short sentences (e.g., "Proudly Canadian. Built for Canadian homes."), insert `<br className="sm:hidden" />` between them so each sentence gets its own line on mobile. On desktop they stay inline.
@@ -267,7 +276,7 @@ Golden Windows door products enriched with images + collections + brochures:
 - [x] 5 Instagram post images (for Home feed) — ✅ downloaded to `src/assets/instagram/`
 - [x] Real Google reviews (3+ for Home page) — ✅ 3 real reviews integrated
 - [ ] Team photo (for About page)
-- [ ] Confirm postal code (currently `L4K 2C8` — placeholder)
+- [x] Confirm postal code — `L4K 2C8` confirmed by Vick
 - [ ] Real Google Maps embed URL for 10 Planchet Rd, Unit 4, Vaughan
 
 ### Step 2 — Remaining copy work
@@ -290,7 +299,7 @@ Golden Windows door products enriched with images + collections + brochures:
 ---
 
 ## Known Issues / Placeholders
-- Postal code in `navigation.js` → `L4K 2C8` is still a PLACEHOLDER, needs confirmation from Vick
+- ~~Postal code~~ → `L4K 2C8` confirmed
 - Google Maps iframe src in `Contact.jsx` → placeholder coordinates, not real address
 - Team photo in `About.jsx` → placeholder text box with "Coming Soon"
 - About story copy → marked PLACEHOLDER, needs Vick's actual company story
