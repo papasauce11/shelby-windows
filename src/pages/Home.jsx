@@ -47,7 +47,7 @@ export default function Home() {
       <section className="relative min-h-[70vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden -mb-1">
         <div className="absolute inset-0 -bottom-2 bg-warm-100" />
         <img src={heroBg} alt="" className="absolute -inset-x-0 top-0 -bottom-4 w-full h-[calc(100%+16px)] object-cover object-[47%_center] sm:object-center" />
-        <div className="absolute -inset-x-0 top-0 -bottom-4 bg-black/25" />
+        <div className="absolute -inset-x-0 top-0 -bottom-4" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 70%, #f5f5f4 100%)' }} />
 
         <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 text-center">
           <h1 className="font-heading font-800 text-white text-3xl sm:text-5xl lg:text-7xl leading-tight [text-shadow:0_1px_4px_rgba(0,0,0,0.6),0_2px_10px_rgba(0,0,0,0.3)]">
