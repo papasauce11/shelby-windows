@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function CTASection({
-  heading = "Ready to start your project?",
+  heading = "Experience the Shelby Way",
   text = "Get in touch with the Shelby Windows & Doors team for a free, no-obligation consultation.",
   buttonText = "Contact Us",
   buttonLink = "/contact",
