@@ -53,7 +53,7 @@ export default function ProductDetail() {
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-3xl mx-auto">
           <div className="space-y-5 text-warm-600 text-base sm:text-lg leading-relaxed">
             {paragraphs.map((p, i) => (<p key={i}>{p}</p>))}
@@ -62,10 +62,10 @@ export default function ProductDetail() {
       </section>
 
       {product.collections && product.collections.length > 0 && (
-        <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
+        <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
           <div className="max-w-6xl mx-auto">
             <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block">Collections</span>
-            <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-12">Choose your style</h2>
+            <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-8 sm:mb-12">Choose your style</h2>
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
               {product.collections.map((collection, i) => (
                 <div key={i} className="group bg-white rounded-2xl overflow-hidden border border-warm-100 shadow-sm hover:border-teal-200 hover:shadow-xl transition-all duration-300">
@@ -86,7 +86,7 @@ export default function ProductDetail() {
       <section className={`py-12 sm:py-16 lg:py-24 px-5 sm:px-6 ${product.collections ? 'bg-white' : 'bg-warm-50'}`}>
         <div className="max-w-4xl mx-auto">
           <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block">Key Features</span>
-          <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-12">What makes {product.name.toLowerCase()} stand out</h2>
+          <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-8 sm:mb-12">What makes {product.name.toLowerCase()} stand out</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {product.features.map((feature, i) => (
               <div key={i} className="flex items-start gap-4 bg-white rounded-xl p-5 border border-warm-100">
@@ -101,7 +101,7 @@ export default function ProductDetail() {
       </section>
 
       {product.brochures && product.brochures.length > 0 && (
-        <section className="py-12 sm:py-16 lg:py-20 px-5 sm:px-6 bg-warm-50">
+        <section className="py-8 sm:py-16 lg:py-20 px-5 sm:px-6 bg-warm-50">
           <div className="max-w-4xl mx-auto">
             <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block">Resources</span>
             <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-8">Brochures &amp; catalogues</h2>
@@ -135,7 +135,7 @@ export default function ProductDetail() {
       )}
 
       {related.length > 0 && (
-        <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
+        <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-heading font-800 text-warm-900 mb-8">You may also like</h2>
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
@@ -149,7 +149,8 @@ export default function ProductDetail() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-heading font-800 text-white mb-6">Interested in {product.name.toLowerCase()}?</h2>
           <p className="text-teal-100 text-lg mb-10">Contact us for a free consultation. We will help you choose the right product for your home and provide a clear, detailed quote.</p>
-          <Link to="/contact" className="inline-block px-10 py-4 bg-white text-teal-800 font-semibold rounded-full hover:bg-warm-50 shadow-lg hover:shadow-xl transition-all text-lg">Get a Free Quote</Link>        </div>
+          <Link to="/contact" className="inline-block px-10 py-4 bg-white text-teal-800 font-semibold rounded-full hover:bg-warm-50 shadow-lg hover:shadow-xl transition-all text-lg">Get a Free Quote</Link>
+        </div>
       </section>
     </>
   );

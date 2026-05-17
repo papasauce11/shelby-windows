@@ -38,10 +38,10 @@ export default function OurWork() {
       </section>
 
       {/* Project grid — top row: 2 items, bottom row: 3 items */}
-      <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Top row — 2 large cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
             {projects.slice(0, 2).map((project, i) => (
               <a
                 key={i}
@@ -72,7 +72,7 @@ export default function OurWork() {
           </div>
 
           {/* Bottom row — 3 cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
             {projects.slice(2).map((project, i) => (
               <a
                 key={i + 2}
@@ -127,6 +127,7 @@ export default function OurWork() {
           </a>
         </div>
       </section>
+
 
       <CTASection
         heading="Have a project in mind?"

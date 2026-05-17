@@ -55,7 +55,7 @@ export default function Home() {
           <p className="mt-5 sm:mt-8 text-white text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed [text-shadow:0_1px_10px_rgba(0,0,0,0.7)]">
             Locally installed. Canadian-made. Every window and door we carry comes from manufacturers we trust — built for our winters, backed by real warranties.
           </p>
-          <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-xs sm:max-w-none mx-auto">
+          <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-sm sm:max-w-none mx-auto">
             <Link
               to="/contact"
               className="px-8 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
@@ -111,7 +111,7 @@ export default function Home() {
           <div className="flex items-end justify-between mb-6 sm:mb-12">
             <div>
               <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block animate-on-scroll">Our Windows</span>
-              <h2 className="text-3xl lg:text-4xl font-heading font-800 text-warm-900 animate-on-scroll">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-warm-900 animate-on-scroll">
                 The right window for every room
               </h2>
             </div>
@@ -146,7 +146,7 @@ export default function Home() {
           <div className="flex items-end justify-between mb-6 sm:mb-12">
             <div>
               <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block animate-on-scroll">Our Doors</span>
-              <h2 className="text-3xl lg:text-4xl font-heading font-800 text-warm-900 animate-on-scroll">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-warm-900 animate-on-scroll">
                 Make an entrance
               </h2>
             </div>
@@ -200,7 +200,7 @@ export default function Home() {
           <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-4">
             Proudly Canadian. Built for Canadian homes.
           </h2>
-          <p className="text-warm-500 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-warm-500 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Every product we carry is made in Canada — engineered for freeze-thaw cycles, high humidity, and everything our climate throws at a home. When you buy from Shelby, you're getting windows and doors that were designed with our winters in mind, not retrofitted from somewhere else.
           </p>
         </div>
@@ -221,7 +221,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <p className="text-warm-500 text-lg leading-relaxed mb-8">
+              <p className="text-warm-500 text-base sm:text-lg leading-relaxed mb-8">
                 We offer flexible financing options to make your window and door project a reality — no need to delay upgrades or compromise on quality. Affordable monthly payments, fast approvals, and no hidden fees.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -253,7 +253,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-14">
             <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block">Customer Reviews</span>
-            <h2 className="text-3xl lg:text-4xl font-heading font-800 text-warm-900">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-warm-900">
               What our customers say
             </h2>
           </div>

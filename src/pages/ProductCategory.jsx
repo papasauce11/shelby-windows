@@ -61,7 +61,7 @@ export default function ProductCategory() {
       </section>
 
       {/* Product grid */}
-      <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
             {products.map(product => (
@@ -70,6 +70,7 @@ export default function ProductCategory() {
           </div>
         </div>
       </section>
+
 
       <CTASection
         heading={`Need help choosing the right ${isDoors ? 'doors' : 'windows'}?`}
