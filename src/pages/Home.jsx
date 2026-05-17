@@ -107,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Motto */}
-      <div className="pt-6 pb-2 sm:pt-10 sm:pb-4 text-center bg-white">
+      <div className="pt-1 pb-0 sm:pt-5 sm:pb-0 text-center bg-white">
         <p className="text-2xl sm:text-4xl text-warm-400 italic font-light tracking-wide" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
           Experience the Shelby Way
         </p>
