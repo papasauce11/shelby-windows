@@ -1,0 +1,1 @@
+var e=`/assets/1-BMJgToUi.png`;export{e as t};

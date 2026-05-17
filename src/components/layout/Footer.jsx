@@ -41,7 +41,7 @@ export default function Footer() {
           <div className="lg:col-span-9 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-8">
 
             {/* Pages */}
-            <div className="pl-[30px]">
+            <div className="sm:pl-[30px]">
               <h4 className="font-heading text-xs font-700 uppercase tracking-widest text-white mb-3">Pages</h4>
               <ul className="space-y-1.5">
                 {[
@@ -133,3 +133,4 @@ export default function Footer() {
     </footer>
   );
 }
+

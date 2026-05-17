@@ -66,7 +66,7 @@ export default function SupplierDetail() {
   return (
     <>
       {/* Themed hero header */}
-      <section className={`relative overflow-hidden border-b ${t.heroBorder} pt-28 sm:pt-32 pb-12 sm:pb-16 px-5 sm:px-6`}>
+      <section className={`relative overflow-hidden border-b ${t.heroBorder} pt-24 sm:pt-32 pb-10 sm:pb-16 px-5 sm:px-6`}>
         {/* Faded product imagery background */}
         {heroImg && (
           <>
@@ -125,7 +125,7 @@ export default function SupplierDetail() {
                 {supplier.shortName} products we carry
               </h2>
             </div>
-            <div className={`grid grid-cols-1 sm:grid-cols-2 ${featured.length >= 4 ? 'lg:grid-cols-4' : featured.length === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-5 sm:gap-6`}>
+            <div className={`grid grid-cols-2 ${featured.length >= 4 ? 'lg:grid-cols-4' : featured.length === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-3 sm:gap-6`}>
               {featured.map(product => (
                 <ProductCard key={product.slug} product={product} />
               ))}

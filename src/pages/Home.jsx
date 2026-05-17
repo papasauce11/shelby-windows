@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden">
         <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-90" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
 
@@ -73,42 +73,42 @@ export default function Home() {
       </section>
 
       {/* Trust Strip */}
-      <section className="py-10 sm:py-14 px-5 sm:px-6 bg-warm-100 border-b border-warm-200">
+      <section className="py-8 sm:py-14 px-5 sm:px-6 bg-warm-100 border-b border-warm-200">
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {[
             { icon: (
-                <svg className="w-9 h-9 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-7 h-7 sm:w-9 sm:h-9 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               ), label: "Fast, Clean Installs" },
             { icon: (
-                <svg className="w-9 h-9 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-7 h-7 sm:w-9 sm:h-9 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
               ), label: "Free Measurements" },
             { icon: (
-                <svg className="w-9 h-9 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-7 h-7 sm:w-9 sm:h-9 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               ), label: "Manufacturer-Backed Warranty" },
             { icon: (
-                <svg className="w-9 h-9 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-7 h-7 sm:w-9 sm:h-9 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
                 </svg>
               ), label: "Hundreds of Styles" },
           ].map(({ icon, label }) => (
-            <div key={label} className="bg-white rounded-xl border border-warm-200 p-5 sm:p-6 text-center shadow-sm">
-              <div className="flex justify-center mb-3">{icon}</div>
-              <p className="text-sm sm:text-base font-heading font-700 text-warm-900">{label}</p>
+            <div key={label} className="bg-white rounded-xl border border-warm-200 p-3 sm:p-6 text-center shadow-sm">
+              <div className="flex justify-center mb-2 sm:mb-3">{icon}</div>
+              <p className="text-xs sm:text-base font-heading font-700 text-warm-900">{label}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Windows Preview */}
-      <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-8 sm:mb-12">
+          <div className="flex items-end justify-between mb-6 sm:mb-12">
             <div>
               <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block animate-on-scroll">Our Windows</span>
               <h2 className="text-3xl lg:text-4xl font-heading font-800 text-warm-900 animate-on-scroll">
@@ -126,7 +126,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {featuredWindows.map(product => (
               <ProductCard key={product.slug} product={product} />
             ))}
@@ -141,9 +141,9 @@ export default function Home() {
       </section>
 
       {/* Doors Preview */}
-      <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-8 sm:mb-12">
+          <div className="flex items-end justify-between mb-6 sm:mb-12">
             <div>
               <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block animate-on-scroll">Our Doors</span>
               <h2 className="text-3xl lg:text-4xl font-heading font-800 text-warm-900 animate-on-scroll">
@@ -161,7 +161,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-6">
             {featuredDoors.map(product => (
               <ProductCard key={product.slug} product={product} />
             ))}
@@ -194,9 +194,9 @@ export default function Home() {
       </section>
 
       {/* Proudly Canadian */}
-      <section className="py-10 sm:py-14 lg:py-20 px-5 sm:px-6 bg-warm-50">
+      <section className="py-8 sm:py-14 lg:py-20 px-5 sm:px-6 bg-warm-50">
         <div className="max-w-4xl mx-auto text-center">
-          <img src={proudlyCanadianBadge} alt="Proudly Canadian - Canadian Products" className="w-72 h-72 mx-auto mb-6" />
+          <img src={proudlyCanadianBadge} alt="Proudly Canadian - Canadian Products" className="w-48 h-48 sm:w-72 sm:h-72 mx-auto mb-6" />
           <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-4">
             Proudly Canadian. Built for Canadian homes.
           </h2>
@@ -207,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* Financing */}
-      <section id="financing" className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white scroll-mt-24">
+      <section id="financing" className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
@@ -249,16 +249,16 @@ export default function Home() {
       </section>
 
       {/* Reviews — Real Google Reviews (5.0 / 20 reviews) */}
-      <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-8 sm:mb-14">
             <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block">Customer Reviews</span>
             <h2 className="text-3xl lg:text-4xl font-heading font-800 text-warm-900">
               What our customers say
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
             {[
               {
                 name: "Herbert Lemcke",
@@ -276,7 +276,7 @@ export default function Home() {
                 text: "Our company has worked with Vick for 4 years and we can confidently say he stands out in the window and door industry. As professional installers, we value high standards and attention to detail -- qualities Vick brings to every project. His customer service is exceptional. Vick goes above and beyond for clients, treating every project with care and always aiming to exceed expectations. We highly recommend Vick to anyone wanting top-quality windows and doors."
               }
             ].map(({ name, time, text }) => (
-              <div key={name} className="bg-white rounded-2xl p-8 border border-warm-100 shadow-sm flex flex-col gap-4">
+              <div key={name} className="bg-white rounded-2xl p-5 sm:p-8 border border-warm-100 shadow-sm flex flex-col gap-3 sm:gap-4">
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, s) => (
                     <svg key={s} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -310,9 +310,9 @@ export default function Home() {
       </section>
 
       {/* Instagram Feed */}
-      <section className="py-10 sm:py-14 lg:py-20 px-5 sm:px-6 bg-white">
+      <section className="py-8 sm:py-14 lg:py-20 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-end justify-between mb-8">
+          <div className="flex items-end justify-between mb-6 sm:mb-8">
             <div>
               <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 block">Follow Along</span>
               <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900">

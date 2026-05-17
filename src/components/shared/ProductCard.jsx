@@ -31,16 +31,16 @@ export default function ProductCard({ product }) {
           </>
         )}
       </div>
-      <div className="p-6">
-        <h3 className="font-heading text-lg font-700 text-warm-900 group-hover:text-teal-700 transition-colors">
+      <div className="p-3 sm:p-6">
+        <h3 className="font-heading text-sm sm:text-lg font-700 text-warm-900 group-hover:text-teal-700 transition-colors">
           {product.name}
         </h3>
-        <p className="mt-2 text-sm text-warm-500 leading-relaxed line-clamp-2">
+        <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-warm-500 leading-relaxed line-clamp-2">
           {product.shortDescription}
         </p>
-        <div className="mt-4 flex items-center text-teal-700 text-sm font-medium">
+        <div className="mt-2 sm:mt-4 flex items-center text-teal-700 text-xs sm:text-sm font-medium">
           Learn more
-          <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </div>

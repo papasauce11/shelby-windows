@@ -81,6 +81,7 @@
 
 ### `ProductCard.jsx`
 - Shows actual product image when `product.image` exists; falls back to placeholder gradient
+- Supports `imageContain` flag: uses `object-contain p-4 bg-white` for cutout/diagram images
 - Placeholder image area: teal-50→warm-100 gradient, product name centered
 - Base: `shadow-sm border border-warm-100`
 - Hover: `border-teal-200 shadow-xl`, scale image 105%
@@ -109,6 +110,7 @@
 ### `products.js`
 - `products.windows[]` and `products.doors[]`
 - Each product: `slug`, `name`, `category`, `shortDescription`, `description`, `features[]`, `suppliers[]`, `relatedProducts[]`
+- Optional image flags: `imageContain` (bool, for cutout images), `imagePosition` (CSS object-position string for crop control)
 - Door products with enriched data have: `heroImage`, `image`, `collections[]`, `brochures[]`
 - Entry door images are external URLs from EntryGuard's CDN (permission granted)
 - Sliding patio + terrace door images are external URLs from Golden Windows' CDN (permission granted)
@@ -163,8 +165,8 @@ Golden Windows door products enriched with images + collections + brochures:
 - Trust strip: 4 icons — "Fast, Clean Installs" / "Free In-Home Measure" / "Manufacturer Backed" / "Hundreds of Styles"
 - Windows preview: 4 cards, Browse all link
 - Doors preview: all 5 door cards, Browse all link
-- Wave dividers between sections (hardcoded fill colors)
-- Supplier strip: all 3 suppliers
+- Gradient fade dividers between sections (replaced wave SVGs)
+- Supplier strip: all 3 suppliers, no description paragraph, reduced top padding (`pt-2 sm:pt-4`), centered
 - Proudly Canadian: large badge + updated human-sounding copy
 - Financing: photo left (with text-shadow overlay), feature cards right (white bg, shadow-sm)
 - Reviews: 3 real Google reviews (Herbert Lemcke, Petra Hamann, Nexus 303) with star ratings + "Read more on Google" link
@@ -175,7 +177,7 @@ Golden Windows door products enriched with images + collections + brochures:
 - No HeroBanner
 - Story section: text left / photo right (3.png, aspect-[4/5])
 - Floating Canadian badge: `absolute -bottom-8 -left-8 hidden lg:block w-28 h-28`
-- Values: 4 cards on `bg-warm-50`, hover:border-teal-200
+- Values: 3 cards (Canadian Products, Quality Installation, Full-Service Experience) on `bg-warm-50`, no icons, `sm:grid-cols-3 max-w-5xl`
 - Team: **placeholder box** — needs real team photo from Vick
 - Team copy: placeholder, needs Vick's actual bio/quote
 - Story copy: marked PLACEHOLDER, needs Vick's actual company story
@@ -204,23 +206,35 @@ Golden Windows door products enriched with images + collections + brochures:
 - Windows: teal-50 strip, teal-700 stat; Doors: warm-50 strip, warm-800 stat
 
 ### `ProductDetail.jsx`
-- Split hero: image placeholder left | content right
-- Description, Features grid, Suppliers, Related products, CTA
+- Split hero: image left | content right
+- Supports `imageContain` flag (object-contain + p-6 for cutout/diagram images like custom-shape, tilt)
+- Supports `imagePosition` prop (CSS object-position for crop control, e.g. fiberglass-entry-doors uses `65% center`)
+- Collection cards use portrait aspect ratio `aspect-[3/4]`
+- Description, Features grid, Brochures (if present), Suppliers, Related products, CTA
 
 ### `SupplierDetail.jsx`
-- Custom editorial header (teal-50 bg, logo in white box)
-- Description, products grid on warm-50
+- Hero: full-bleed product imagery background + 10% themed color tint overlay
+- All hero text is white with `[text-shadow]` + container-level `[filter:drop-shadow()]`
+- Tagline: plain white text (no badge/fill background)
+- Visit button: white bg with themed border/text colors
+- Vinyl-Bilt hero uses local bay window image (not their Adobe Stock URL)
+- 3 theme variants: amber (Golden Windows), teal (Vinyl Bilt), navy (Entryguard)
+- Featured products grid, CTA section
 
 ---
 
 ## Visual Polish (completed)
-- ProductCard: `shadow-sm` base, `shadow-xl` hover
+- ProductCard: `shadow-sm` base, `shadow-xl` hover; supports `imageContain` for cutout images
 - HeroBanner: gradient overlay (not flat), text-shadow on title + subtitle
-- Home hero h1: `[text-shadow:0_2px_20px_rgba(0,0,0,0.5)]`
+- Home hero: `opacity-90` on hero image, `[text-shadow:0_2px_20px_rgba(0,0,0,0.5)]` on h1
 - CTASection: text-shadow on heading + body text
 - Financing overlay text: text-shadow on heading + label
 - Financing feature cards: `bg-white shadow-sm hover:shadow-md` (was flat warm-50)
 - All hero copy and trust strip labels rewritten (non-AI sounding)
+- Supplier pages: full-bleed hero imagery with 10% themed tint, white text + drop shadows
+- About values: 3 cards (no icons), clean `sm:grid-cols-3` layout
+- Gradient fade dividers replaced wave SVGs site-wide
+- Sticky CTA bar: mobile only
 
 ---
 
@@ -232,6 +246,7 @@ Golden Windows door products enriched with images + collections + brochures:
 | 2 | Polish + Depth Pass | 🟡 Visual done — copy rewrites remain |
 | 3 | Our Work Page Rebuild (hero + IG grid) | ✅ Done — 5 IG projects wired up |
 | 4 | Content Integration (product images, reviews, team photo, maps) | 🟡 Mostly done — team photo + maps remain |
+| 4b | Mobile Optimization Pass | 🟡 Next up |
 | 5 | Form Backend (Formspree/EmailJS) | 🟢 Can start now |
 | 6 | QA + SEO (meta tags, 404, OG tags, favicon) | 🟢 Can start now |
 | 7 | Launch (shelbywindows.ca, DNS, SSL, Search Console) | ⏳ Last step |

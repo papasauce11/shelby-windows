@@ -1,0 +1,1 @@
+var e=`/assets/6-B-scthSG.png`;export{e as t};
