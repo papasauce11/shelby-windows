@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap');
 
 @theme {
-  --color-teal-50: #f0faf8;
-  --color-teal-100: #d0f0ea;
-  --color-teal-200: #9ee0d4;
-  --color-teal-300: #5cc7b5;
-  --color-teal-400: #33ad9c;
-  --color-teal-500: #219688;
-  --color-teal-600: #148073;
-  --color-teal-700: #136e63;
-  --color-teal-800: #155a52;
-  --color-teal-900: #154943;
+  --color-teal-50: #f0fbf9;
+  --color-teal-100: #d5f3ed;
+  --color-teal-200: #a8e5d9;
+  --color-teal-300: #6bd4c2;
+  --color-teal-400: #3bbfac;
+  --color-teal-500: #27a594;
+  --color-teal-600: #1a9182;
+  --color-teal-700: #187b6f;
+  --color-teal-800: #18645b;
+  --color-teal-900: #18524a;
 
   --color-warm-50: #fafaf9;
   --color-warm-75: #f7f7f6;

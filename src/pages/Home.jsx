@@ -59,13 +59,13 @@ export default function Home() {
           <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
               to="/contact"
-              className="px-5 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
+              className="min-w-[240px] sm:min-w-0 px-5 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
             >
               Get a Free Quote
             </Link>
             <Link
               to="/contact?reason=showroom"
-              className="px-5 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
+              className="min-w-[240px] sm:min-w-0 px-5 py-3.5 sm:px-10 sm:py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-500 shadow-lg hover:shadow-xl transition-all text-base sm:text-lg text-center"
             >
               Book a Showroom Visit
             </Link>
