@@ -287,7 +287,7 @@ Golden Windows door products enriched with images + collections + brochures:
 ---
 
 ## Known Issues / Placeholders
-- Postal code in `navigation.js` → `L4K 2C8` — needs confirmation
+- ~~Postal code~~ → `L4K 2C8` confirmed ✅
 - Google Maps iframe src in `Contact.jsx` → placeholder coordinates, not real address
 - Team photo in `About.jsx` → placeholder text box with "Coming Soon"
 - About story copy → marked PLACEHOLDER, needs Vick's actual company story

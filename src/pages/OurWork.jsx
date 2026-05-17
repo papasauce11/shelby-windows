@@ -25,7 +25,7 @@ export default function OurWork() {
       />
 
       {/* Instagram link */}
-      <div className="py-4 sm:py-6 text-center bg-white">
+      <div className="py-2 sm:py-3 text-center bg-white">
         <a
           href="https://www.instagram.com/shelbywindowsanddoors/"
           target="_blank"
@@ -38,7 +38,7 @@ export default function OurWork() {
       </div>
 
       {/* Project grid — top row: 2 items, bottom row: 3 items */}
-      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
+      <section className="py-4 sm:py-8 lg:py-12 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Top row — 2 large cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
