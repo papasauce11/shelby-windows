@@ -4,6 +4,7 @@ import { getProductBySlug } from '../data/products';
 import SupplierLogo from '../components/shared/SupplierLogo';
 import ProductCard from '../components/shared/ProductCard';
 import CTASection from '../components/shared/CTASection';
+import vinylBiltHero from '../assets/windows/bay window 2.png';
 
 const themes = {
   amber: {
@@ -60,23 +61,24 @@ export default function SupplierDetail() {
   const featured = (supplier.featuredProducts || supplier.productsOffered)
     .map(s => getProductBySlug(s))
     .filter(Boolean);
+  const heroImg = supplier.slug === 'vinyl-bilt' ? vinylBiltHero : supplier.heroImage;
 
   return (
     <>
       {/* Themed hero header */}
       <section className={`relative overflow-hidden border-b ${t.heroBorder} pt-28 sm:pt-32 pb-12 sm:pb-16 px-5 sm:px-6`}>
         {/* Faded product imagery background */}
-        {supplier.heroImage && (
+        {heroImg && (
           <>
             <img
-              src={supplier.heroImage}
+              src={heroImg}
               alt=""
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className={`absolute inset-0 ${t.heroBg} opacity-10`} />
           </>
         )}
-        {!supplier.heroImage && <div className={`absolute inset-0 ${t.heroBg}`} />}
+        {!heroImg && <div className={`absolute inset-0 ${t.heroBg}`} />}
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           {/* Logo — no box, large */}
