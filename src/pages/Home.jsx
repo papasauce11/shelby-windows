@@ -48,7 +48,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 text-center">
-          <h1 className="font-heading font-800 text-white text-3xl sm:text-5xl lg:text-7xl leading-tight [text-shadow:0_2px_20px_rgba(0,0,0,0.5)]">
+          <h1 className="font-heading font-800 text-white text-3xl sm:text-5xl lg:text-7xl leading-tight [text-shadow:0_1px_4px_rgba(0,0,0,0.6),0_2px_10px_rgba(0,0,0,0.3)]">
             Windows & Doors<br />
             <span className="text-teal-400">Built for Canada</span>
           </h1>

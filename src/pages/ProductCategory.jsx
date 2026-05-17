@@ -53,9 +53,9 @@ export default function ProductCategory() {
               {meta.intro}
             </p>
           </div>
-          <div className={`flex-shrink-0 rounded-xl border px-6 py-4 text-center bg-white self-start lg:self-auto ${isDoors ? 'border-warm-200' : 'border-teal-200'}`}>
-            <span className={`font-heading font-800 text-3xl sm:text-4xl block ${isDoors ? 'text-warm-800' : 'text-teal-700'}`}>{meta.stat.value}</span>
-            <span className="text-warm-500 text-xs mt-1 block">{meta.stat.label}</span>
+          <div className="flex-shrink-0 px-8 py-5 text-center self-start lg:self-auto">
+            <span className={`font-heading font-800 text-5xl sm:text-6xl block leading-none ${isDoors ? 'text-warm-800' : 'text-teal-700'}`}>{meta.stat.value}</span>
+            <span className="text-warm-500 text-sm mt-2 block font-medium tracking-wide">{meta.stat.label}</span>
           </div>
         </div>
       </section>
