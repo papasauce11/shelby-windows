@@ -1,17 +1,17 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 @theme {
-  --color-teal-50: #f0fdfa;
-  --color-teal-100: #ccfbf1;
-  --color-teal-200: #99f6e4;
-  --color-teal-300: #5eead4;
-  --color-teal-400: #2dd4bf;
-  --color-teal-500: #14b8a6;
-  --color-teal-600: #0d9488;
-  --color-teal-700: #0f766e;
-  --color-teal-800: #115e59;
-  --color-teal-900: #134e4a;
+  --color-teal-50: #eef8f6;
+  --color-teal-100: #c8ede7;
+  --color-teal-200: #8fd8cc;
+  --color-teal-300: #4fb8a8;
+  --color-teal-400: #2a9e8e;
+  --color-teal-500: #1a8a7a;
+  --color-teal-600: #0c7466;
+  --color-teal-700: #0b6358;
+  --color-teal-800: #0e4f47;
+  --color-teal-900: #103e38;
 
   --color-warm-50: #fafaf9;
   --color-warm-100: #f5f5f4;
@@ -24,6 +24,7 @@
   --color-warm-800: #292524;
   --color-warm-900: #1c1917;
 
+  --font-display: 'DM Serif Display', serif;
   --font-heading: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'DM Sans', sans-serif;
 }
@@ -41,7 +42,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.15;

@@ -40,7 +40,7 @@ export default function Layout({ children }) {
       <Footer />
 
       {/* Sticky CTA bar */}
-      <div className={`fixed bottom-0 left-0 right-0 z-40 transition-transform duration-400 ${showSticky ? 'translate-y-0' : 'translate-y-full'}`}>
+      <div className={`fixed bottom-0 left-0 right-0 z-40 transition-transform duration-400 lg:hidden ${showSticky ? 'translate-y-0' : 'translate-y-full'}`}>
         <div className="bg-white border-t border-warm-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] py-3 px-6">
           <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
             <p className="text-sm text-warm-600 hidden sm:block shrink-0">Free measurements across the GTA</p>

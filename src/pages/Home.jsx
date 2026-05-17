@@ -175,8 +175,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Wave divider */}
-      <div className="bg-warm-50"><svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block -mb-px"><path d="M0 0C240 32 480 48 720 48s480-16 720-48H0z" fill="#ffffff"/></svg></div>
+      {/* Gradient fade divider */}
+      <div className="h-16 bg-gradient-to-b from-white to-white/0" />
 
       {/* Supplier Strip */}
       <section className="py-8 sm:py-10 px-5 sm:px-6 bg-white">
