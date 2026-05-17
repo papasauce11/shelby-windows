@@ -114,7 +114,7 @@ export default function Home() {
       </div>
 
       {/* Windows Preview */}
-      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
+      <section className="pt-0.5 pb-8 sm:pt-[34px] sm:pb-16 lg:pt-[66px] lg:pb-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-6 sm:mb-12">
             <div>
