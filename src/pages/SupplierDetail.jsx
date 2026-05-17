@@ -75,12 +75,12 @@ export default function SupplierDetail() {
               alt=""
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className={`absolute inset-0 ${t.heroBg} opacity-10`} />
           </>
         )}
         {!heroImg && <div className={`absolute inset-0 ${t.heroBg}`} />}
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
+        <div className="relative z-10 max-w-4xl mx-auto text-center [filter:drop-shadow(0_2px_8px_rgba(0,0,0,0.4))]">
           {/* Logo — no box, large */}
           <div className="mb-6">
             <SupplierLogo supplier={supplier} size={supplier.slug === 'golden-windows' ? 'heroGolden' : 'hero'} linkable={false} />
