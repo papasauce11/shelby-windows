@@ -46,7 +46,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative min-h-[70vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden -mb-px">
         <img src={heroBg} alt="" className="absolute -inset-x-0 top-0 -bottom-4 w-full h-[calc(100%+16px)] object-cover object-center" />
-        <div className="absolute -inset-x-0 top-0 -bottom-4 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #f5f5f4 0%, rgba(0,0,0,0.55) 8%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.2) 100%)" }} />
 
         <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 text-center">
           <h1 className="font-heading font-800 text-white text-3xl sm:text-5xl lg:text-7xl leading-tight [text-shadow:0_1px_4px_rgba(0,0,0,0.6),0_2px_10px_rgba(0,0,0,0.3)]">
@@ -108,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Windows Preview */}
-      <section className="pt-0.5 pb-8 sm:pt-[34px] sm:pb-16 lg:pt-[66px] lg:pb-24 px-5 sm:px-6 bg-white">
+      <section className="pt-8 pb-8 sm:pt-[34px] sm:pb-16 lg:pt-[66px] lg:pb-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-6 sm:mb-12">
             <div>
