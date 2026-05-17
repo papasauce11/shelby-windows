@@ -39,8 +39,8 @@ export default function Header() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-1">
-              <img src={shelbyBranding} alt="" className="h-[60px] sm:h-[66px] w-auto" />
-              <img src={shelbyLogo} alt="Shelby Windows & Doors" className="h-[60px] sm:h-[66px] w-auto" />
+              <img src={shelbyBranding} alt="" className="h-[75px] sm:h-[66px] w-auto" />
+              <img src={shelbyLogo} alt="Shelby Windows & Doors" className="h-[75px] sm:h-[66px] w-auto" />
             </Link>
 
             {/* Desktop Nav */}
@@ -160,16 +160,16 @@ export default function Header() {
                       </svg>
                     </button>
                     {mobileAccordion === 'products' && (
-                      <div className="pl-4 space-y-4 mt-2 mb-4">
+                      <div className="pl-4 space-y-2 mt-1 mb-3">
                         {Object.values(productsData.children).map((section) => (
                           <div key={section.label}>
-                            <Link to={section.path} className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 block mb-2 px-4">
+                            <Link to={section.path} className="text-sm font-heading font-800 uppercase tracking-widest text-teal-600 block mb-1 px-4">
                               {section.label}
                             </Link>
-                            <ul className="space-y-1">
+                            <ul className="space-y-0">
                               {section.items.map((sub) => (
                                 <li key={sub.path}>
-                                  <Link to={sub.path} className="block py-2 px-4 text-base text-warm-600 hover:text-teal-700 hover:bg-teal-50 rounded-lg min-h-[48px] flex items-center">
+                                  <Link to={sub.path} className="block py-1 px-4 text-base text-warm-600 hover:text-teal-700 hover:bg-teal-50 rounded-lg min-h-[40px] flex items-center">
                                     {sub.label}
                                   </Link>
                                 </li>
