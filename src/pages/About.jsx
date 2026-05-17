@@ -42,11 +42,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Divider: story → values */}
-      <div className="h-10 sm:h-16 bg-gradient-to-b from-white to-warm-50" />
-
       {/* Values — light background */}
-      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6 sm:mb-16">
             <span className="text-xs sm:text-base font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 sm:mb-3 block">What Sets Us Apart</span>
@@ -77,14 +74,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* Divider: values → team */}
-      <div className="h-10 sm:h-16 bg-gradient-to-b from-warm-50 to-white" />
-
       {/* Team — photo right, text left */}
       <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-16 items-center">
           {/* Photo */}
-          <div className="aspect-[16/9] sm:aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-warm-200 bg-warm-50 order-2 lg:order-1 flex items-center justify-center">
+          <div className="aspect-[16/9] sm:aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-warm-200 bg-warm-100 order-2 lg:order-1 flex items-center justify-center">
             <span className="text-warm-400 text-xs sm:text-sm">Team Photo — Coming Soon</span>
           </div>
 

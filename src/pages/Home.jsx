@@ -106,9 +106,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Divider: trust → windows */}
-      <div className="h-10 sm:h-16 bg-gradient-to-b from-warm-100 to-white" />
-
       {/* Windows Preview */}
       <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -144,11 +141,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Divider: windows → doors */}
-      <div className="h-10 sm:h-16 bg-gradient-to-b from-white to-warm-50" />
-
       {/* Doors Preview */}
-      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-100">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-6 sm:mb-12">
             <div>
@@ -182,9 +176,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Divider: doors → suppliers */}
-      <div className="h-10 sm:h-16 bg-gradient-to-b from-warm-50 to-white" />
-
       {/* Supplier Strip */}
       <section className="pt-2 sm:pt-4 pb-13 sm:pb-15 px-5 sm:px-6 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col items-center justify-center text-center">
@@ -200,11 +191,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Divider: suppliers → canadian */}
-      <div className="h-10 sm:h-16 bg-gradient-to-b from-white to-warm-50" />
-
       {/* Proudly Canadian */}
-      <section className="py-8 sm:py-14 lg:py-20 px-5 sm:px-6 bg-warm-50">
+      <section className="py-8 sm:py-14 lg:py-20 px-5 sm:px-6 bg-warm-100">
         <div className="max-w-4xl mx-auto text-center">
           <img src={proudlyCanadianBadge} alt="Proudly Canadian - Canadian Products" className="w-48 h-48 sm:w-72 sm:h-72 mx-auto mb-6" />
           <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-4">
@@ -215,9 +203,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
-      {/* Divider: canadian → financing */}
-      <div className="h-10 sm:h-16 bg-gradient-to-b from-warm-50 to-white" />
 
       {/* Financing */}
       <section id="financing" className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white scroll-mt-24">
@@ -263,11 +248,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Divider: financing → reviews */}
-      <div className="h-10 sm:h-16 bg-gradient-to-b from-white to-warm-50" />
-
       {/* Reviews — Real Google Reviews (5.0 / 20 reviews) */}
-      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-14">
             <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block">Customer Reviews</span>
@@ -334,9 +316,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Divider: reviews → instagram */}
-      <div className="h-10 sm:h-16 bg-gradient-to-b from-warm-50 to-white" />
 
       {/* Instagram Feed */}
       <section className="py-8 sm:py-14 lg:py-20 px-5 sm:px-6 bg-white">
