@@ -8,23 +8,22 @@ export default function About() {
     <>
 
       {/* Story — text left, photo right */}
-      <section className="pt-8 sm:pt-12 pb-12 sm:pb-16 lg:pb-24 px-5 sm:px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <section className="pt-6 sm:pt-12 pb-8 sm:pb-16 lg:pb-24 px-5 sm:px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           {/* Text */}
           <div>
-            <span className="text-sm sm:text-base font-heading font-700 uppercase tracking-widest text-teal-600 mb-4 block">Our Story</span>
-            <h2 className="text-3xl lg:text-4xl font-heading font-800 text-warm-900 mb-8 leading-tight">
-              Built on craftsmanship and trust
+            <span className="text-xs sm:text-base font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 sm:mb-4 block">Our Story</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-warm-900 mb-4 sm:mb-8 leading-tight">
+              Built on craftsmanship<br className="sm:hidden" /> and trust
             </h2>
-            {/* PLACEHOLDER — update with Vick's actual company story */}
-            <div className="space-y-5 text-warm-600 text-lg leading-relaxed">
+            <div className="space-y-3 sm:space-y-5 text-warm-600 text-sm sm:text-lg leading-relaxed">
               <p>
-                Shelby Windows &amp; Doors Inc. was founded with a belief:<br />homeowners deserve access to high-quality windows and doors, installed by people who take pride in their work, at a price that makes sense.
+                Shelby Windows & Doors Inc. was founded with a belief: homeowners deserve access to high-quality windows and doors, installed by people who take pride in their work, at a price that makes sense.
               </p>
               <p>
-                We partner exclusively with established Canadian manufacturers to bring our customers products that are designed, engineered, and built for the demands of our climate. Every window and door we install is backed by the quality assurance of its manufacturer and the care of our installation team.
+                We partner exclusively with established Canadian manufacturers to bring our customers products designed, engineered, and built for the demands of our climate.
               </p>
-              <p>
+              <p className="hidden sm:block">
                 Our approach is simple. We listen to what you need, recommend the products that fit your home and your budget, and handle the full installation from start to finish. No runaround, no surprises.
               </p>
             </div>
@@ -32,7 +31,7 @@ export default function About() {
 
           {/* Photo */}
           <div className="relative">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+            <div className="aspect-[4/3] sm:aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl">
               <img src={storyImg} alt="Shelby Windows installation" className="w-full h-full object-cover" />
             </div>
             {/* Floating Canadian badge */}
@@ -43,15 +42,15 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values — light background, numbered cards */}
-      <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
+      {/* Values — light background */}
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-warm-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-sm sm:text-base font-heading font-700 uppercase tracking-widest text-teal-600 mb-3 block">What Sets Us Apart</span>
-            <h2 className="text-3xl lg:text-4xl font-heading font-800 text-warm-900">Why homeowners choose Shelby</h2>
+          <div className="text-center mb-6 sm:mb-16">
+            <span className="text-xs sm:text-base font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 sm:mb-3 block">What Sets Us Apart</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-warm-900">Why homeowners choose Shelby</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 max-w-5xl mx-auto">
             {[
               {
                 title: "Canadian Products",
@@ -66,9 +65,9 @@ export default function About() {
                 description: "From the initial consultation to the final walkthrough, you deal with one company. We manage every step so you don't have to."
               }
             ].map((value) => (
-              <div key={value.title} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all">
-                <h3 className="font-heading font-700 text-warm-900 text-lg mb-3">{value.title}</h3>
-                <p className="text-warm-500 text-base leading-relaxed">{value.description}</p>
+              <div key={value.title} className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-8 shadow-sm hover:shadow-lg transition-all">
+                <h3 className="font-heading font-700 text-warm-900 text-sm sm:text-lg mb-1 sm:mb-3">{value.title}</h3>
+                <p className="text-warm-500 text-xs sm:text-base leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -76,21 +75,20 @@ export default function About() {
       </section>
 
       {/* Team — photo right, text left */}
-      <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-16 items-center">
           {/* Photo */}
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-warm-200 bg-warm-50 order-2 lg:order-1 flex items-center justify-center">
-            <span className="text-warm-400 text-sm">Team Photo — Coming Soon</span>
+          <div className="aspect-[16/9] sm:aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-warm-200 bg-warm-50 order-2 lg:order-1 flex items-center justify-center">
+            <span className="text-warm-400 text-xs sm:text-sm">Team Photo — Coming Soon</span>
           </div>
 
           {/* Text */}
           <div className="order-1 lg:order-2">
-            <span className="text-sm sm:text-base font-heading font-700 uppercase tracking-widest text-teal-600 mb-4 block">Our Team</span>
-            <h2 className="text-3xl lg:text-4xl font-heading font-800 text-warm-900 mb-6 leading-tight">
+            <span className="text-xs sm:text-base font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 sm:mb-4 block">Our Team</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-warm-900 mb-3 sm:mb-6 leading-tight">
               The people behind the work
             </h2>
-            <p className="text-warm-600 text-lg leading-relaxed">
-              {/* PLACEHOLDER — add team bio or quote from Vick here */}
+            <p className="text-warm-600 text-sm sm:text-lg leading-relaxed">
               Our team brings together years of hands-on installation experience and a genuine commitment to doing the job right. We show up on time, keep your home clean, and don't leave until you're satisfied with the result.
             </p>
           </div>
