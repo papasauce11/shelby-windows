@@ -39,8 +39,8 @@ export default function Header() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-1">
-              <img src={shelbyBranding} alt="" className="h-[48px] sm:h-[66px] w-auto" />
-              <img src={shelbyLogo} alt="Shelby Windows & Doors" className="h-[48px] sm:h-[66px] w-auto" />
+              <img src={shelbyBranding} alt="" className="h-[60px] sm:h-[66px] w-auto" />
+              <img src={shelbyLogo} alt="Shelby Windows & Doors" className="h-[60px] sm:h-[66px] w-auto" />
             </Link>
 
             {/* Desktop Nav */}
