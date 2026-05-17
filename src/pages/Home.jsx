@@ -179,7 +179,7 @@ export default function Home() {
       <div className="h-16 bg-gradient-to-b from-white to-white/0" />
 
       {/* Supplier Strip */}
-      <section className="pt-2 sm:pt-4 pb-8 sm:pb-10 px-5 sm:px-6 bg-white">
+      <section className="pt-2 sm:pt-4 pb-13 sm:pb-15 px-5 sm:px-6 bg-white">
         <div className="max-w-5xl mx-auto flex flex-col items-center justify-center text-center">
           <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 block">Our Trusted Suppliers</span>
           <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-6">
