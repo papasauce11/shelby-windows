@@ -35,12 +35,9 @@ export default function Header() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <Link to="/" className="flex flex-col ml-[10px] sm:ml-0">
-              <div className="flex items-center gap-1">
-                <img src={shelbyBranding} alt="" className="h-[75px] sm:h-[66px] w-auto" />
-                <img src={shelbyLogo} alt="Shelby Windows & Doors" className="h-[75px] sm:h-[66px] w-auto" />
-              </div>
-              <span className="hidden sm:block text-[10px] tracking-[0.2em] uppercase text-warm-400 font-medium -mt-3 ml-1">Experience the Shelby Way</span>
+            <Link to="/" className="flex items-center gap-1 ml-[10px] sm:ml-0">
+              <img src={shelbyBranding} alt="" className="h-[75px] sm:h-[66px] w-auto" />
+              <img src={shelbyLogo} alt="Shelby Windows & Doors" className="h-[75px] sm:h-[66px] w-auto" />
             </Link>
 
             <nav className="hidden lg:flex items-center gap-1">

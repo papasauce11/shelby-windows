@@ -388,6 +388,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CTA */}
       <CTASection
         heading="Experience the Shelby Way"
         text="Whether you're replacing a single window or outfitting an entire home, we're here to help. Reach out for a free consultation."
