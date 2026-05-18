@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { companyInfo } from '../data/navigation';
-import contactImg from '../assets/5.png';
+import contactImg from '../assets/instagram/ig_post_4.jpg';
 
 export default function Contact() {
   const [searchParams] = useSearchParams();
@@ -36,7 +36,7 @@ export default function Contact() {
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-warm-900 mb-2 sm:mb-3 leading-tight">
             {isShowroom ? 'Book a Showroom Visit' : 'Contact Us'}
           </h1>
-          <p className="text-warm-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-6 sm:mb-8">
+          <p className="text-warm-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-10 sm:mb-14">
             {isShowroom
               ? 'See our products in person. Book a time to visit the Shelby Windows & Doors showroom.'
               : 'Ready to start your project? Get in touch for a free, no-obligation consultation.'}
