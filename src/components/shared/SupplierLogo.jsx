@@ -21,12 +21,20 @@ export default function SupplierLogo({ supplier, size = "default", linkable = tr
   };
 
   const logo = logoMap[supplier.slug];
+  const isWindowStar = supplier.slug === 'window-star';
+  const isHeroSize = size === 'hero' || size === 'heroGolden';
 
   const inner = logo ? (
     <img
       src={logo}
       alt={supplier.name}
-      className="max-h-full w-auto object-contain"
+      className={`w-auto object-contain ${
+        isWindowStar
+          ? isHeroSize
+            ? 'max-h-full -ml-[15px]'
+            : 'max-h-[130%] max-w-[85%]'
+          : 'max-h-full'
+      }`}
     />
   ) : (
     <span className="font-heading font-700 text-warm-600 group-hover:text-teal-700 tracking-wide transition-colors text-sm">
@@ -45,7 +53,7 @@ export default function SupplierLogo({ supplier, size = "default", linkable = tr
   return (
     <Link
       to={`/suppliers/${supplier.slug}`}
-      className={`inline-flex items-center justify-center border border-warm-200 rounded-xl bg-white hover:border-teal-300 hover:shadow-md transition-all group ${sizes[size]}`}
+      className={`inline-flex items-center justify-center border border-warm-200 rounded-xl bg-white hover:border-teal-300 hover:shadow-md transition-all group overflow-hidden ${sizes[size]}`}
     >
       {inner}
     </Link>
