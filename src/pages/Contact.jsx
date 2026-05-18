@@ -37,7 +37,7 @@ export default function Contact() {
           <p className="text-warm-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-12 sm:mb-16">
             {isShowroom
               ? <>See our products in person.<br />Book a time to visit the Shelby Windows & Doors showroom.</>
-              : <>Ready to start your project? Get in touch for a free, no-obligation consultation.<br />Walk-ins welcome at our Vaughan showroom.</>}
+              : <>Ready to start your project? Get in touch for a free, no-obligation consultation.<br />Visit our showroom in Vaughan to see our products in person.</>}
           </p>
         </div>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
