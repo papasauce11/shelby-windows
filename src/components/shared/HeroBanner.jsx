@@ -23,11 +23,11 @@ export default function HeroBanner({ title, subtitle, cta, ctaLink = "/contact",
       <div className={`absolute inset-0 ${image ? 'bg-gradient-to-t from-black/65 via-black/35 to-black/20' : 'bg-black/20'}`} />
 
       <div className="relative z-10 max-w-4xl mx-auto px-5 text-center">
-        <h1 className={`font-heading font-800 text-white leading-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.4)] ${large ? 'text-3xl sm:text-4xl lg:text-7xl' : 'text-2xl sm:text-3xl lg:text-5xl'}`}>
+        <h1 className={`font-heading font-800 text-white leading-tight [text-shadow:0_1px_4px_rgba(0,0,0,0.7),0_0_8px_rgba(0,0,0,0.5)] ${large ? 'text-3xl sm:text-4xl lg:text-7xl' : 'text-2xl sm:text-3xl lg:text-5xl'}`}>
           {title}
         </h1>
         {subtitle && (
-          <p className={`mt-4 text-white/80 max-w-2xl mx-auto [text-shadow:0_1px_8px_rgba(0,0,0,0.5)] ${large ? 'text-base sm:text-lg lg:text-xl' : 'text-sm sm:text-base lg:text-lg'}`}>
+          <p className={`mt-4 text-white/80 max-w-2xl mx-auto [text-shadow:0_0_6px_rgba(0,0,0,0.8),0_1px_3px_rgba(0,0,0,0.6)] ${large ? 'text-base sm:text-lg lg:text-xl' : 'text-sm sm:text-base lg:text-lg'}`}>
             {subtitle}
           </p>
         )}

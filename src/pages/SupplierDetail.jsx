@@ -80,7 +80,7 @@ export default function SupplierDetail() {
         )}
         {!heroImg && <div className={`absolute inset-0 ${t.heroBg}`} />}
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center [filter:drop-shadow(0_1px_3px_rgba(0,0,0,0.5))]">
+        <div className="relative z-10 max-w-4xl mx-auto text-center [filter:drop-shadow(0_1px_4px_rgba(0,0,0,0.7))]">
           {/* Logo — no box, large */}
           <div className="mb-6">
             <SupplierLogo supplier={supplier} size={supplier.slug === 'golden-windows' ? 'heroGolden' : 'hero'} linkable={false} />
@@ -89,13 +89,13 @@ export default function SupplierDetail() {
           {/* Tagline */}
           {supplier.tagline && (
             <div className="mb-6">
-              <span className="inline-block px-4 py-1.5 text-xs font-heading font-700 uppercase tracking-widest text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
+              <span className="inline-block px-4 py-1.5 text-xs font-heading font-700 uppercase tracking-widest text-white [text-shadow:0_0_6px_rgba(0,0,0,0.8),0_1px_3px_rgba(0,0,0,0.7)]">
                 {supplier.tagline}
               </span>
             </div>
           )}
 
-          <p className="text-white text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
+          <p className="text-white text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 [text-shadow:0_0_6px_rgba(0,0,0,0.8),0_1px_3px_rgba(0,0,0,0.7)]">
             {supplier.description}
           </p>
 
