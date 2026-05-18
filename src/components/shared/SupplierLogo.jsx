@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import goldenWindowsLogo from '../../assets/golden_windows_logo.png';
 import vinylBiltLogo from '../../assets/vinylbilt_logo.png';
 import entryguardLogo from '../../assets/entryguard_logo.png';
-import windowStarLogo from '../../assets/windowstar.png';
+import windowStarLogo from '../../assets/windowstar-horizontal.png';
 
 const logoMap = {
   'golden-windows': goldenWindowsLogo,
@@ -21,26 +21,8 @@ export default function SupplierLogo({ supplier, size = "default", linkable = tr
   };
 
   const logo = logoMap[supplier.slug];
-  const isWindowStar = supplier.slug === 'window-star';
-  const isHeroSize = size === 'hero' || size === 'heroGolden';
 
-  // WindowStar has a square icon (no text in image), so we pair it with text
-  const inner = isWindowStar ? (
-    <div className={`flex items-center ${isHeroSize ? 'gap-2 sm:gap-3' : 'gap-1.5 sm:gap-2'}`}>
-      <img
-        src={logo}
-        alt={supplier.name}
-        className={`w-auto object-contain ${isHeroSize ? 'h-[65%]' : 'h-[55%] sm:h-[60%]'}`}
-      />
-      <span className={`font-heading font-800 tracking-tight uppercase leading-tight ${
-        isHeroSize
-          ? 'text-white text-sm sm:text-xl lg:text-2xl'
-          : 'text-warm-800 text-[0.55rem] sm:text-xs'
-      }`}>
-        Window<br />Star
-      </span>
-    </div>
-  ) : logo ? (
+  const inner = logo ? (
     <img
       src={logo}
       alt={supplier.name}
