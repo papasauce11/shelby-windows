@@ -30,18 +30,14 @@ export default function Contact() {
       {/* Hero strip + Form + image */}
       <section className="pt-6 sm:pt-10 pb-8 sm:pb-12 px-5 sm:px-6 bg-warm-50">
         <div className="max-w-7xl mx-auto text-center">
-          {isShowroom && (
-            <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 block">
-              Book a Visit
-            </span>
-          )}
+
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-warm-900 mb-2 sm:mb-3 leading-tight">
             {isShowroom ? 'Book a Showroom Visit' : 'Contact Us'}
           </h1>
           <p className="text-warm-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed mb-12 sm:mb-16">
             {isShowroom
-              ? 'See our products in person. Book a time to visit the Shelby Windows & Doors showroom.'
-              : 'Ready to start your project? Get in touch for a free, no-obligation consultation.'}
+              ? <>See our products in person.<br />Book a time to visit the Shelby Windows & Doors showroom.</>
+              : <>Ready to start your project? Get in touch for a free, no-obligation consultation.<br />Walk-ins welcome at our Vaughan showroom.</>}
           </p>
         </div>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
