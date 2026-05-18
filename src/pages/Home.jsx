@@ -185,7 +185,7 @@ export default function Home() {
           <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-6">
             Canadian manufacturers you can count on
           </h2>
-          <div className="flex items-center justify-center gap-3 sm:gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             {suppliers.map(supplier => (
               <SupplierLogo key={supplier.slug} supplier={supplier} size="large" />
             ))}

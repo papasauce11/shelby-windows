@@ -13,16 +13,34 @@ const logoMap = {
 
 export default function SupplierLogo({ supplier, size = "default", linkable = true }) {
   const sizes = {
-    small: "px-4 py-3 h-16",
-    default: "px-6 py-4 h-20",
-    large: "px-4 py-3 h-16 sm:px-8 sm:py-5 sm:h-24",
+    small: "px-4 py-3 h-16 w-36",
+    default: "px-6 py-4 h-20 w-44",
+    large: "px-4 py-3 h-16 w-[140px] sm:px-6 sm:py-5 sm:h-24 sm:w-[200px]",
     hero: "h-20 sm:h-28 lg:h-32",
     heroGolden: "h-24 sm:h-36 lg:h-40"
   };
 
   const logo = logoMap[supplier.slug];
+  const isWindowStar = supplier.slug === 'window-star';
+  const isHeroSize = size === 'hero' || size === 'heroGolden';
 
-  const inner = logo ? (
+  // WindowStar has a square icon (no text in image), so we pair it with text
+  const inner = isWindowStar ? (
+    <div className={`flex items-center ${isHeroSize ? 'gap-2 sm:gap-3' : 'gap-1.5 sm:gap-2'}`}>
+      <img
+        src={logo}
+        alt={supplier.name}
+        className={`w-auto object-contain ${isHeroSize ? 'h-[65%]' : 'h-[55%] sm:h-[60%]'}`}
+      />
+      <span className={`font-heading font-800 tracking-tight uppercase leading-tight ${
+        isHeroSize
+          ? 'text-white text-sm sm:text-xl lg:text-2xl'
+          : 'text-warm-800 text-[0.55rem] sm:text-xs'
+      }`}>
+        Window<br />Star
+      </span>
+    </div>
+  ) : logo ? (
     <img
       src={logo}
       alt={supplier.name}
