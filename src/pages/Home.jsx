@@ -55,7 +55,7 @@ export default function Home() {
             <span className="text-teal-400">Built for Canada</span>
           </h1>
           <p className="mt-5 sm:mt-8 text-white text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed [text-shadow:0_0_6px_rgba(0,0,0,0.9),0_0_12px_rgba(0,0,0,0.6),0_1px_3px_rgba(0,0,0,0.8)]">
-            Locally installed. Canadian-made. Every window and door we carry comes from manufacturers we trust&nbsp;&mdash; built for our winters, backed by real&nbsp;warranties.
+            Locally installed. Canadian suppliers. Every window and door we carry comes from manufacturers we trust&nbsp;&mdash; built for our winters, backed by real&nbsp;warranties.
           </p>
           <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Link
@@ -201,7 +201,7 @@ export default function Home() {
             Proudly Canadian.<br className="sm:hidden" /> Built for Canadian homes.
           </h2>
           <p className="text-warm-500 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Every product we carry is made in Canada — engineered for freeze-thaw cycles, high humidity, and everything our climate throws at a home. When you buy from Shelby, you're getting windows and doors that were designed with our winters in mind, not retrofitted from somewhere else.
+            Every product we carry comes from suppliers we know and trust, engineered for freeze-thaw cycles, high humidity, and everything our climate throws at a home. When you buy from Shelby, you're getting windows and doors that were selected with our winters in mind and backed by real warranties.
           </p>
         </div>
       </section>

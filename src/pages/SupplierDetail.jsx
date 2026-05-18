@@ -40,6 +40,17 @@ const themes = {
     sectionBorder: 'border-slate-200',
     productLabel: 'text-slate-600',
   },
+  emerald: {
+    heroBg: 'bg-emerald-50',
+    heroBorder: 'border-emerald-100',
+    accent: 'text-emerald-600',
+    accentBg: 'bg-emerald-600',
+    taglineBg: 'bg-emerald-100 text-emerald-800',
+    visitBtn: 'border-emerald-300 text-emerald-700 hover:bg-emerald-100',
+    sectionBg: 'bg-emerald-50',
+    sectionBorder: 'border-emerald-100',
+    productLabel: 'text-emerald-600',
+  },
 };
 
 export default function SupplierDetail() {

@@ -11,7 +11,7 @@ export const faqItems = [
   },
   {
     question: "What types of doors do you offer?",
-    answer: "We offer entrance doors in steel, fibreglass, and wood, as well as sliding patio doors, swinging patio doors (French doors), folding doors, multi-slide doors, and lift & slide doors. Our door products are sourced from trusted Canadian suppliers."
+    answer: "We offer entrance doors in steel, fiberglass, and thermal break aluminum, as well as sliding patio doors, terrace doors, folding doors, lift & slide doors, and interior doors. Our door products are sourced from trusted Canadian suppliers."
   },
   {
     question: "How long does a typical window or door installation take?",
@@ -30,8 +30,8 @@ export const faqItems = [
     answer: "Yes. We provide free, no-obligation consultations. We will assess your current windows or doors, discuss your needs, and provide a detailed quote. Contact us to schedule a time that works for you."
   },
   {
-    question: "What is the difference between vinyl, wood, and fibreglass windows?",
-    answer: "Vinyl windows are low-maintenance, energy-efficient, and cost-effective. They resist moisture and do not need painting. Wood windows offer a classic, warm aesthetic and are often preferred in heritage or traditional homes, but require more upkeep. Fibreglass windows combine strength and durability with low maintenance and can mimic the appearance of wood. The best choice depends on your priorities for appearance, maintenance, and budget."
+    question: "What is the difference between vinyl, aluminum, and wood windows?",
+    answer: "Vinyl windows are low-maintenance, energy-efficient, and cost-effective. They resist moisture and do not need painting. Aluminum-clad windows pair a wood interior with a durable aluminum exterior for low maintenance and lasting protection. Thermal break aluminum windows offer a premium European-style option with superior strength, slim sightlines, and excellent energy performance. Wood windows offer a classic, warm aesthetic and are often preferred in heritage or traditional homes, but require more upkeep. The best choice depends on your priorities for appearance, maintenance, and budget."
   },
   {
     question: "Can I customize the colour and finish of my windows and doors?",

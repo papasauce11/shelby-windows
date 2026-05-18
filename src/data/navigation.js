@@ -30,7 +30,11 @@ export const navigation = {
             { label: "Terrace Doors", path: "/doors/terrace" },
             { label: "Fiberglass Entry Doors", path: "/doors/fiberglass-entry-doors" },
             { label: "Steel Entry Doors", path: "/doors/steel-entry-doors" },
-            { label: "NHP Steel Entry Doors", path: "/doors/nhp-steel-entry-doors" }
+            { label: "NHP Steel Entry Doors", path: "/doors/nhp-steel-entry-doors" },
+            { label: "Aluminum Entry Doors", path: "/doors/aluminum-entry-doors" },
+            { label: "Folding Doors", path: "/doors/folding-doors" },
+            { label: "Lift & Slide Doors", path: "/doors/lift-slide-doors" },
+            { label: "Interior Doors", path: "/doors/interior-doors" }
           ]
         },
         suppliers: {
@@ -39,7 +43,8 @@ export const navigation = {
           items: [
             { label: "Golden Windows", path: "/suppliers/golden-windows" },
             { label: "Vinyl Bilt", path: "/suppliers/vinyl-bilt" },
-            { label: "Entryguard Doors", path: "/suppliers/entryguard-doors" }
+            { label: "Entryguard Doors", path: "/suppliers/entryguard-doors" },
+            { label: "Window Star", path: "/suppliers/window-star" }
           ]
         }
       }

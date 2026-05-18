@@ -32,10 +32,10 @@ Awning windows can be installed individually or grouped with fixed picture windo
         "Available in a range of sizes, colours, and frame materials",
         "Ideal for bathrooms, kitchens, and basement installations"
       ],
-      suppliers: ["golden-windows", "vinyl-bilt"],
+      suppliers: ["golden-windows", "vinyl-bilt", "window-star"],
       relatedProducts: ["casement", "sliding"],
       metaTitle: "Awning Windows | Shelby Windows & Doors",
-      metaDescription: "Awning windows from Shelby Windows & Doors. Top-hinged for ventilation rain or shine. Installed across Ontario with Canadian-made products."
+      metaDescription: "Awning windows from Shelby Windows & Doors. Top-hinged for ventilation rain or shine. Installed across the GTA with trusted suppliers."
     },
     {
       slug: "bay",
@@ -59,7 +59,7 @@ Bay windows are a strong architectural feature. They add visual interest from bo
       suppliers: ["golden-windows", "vinyl-bilt"],
       relatedProducts: ["casement", "custom-shape"],
       metaTitle: "Bay Windows | Shelby Windows & Doors",
-      metaDescription: "Bay windows from Shelby Windows & Doors. Add depth, light, and character to your home with Canadian-made multi-panel bay windows."
+      metaDescription: "Bay windows from Shelby Windows & Doors. Add depth, light, and character to your home with quality multi-panel bay windows."
     },
     {
       slug: "casement",
@@ -80,10 +80,10 @@ Casement windows are versatile and work well in nearly any room. You will often 
         "Clean sightlines with no centre rail",
         "Available in multiple frame materials and finishes"
       ],
-      suppliers: ["golden-windows", "vinyl-bilt"],
+      suppliers: ["golden-windows", "vinyl-bilt", "window-star"],
       relatedProducts: ["awning", "double-hung"],
       metaTitle: "Casement Windows | Shelby Windows & Doors",
-      metaDescription: "Casement windows from Shelby Windows & Doors. Side-hinged, crank-operated windows for maximum ventilation. Canadian-made quality."
+      metaDescription: "Casement windows from Shelby Windows & Doors. Side-hinged, crank-operated windows for maximum ventilation. Quality you can count on."
     },
     {
       slug: "double-hung",
@@ -131,7 +131,7 @@ Single hung windows are a practical choice for bedrooms, hallways, and general l
       suppliers: ["golden-windows", "vinyl-bilt"],
       relatedProducts: ["double-hung", "sliding", "casement"],
       metaTitle: "Single Hung Windows | Shelby Windows & Doors",
-      metaDescription: "Single hung windows from Shelby Windows & Doors. Classic, reliable, and energy-efficient. Installed with Canadian-made products."
+      metaDescription: "Single hung windows from Shelby Windows & Doors. Classic, reliable, and energy-efficient. Installed by trusted professionals."
     },
     {
       slug: "sliding",
@@ -152,10 +152,10 @@ Modern sliding windows use precision-engineered rollers for smooth, quiet operat
         "Multi-point locking for added security",
         "Available in two-panel and three-panel configurations"
       ],
-      suppliers: ["golden-windows", "vinyl-bilt"],
+      suppliers: ["golden-windows", "vinyl-bilt", "window-star"],
       relatedProducts: ["single-hung", "double-hung"],
       metaTitle: "Sliding Windows | Shelby Windows & Doors",
-      metaDescription: "Sliding windows from Shelby Windows & Doors. Smooth horizontal operation for space-saving ventilation. Canadian-made quality."
+      metaDescription: "Sliding windows from Shelby Windows & Doors. Smooth horizontal operation for space-saving ventilation. Quality you can count on."
     },
     {
       slug: "custom-shape",
@@ -177,7 +177,7 @@ Because every custom shape window is made to order, the sizing, shape, and finis
         "Ideal for gable ends, transoms, and accent positions",
         "Available with decorative glass and grid options"
       ],
-      suppliers: ["golden-windows", "vinyl-bilt"],
+      suppliers: ["golden-windows", "vinyl-bilt", "window-star"],
       relatedProducts: ["bay", "casement"],
       metaTitle: "Custom Shape Windows | Shelby Windows & Doors",
       metaDescription: "Custom shape windows from Shelby Windows & Doors. Arches, circles, and unique geometries. Made-to-order in Canada."
@@ -202,7 +202,7 @@ Tilt windows are an excellent fit for upper-floor installations where exterior c
         "European engineering adapted for Canadian climate",
         "Excellent energy performance with compression seals"
       ],
-      suppliers: ["golden-windows", "vinyl-bilt"],
+      suppliers: ["golden-windows", "vinyl-bilt", "window-star"],
       relatedProducts: ["casement", "awning", "double-hung"],
       metaTitle: "Tilt Windows | Shelby Windows & Doors",
       metaDescription: "Tilt windows from Shelby Windows & Doors. European-style dual-mode operation for versatile ventilation. Canadian installation."
@@ -256,7 +256,7 @@ Modern sliding patio doors use heavy-duty roller systems for smooth, effortless 
         { name: "Exterior Colour Options", url: "https://goldenwindows.com/content/img/site/brochure/GW25-Colour-Guide-R4.pdf" }
       ],
       metaTitle: "Sliding Patio Doors | Shelby Windows & Doors",
-      metaDescription: "Sliding patio doors from Shelby Windows & Doors. Smooth, space-saving operation for your deck or patio. Canadian-made and installed."
+      metaDescription: "Sliding patio doors from Shelby Windows & Doors. Smooth, space-saving operation for your deck or patio. Professionally installed."
     },
     {
       slug: "terrace",
@@ -423,6 +423,106 @@ NHP doors are a particularly strong fit for homes in areas with harsh winter con
       ],
       metaTitle: "NHP High Performance Steel Doors | Shelby Windows & Doors",
       metaDescription: "NHP high performance steel entry doors from Shelby Windows & Doors. Maximum durability and energy efficiency for Canadian homes."
+    },
+    {
+      slug: "aluminum-entry-doors",
+      name: "Aluminum Entry Doors",
+      category: "doors",
+      shortDescription: "European-style thermal break aluminum entry doors with slim sightlines, modern aesthetics, and superior thermal performance.",
+      description: `Aluminum entry doors bring a distinctly modern look that you won't get from steel or fiberglass. The thermal break aluminum construction uses an insulating barrier between the interior and exterior aluminum profiles, which means you get the strength and slim sightlines of metal without the heat loss.
+
+These doors are built for homeowners who want something architectural. Clean lines, large glass panels, and narrow frames let you make a statement at the front of your home while still hitting strong energy numbers. The aluminum profiles resist corrosion, won't warp or rot, and hold their finish for years with minimal maintenance.
+
+Available through Window Star in a range of configurations, finishes, and glass options. Whether you want a bold pivot door or a classic hinged entry, thermal break aluminum gives you design flexibility that other materials can't match.`,
+      features: [
+        "Thermal break aluminum construction for energy efficiency",
+        "Slim profiles and clean sightlines for a modern look",
+        "Corrosion-resistant and low-maintenance",
+        "Large glass panel options for maximum natural light",
+        "Multi-point locking hardware for security",
+        "Wide range of finishes and custom configurations"
+      ],
+      suppliers: ["window-star"],
+      relatedProducts: ["fiberglass-entry-doors", "steel-entry-doors", "folding-doors"],
+      heroImage: "https://www.windowstar.ca/wp-content/uploads/2025/04/66a9f5df92a52.jpg",
+      image: "https://www.windowstar.ca/wp-content/uploads/2025/04/66a9f5df92a52.jpg",
+      metaTitle: "Aluminum Entry Doors | Shelby Windows & Doors",
+      metaDescription: "Aluminum entry doors from Shelby Windows & Doors. European-style thermal break aluminum for modern homes. Slim profiles, strong performance."
+    },
+    {
+      slug: "folding-doors",
+      name: "Folding Doors",
+      category: "doors",
+      shortDescription: "Multi-panel folding doors that stack neatly to one side, opening an entire wall to your outdoor space.",
+      description: `Folding doors, sometimes called bi-fold doors, consist of multiple hinged panels that fold and stack against one side of the opening. When fully open, they create a wide, unobstructed connection between your indoor and outdoor living areas.
+
+The thermal break aluminum frames keep the profiles slim, which means more glass and less frame in your sightline. When closed, the multi-point locking system and weatherseals provide strong security and energy performance. When open, you get an opening that no sliding or swinging door can match.
+
+Folding doors work especially well for rooms that face a patio, deck, pool area, or backyard. They turn a wall into a passageway and blur the line between inside and out. Available in configurations from two panels up to six or more, with options for the traffic door to open independently for everyday use.`,
+      features: [
+        "Multi-panel design folds and stacks to open an entire wall",
+        "Thermal break aluminum frames for slim sightlines and efficiency",
+        "Traffic door option for everyday single-door use",
+        "Multi-point locking and full weathersealing when closed",
+        "Configurations from two panels to six or more",
+        "Low-threshold options for seamless indoor-outdoor transitions"
+      ],
+      suppliers: ["window-star"],
+      relatedProducts: ["lift-slide-doors", "aluminum-entry-doors", "sliding-patio"],
+      heroImage: "https://www.windowstar.ca/wp-content/uploads/2025/04/66a9f85615368.jpg",
+      image: "https://www.windowstar.ca/wp-content/uploads/2025/04/66a9f85615368.jpg",
+      metaTitle: "Folding Doors | Shelby Windows & Doors",
+      metaDescription: "Folding doors from Shelby Windows & Doors. Multi-panel bi-fold doors in thermal break aluminum. Open an entire wall to your outdoor space."
+    },
+    {
+      slug: "lift-slide-doors",
+      name: "Lift & Slide Doors",
+      category: "doors",
+      shortDescription: "Heavy-duty sliding doors with a lift-and-slide mechanism for effortless operation of large, oversized glass panels.",
+      description: `Lift and slide doors use a specialized mechanism that lifts the door panel slightly off its seal before sliding, allowing you to move very large and heavy glass panels with minimal effort. When the handle returns to the locked position, the panel drops back down onto its seals for a tight, weatherproof closure.
+
+This system makes it possible to build sliding doors far larger than a conventional patio door. Floor-to-ceiling glass panels spanning 8, 10, or even 12 feet wide become practical because the lift mechanism eliminates the friction that would make a panel that size impossible to slide by hand.
+
+Lift and slide doors are the premium choice for homeowners who want maximum glass area with smooth, reliable operation. The thermal break aluminum frames keep the profiles narrow and the energy performance high, even at oversized dimensions. They are a natural fit for modern homes, lakefront properties, and any space where the view is the priority.`,
+      features: [
+        "Lift-and-slide mechanism for effortless operation of heavy panels",
+        "Supports oversized glass panels for maximum views",
+        "Thermal break aluminum frames for energy efficiency",
+        "Drops onto seals when locked for a tight weatherproof closure",
+        "Slim profiles to maximize glass area",
+        "Ideal for floor-to-ceiling applications and wide openings"
+      ],
+      suppliers: ["window-star"],
+      relatedProducts: ["folding-doors", "sliding-patio", "aluminum-entry-doors"],
+      heroImage: "https://www.windowstar.ca/wp-content/uploads/2025/04/lift-sliding.jpg",
+      image: "https://www.windowstar.ca/wp-content/uploads/2025/04/lift-sliding.jpg",
+      metaTitle: "Lift & Slide Doors | Shelby Windows & Doors",
+      metaDescription: "Lift and slide doors from Shelby Windows & Doors. Oversized thermal break aluminum sliding doors for maximum views and effortless operation."
+    },
+    {
+      slug: "interior-doors",
+      name: "Interior Doors",
+      category: "doors",
+      shortDescription: "Modern interior doors in aluminum and glass for open-concept living, room dividers, and stylish transitions between spaces.",
+      description: `Interior doors don't just close off rooms. Done well, they define how a space looks and feels. Aluminum-framed interior doors offer a modern alternative to traditional wood doors, with slim profiles, clean lines, and the option for full glass panels that let light flow between rooms.
+
+These doors work especially well in open-concept homes where you want the ability to close off a space without losing the visual connection. A glass interior door keeps sightlines open, maintains the sense of space, and still provides sound separation and privacy when needed.
+
+Available in sliding, hinged, and barn-door configurations. The aluminum frames can be finished in a range of colours to match your interior, from matte black for an industrial look to white or natural aluminum for something more understated.`,
+      features: [
+        "Slim aluminum frames with full glass panel options",
+        "Sliding, hinged, and barn-door configurations",
+        "Maintains light flow and visual connection between rooms",
+        "Range of frame finishes to match any interior style",
+        "Sound separation without losing the sense of space",
+        "Modern, architectural alternative to traditional wood doors"
+      ],
+      suppliers: ["window-star"],
+      relatedProducts: ["aluminum-entry-doors", "folding-doors", "lift-slide-doors"],
+      heroImage: "https://www.windowstar.ca/wp-content/uploads/2025/04/66a9f1a41d84f.jpg",
+      image: "https://www.windowstar.ca/wp-content/uploads/2025/04/66a9f1a41d84f.jpg",
+      metaTitle: "Interior Doors | Shelby Windows & Doors",
+      metaDescription: "Interior doors from Shelby Windows & Doors. Aluminum and glass interior doors for modern homes. Sliding, hinged, and barn-door options."
     }
   ]
 };

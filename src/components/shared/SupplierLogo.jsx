@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom';
 import goldenWindowsLogo from '../../assets/golden_windows_logo.png';
 import vinylBiltLogo from '../../assets/vinylbilt_logo.png';
 import entryguardLogo from '../../assets/entryguard_logo.png';
+import windowStarLogo from '../../assets/windowstar.png';
 
 const logoMap = {
   'golden-windows': goldenWindowsLogo,
   'vinyl-bilt': vinylBiltLogo,
   'entryguard-doors': entryguardLogo,
+  'window-star': windowStarLogo,
 };
 
 export default function SupplierLogo({ supplier, size = "default", linkable = true }) {

@@ -52,7 +52,7 @@ export const suppliers = [
     theme: "emerald",
     tagline: "European-Style Thermal Break Aluminum",
     heroImage: "https://www.windowstar.ca/wp-content/uploads/2025/04/abbg.jpg",
-    description: `Canadian company with over 20 years in the business, specializing in European-style thermal break aluminum windows and doors. German-inspired engineering with a focus on slim sightlines, energy efficiency, and modern design.`,
+    description: `Canadian manufacturer specializing in high-end European-style thermal break aluminum windows and doors. Over 20 years of experience delivering premium fenestration solutions with German-inspired engineering, advanced designs, and superior energy efficiency.`,
     featuredProducts: ["casement", "awning", "folding-doors", "lift-slide-doors"],
     productsOffered: ["awning", "casement", "sliding", "custom-shape", "tilt", "aluminum-entry-doors", "folding-doors", "lift-slide-doors", "interior-doors"],
     metaTitle: "Window Star | Our Suppliers | Shelby Windows & Doors",
@@ -67,5 +67,7 @@ export function getSupplierBySlug(slug) {
 
 // Helper to get suppliers that carry a specific product
 export function getSuppliersForProduct(productSlug) {
+  return suppliers.filter(s => s.productsOffered.includes(productSlug));
+}roductSlug) {
   return suppliers.filter(s => s.productsOffered.includes(productSlug));
 }
