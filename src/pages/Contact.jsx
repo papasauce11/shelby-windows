@@ -27,8 +27,8 @@ export default function Contact() {
 
   return (
     <>
-      {/* Hero strip */}
-      <section className="pt-6 sm:pt-10 pb-0 px-5 sm:px-6 bg-warm-50">
+      {/* Hero strip + Form + image */}
+      <section className="pt-6 sm:pt-10 pb-8 sm:pb-12 px-5 sm:px-6 bg-warm-50">
         <div className="max-w-7xl mx-auto text-center">
           {isShowroom && (
             <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 block">
@@ -44,10 +44,6 @@ export default function Contact() {
               : 'Ready to start your project? Get in touch for a free, no-obligation consultation.'}
           </p>
         </div>
-      </section>
-
-      {/* Form + image */}
-      <section className="pb-8 sm:pb-12 px-5 sm:px-6 bg-warm-50">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 
           {/* Left column: form + contact cards */}
