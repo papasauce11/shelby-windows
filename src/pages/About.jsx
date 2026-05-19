@@ -1,5 +1,5 @@
 import CTASection from '../components/shared/CTASection';
-import storyImg from '../assets/3.png';
+import storyImg from '../assets/3.jpg';
 import vickHeadshot from '../assets/Vick Headshot.PNG';
 import proudlyCanadian from '../assets/proudly_canadian.png';
 
