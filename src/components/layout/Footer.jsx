@@ -134,7 +134,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {companyInfo.name} All rights reserved.
           </p>
           <p className="text-xs text-warm-700">
-            Website by <a href="https://varaico.com" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-400 transition-colors">Varaico</a>
+            Website by <a href="https://varaico.ca" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-400 transition-colors">Varaico</a>
           </p>
         </div>
       </div>
