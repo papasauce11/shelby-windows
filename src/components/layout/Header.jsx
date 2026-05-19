@@ -118,7 +118,7 @@ export default function Header() {
                       <div className="pl-4 space-y-5 mt-1 mb-3">
                         {Object.values(productsData.children).map((section) => (
                           <div key={section.label}>
-                            <Link to={section.path} className="text-sm font-heading font-800 uppercase tracking-widest text-teal-600 block mb-2 px-4">
+                            <Link to={section.path} className="text-sm font-heading font-900 uppercase tracking-widest text-teal-600 block mb-2 px-4 font-bold">
                               {section.label}
                             </Link>
                             <ul className="space-y-0">
