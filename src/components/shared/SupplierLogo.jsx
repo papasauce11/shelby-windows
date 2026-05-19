@@ -31,7 +31,7 @@ export default function SupplierLogo({ supplier, size = "default", linkable = tr
       className={`w-auto object-contain ${
         isWindowStar
           ? isHeroSize
-            ? 'max-h-full -ml-[15px]'
+            ? 'max-h-full relative -left-[15px]'
             : 'max-h-[340%] max-w-[95%]'
           : 'max-h-full'
       }`}
