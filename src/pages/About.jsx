@@ -32,11 +32,11 @@ export default function About() {
           {/* Photo */}
           <div className="relative">
             <div className="aspect-[4/3] sm:aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl">
-              <img src={storyImg} alt="Shelby Windows installation" className="w-full h-full object-cover" />
+              <img src={storyImg} alt="Shelby Windows installation" loading="lazy" className="w-full h-full object-cover" />
             </div>
             {/* Floating Canadian badge */}
             <div className="absolute -bottom-8 -left-8 hidden lg:block">
-              <img src={proudlyCanadian} alt="Proudly Canadian" className="w-28 h-28 drop-shadow-lg" />
+              <img src={proudlyCanadian} alt="Proudly Canadian" loading="lazy" className="w-28 h-28 drop-shadow-lg" />
             </div>
           </div>
         </div>

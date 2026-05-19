@@ -70,7 +70,7 @@ export default function ProductDetail() {
               {product.collections.map((collection, i) => (
                 <div key={i} className="group bg-white rounded-2xl overflow-hidden border border-warm-100 shadow-sm hover:border-teal-200 hover:shadow-xl transition-all duration-300">
                   <div className="aspect-[3/4] relative overflow-hidden">
-                    <img src={collection.image} alt={`${collection.name} Collection`} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out" />
+                    <img src={collection.image} alt={`${collection.name} Collection`} loading="lazy" className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out" />
                   </div>
                   <div className="p-3 sm:p-6">
                     <h3 className="font-heading text-sm sm:text-lg font-700 text-warm-900 mb-1 sm:mb-2">{collection.name} Collection</h3>

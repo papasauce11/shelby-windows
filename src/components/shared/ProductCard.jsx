@@ -16,6 +16,7 @@ export default function ProductCard({ product }) {
             <img
               src={product.image}
               alt={product.name}
+              loading="lazy"
               className={`w-full h-full ${product.imageContain ? 'object-contain p-4' : 'object-cover'} transform ${isDoor ? 'scale-[0.85]' : ''} group-hover:scale-105 transition-transform duration-500 ease-out`}
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 z-10" />

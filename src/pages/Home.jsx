@@ -196,7 +196,7 @@ export default function Home() {
       {/* Proudly Canadian */}
       <section className="py-8 sm:py-14 lg:py-20 px-5 sm:px-6 bg-warm-75">
         <div className="max-w-4xl mx-auto text-center">
-          <img src={proudlyCanadianBadge} alt="Proudly Canadian - Canadian Products" className="w-48 h-48 sm:w-72 sm:h-72 mx-auto mb-6" />
+          <img src={proudlyCanadianBadge} alt="Proudly Canadian - Canadian Products" loading="lazy" className="w-48 h-48 sm:w-72 sm:h-72 mx-auto mb-6" />
           <h2 className="text-2xl lg:text-3xl font-heading font-800 text-warm-900 mb-4">
             Proudly Canadian.<br className="sm:hidden" /> Built for Canadian homes.
           </h2>
@@ -211,7 +211,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src={financingImg} alt="Luxury windows and doors" className="w-full h-full object-cover" />
+              <img src={financingImg} alt="Luxury windows and doors" loading="lazy" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <span className="text-xs font-heading font-700 uppercase tracking-widest text-teal-300 mb-2 block [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">Financing Available</span>
@@ -352,7 +352,7 @@ export default function Home() {
               >
                 {instagramPosts.map((post, i) => (
                   <a key={i} href={post.url} target="_blank" rel="noopener noreferrer" className="flex-none w-full aspect-square block bg-warm-100 overflow-hidden">
-                    {post.image ? <img src={post.image} alt={`Post ${i + 1}`} className="w-full h-full object-cover" /> : <div className="w-full h-full flex items-center justify-center text-warm-300"><svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>}
+                    {post.image ? <img src={post.image} alt={`Post ${i + 1}`} loading="lazy" className="w-full h-full object-cover" /> : <div className="w-full h-full flex items-center justify-center text-warm-300"><svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>}
                   </a>
                 ))}
               </div>
@@ -370,7 +370,7 @@ export default function Home() {
               {instagramPosts.map((post, i) => (
                 <a key={i} href={post.url} target="_blank" rel="noopener noreferrer" className="flex-1 aspect-square block overflow-hidden rounded-xl bg-warm-100 hover:opacity-90 transition-opacity">
                   {post.image ? (
-                    <img src={post.image} alt={`Post ${i + 1}`} className="w-full h-full object-cover" />
+                    <img src={post.image} alt={`Post ${i + 1}`} loading="lazy" className="w-full h-full object-cover" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-warm-300">
                       <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>

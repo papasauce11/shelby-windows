@@ -29,6 +29,7 @@ export default function SupplierLogo({ supplier, size = "default", linkable = tr
     <img
       src={logo}
       alt={supplier.name}
+      loading="lazy"
       className={`object-contain ${
         isWindowStar
           ? isHeroSize

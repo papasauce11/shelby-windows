@@ -191,7 +191,7 @@ export default function Contact() {
 
           {/* Right column: tall image */}
           <div className="hidden lg:block rounded-2xl overflow-hidden shadow-md">
-            <img src={contactImg} alt="Shelby Windows project" className="w-full h-full object-cover" />
+            <img src={contactImg} alt="Shelby Windows project" loading="lazy" className="w-full h-full object-cover" />
           </div>
 
         </div>
