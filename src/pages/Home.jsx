@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import heroBg from '../assets/hero.png';
+import heroBg from '../assets/hero2.jpg';
 import financingImg from '../assets/10.png';
 import { products } from '../data/products';
 import { suppliers } from '../data/suppliers';
