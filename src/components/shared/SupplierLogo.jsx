@@ -32,7 +32,7 @@ export default function SupplierLogo({ supplier, size = "default", linkable = tr
         isWindowStar
           ? isHeroSize
             ? 'max-h-full relative -left-[15px]'
-            : 'max-h-[510%] max-w-[95%]'
+            : 'max-h-[600%] max-w-[95%]'
           : 'max-h-full'
       }`}
     />
