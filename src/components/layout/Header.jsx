@@ -115,10 +115,10 @@ export default function Header() {
                       <svg className={`w-5 h-5 transition-transform ${mobileAccordion === 'products' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                     </button>
                     {mobileAccordion === 'products' && (
-                      <div className="pl-4 space-y-2 mt-1 mb-3">
+                      <div className="pl-4 space-y-5 mt-1 mb-3">
                         {Object.values(productsData.children).map((section) => (
                           <div key={section.label}>
-                            <Link to={section.path} className="text-sm font-heading font-800 uppercase tracking-widest text-teal-600 block mb-1 px-4">
+                            <Link to={section.path} className="text-sm font-heading font-800 uppercase tracking-widest text-teal-600 block mb-2 px-4">
                               {section.label}
                             </Link>
                             <ul className="space-y-0">
