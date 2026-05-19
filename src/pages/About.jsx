@@ -99,10 +99,7 @@ export default function About() {
                 Every Shelby project starts and ends with Vick. From the first phone call to the final walkthrough, he's personally involved because he believes that's the only way to guarantee the result lives up to the Shelby name.
               </p>
               <p>
-                He listens first, recommends what actually makes sense for your home, and stays hands-on through every stage of the installation. No handoffs to someone you've never met, no cutting corners to save time.
-              </p>
-              <p className="text-warm-800 font-medium italic">
-                "Your home is your biggest investment. I treat every job like it's my own."
+                He listens first, recommends what actually makes sense for your project, and stays hands-on through every stage of the installation.
               </p>
             </div>
           </div>
