@@ -3,7 +3,7 @@ import HeroBanner from '../components/shared/HeroBanner';
 import FAQAccordion from '../components/shared/FAQAccordion';
 import CTASection from '../components/shared/CTASection';
 import { Link } from 'react-router-dom';
-import heroBg from '../assets/6.png';
+import heroBg from '../assets/6.jpg';
 
 export default function FAQ() {
   return (

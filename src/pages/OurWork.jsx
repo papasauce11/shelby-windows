@@ -1,6 +1,6 @@
 import HeroBanner from '../components/shared/HeroBanner';
 import CTASection from '../components/shared/CTASection';
-import heroBg from '../assets/2.png';
+import heroBg from '../assets/2.jpg';
 import igPost1 from '../assets/instagram/ig_post_1.jpg';
 import igPost2 from '../assets/instagram/ig_post_2.jpg';
 import igPost3 from '../assets/instagram/ig_post_3.jpg';
