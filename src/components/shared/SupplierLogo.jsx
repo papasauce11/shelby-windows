@@ -12,6 +12,9 @@ const logoMap = {
 };
 
 export default function SupplierLogo({ supplier, size = "default", linkable = true }) {
+  const isWindowStar = supplier.slug === 'window-star';
+  const isHeroSize = size === 'hero' || size === 'heroGolden';
+
   const sizes = {
     small: "px-4 py-3 h-16 w-36",
     default: "px-6 py-4 h-20 w-44",
@@ -21,19 +24,17 @@ export default function SupplierLogo({ supplier, size = "default", linkable = tr
   };
 
   const logo = logoMap[supplier.slug];
-  const isWindowStar = supplier.slug === 'window-star';
-  const isHeroSize = size === 'hero' || size === 'heroGolden';
 
   const inner = logo ? (
     <img
       src={logo}
       alt={supplier.name}
-      className={`w-auto object-contain ${
+      className={`object-contain ${
         isWindowStar
           ? isHeroSize
-            ? 'max-h-full relative -left-[15px]'
-            : 'max-h-[750%] max-w-[95%]'
-          : 'max-h-full'
+            ? 'max-h-full w-auto relative -left-[15px]'
+            : 'w-[250%] max-w-none'
+          : 'max-h-full w-auto'
       }`}
     />
   ) : (
