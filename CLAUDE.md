@@ -23,6 +23,9 @@ cd C:\Users\Varai\Desktop\Varaico\shelby-windows; git add -A; git commit -m "mes
 - Vercel is Linux/case-sensitive -- asset filenames must match exactly (note: `custom windows.PNG` and `Tilt windows.png` have uppercase extensions).
 - Vercel CDN caches aggressively -- if Josh sees stale content on another device, tell him Ctrl+Shift+R or incognito.
 - Sandbox disk fills up after many builds. Clean with `rm -rf /tmp/shelby-build*` or use a single output dir name.
+- **NEVER do bulk file operations across the codebase in a single session.** A previous optimization attempt corrupted 60 files by truncating every one. One change at a time, build-verify after each.
+- **NEVER convert external CDN image URLs to different formats.** We don't control supplier servers. If `goldenwindows.com` serves `.jpg`, that's what we use. Only local assets in `src/assets/` can be format-converted.
+- **After ANY bulk edit, run the file integrity check** (see Incident Log below) before pushing.
 
 ---
 
@@ -313,9 +316,8 @@ Golden Windows door products enriched with images + collections + brochures:
 - Rewrite FAQ answers where needed
 
 ### Step 5 — Form backend
-- Contact form currently only sets `submitted = true` — no email sent
-- Recommended: Formspree (free tier, no backend needed)
-- Target email: confirm with Vick (likely info@shelbywindows.ca)
+- ✅ Contact form wired to Web3Forms (access key: `73f9bfa3-d56f-4ae6-864d-8e1c2ae5fca4`)
+- Sends: name, email, phone, reason, message to info@shelbywindows.ca
 
 ---
 
@@ -330,7 +332,7 @@ Golden Windows door products enriched with images + collections + brochures:
 - ~~Postal code~~ → `L4K 2C8` confirmed
 - Google Maps iframe src in `Contact.jsx` → placeholder coordinates, not real address
 - About story copy → marked PLACEHOLDER, needs Vick's actual company story
-- Contact form → no email sending (frontend only, sets `submitted=true`)
+- ~~Contact form~~ → Web3Forms wired up, sends to info@shelbywindows.ca
 
 ### Resolved (previously placeholders)
 - ~~Instagram images~~ → 5 real IG images downloaded and wired up
@@ -338,3 +340,75 @@ Golden Windows door products enriched with images + collections + brochures:
 - ~~OurWork project images~~ → 5 projects with real IG images
 - ~~Reviews section~~ → 3 real Google reviews integrated
 - ~~Team photo / bio~~ → Founder spotlight with Vick's headshot + personal copy
+
+---
+
+## Incident Log
+
+### May 18, 2026 — Bulk Optimization Corruption
+
+**What happened:** A separate chat session attempted performance optimization (PNG-to-WebP conversion, lazy loading, font preloading). The bulk edit operation truncated 60 files across the entire codebase — every `.jsx`, `.js`, `.json`, `.css`, and `.html` file lost 5-15 lines each. The chat claimed it reverted via `git reset --hard` but the revert did not work.
+
+**What broke:**
+- `vite.config.js`, `package.json`, `vercel.json` — all truncated, missing closing braces
+- All external image URLs (Golden Windows, Entryguard, WindowStar CDNs) were rewritten from `.jpg` to `.webp` in the built JS bundle — those `.webp` files don't exist on supplier servers, returning 503 errors
+- Every door product image was broken on the live site
+- Window images appeared degraded
+
+**Root cause:** Bulk find-replace across all files without per-file verification. The Edit tool's known truncation issue compounded across 60 files. External CDN URLs were treated the same as local assets — the optimization assumed all image servers support webp, which they don't.
+
+**How it was fixed:** Restored all 60 files from `HEAD` using a Python script that compared disk content to git content and overwrote any differences. Verified build produced correct `.png` local assets and `.jpg` external URLs.
+
+**Prevention rules (mandatory for all future sessions):**
+1. Never do bulk edits across more than 3 files without building after each file
+2. Never modify external CDN URLs — we don't control those servers
+3. After any multi-file edit, run the integrity check below
+4. Performance optimization must be done incrementally: one optimization type at a time, build-verify, commit, then next
+5. Use Python scripts via bash for any file modification — never use the Edit tool for bulk operations
+
+---
+
+## File Integrity Check
+
+Run this after any multi-file edit or before any push to catch truncation/corruption:
+
+```bash
+cd /sessions/<session>/mnt/shelby-windows && python3 << 'PYCHECK'
+import subprocess, os
+result = subprocess.run(['git', 'ls-tree', '-r', '--name-only', 'HEAD'], capture_output=True, text=True)
+tracked = result.stdout.strip().split('\n')
+issues = []
+for f in tracked:
+    if not os.path.exists(f):
+        issues.append(f"MISSING: {f}")
+        continue
+    git_content = subprocess.run(['git', 'show', f'HEAD:{f}'], capture_output=True)
+    with open(f, 'rb') as fh:
+        disk = fh.read()
+    if git_content.stdout != disk:
+        gl = git_content.stdout.count(b'\n')
+        dl = disk.count(b'\n')
+        issues.append(f"CHANGED: {f} (git:{gl}L disk:{dl}L)")
+if issues:
+    print(f"WARNING: {len(issues)} files differ from HEAD:")
+    for i in issues: print(f"  {i}")
+else:
+    print("All files match HEAD. Safe to push.")
+PYCHECK
+```
+
+---
+
+## Performance Optimization — Safe Approach
+
+If performance optimization is needed in the future, follow this order. **One step at a time, build + verify after each.**
+
+1. **Local image optimization** — Convert `src/assets/` PNGs to WebP using a build tool (not find-replace). Update imports to match new filenames. Build. Verify images load.
+
+2. **Lazy loading** — Add `loading="lazy"` to below-fold images only. Hero and above-fold images stay eager. Build. Verify.
+
+3. **Font loading** — Move `@import` to `<link rel="preconnect">` + `<link rel="stylesheet">` in `index.html`. Build. Verify fonts still load.
+
+4. **Priority hints** — Add `fetchpriority="high"` to hero image. Build. Verify.
+
+**Never touch external URLs.** Supplier CDN images (goldenwindows.com, entryguarddoors.com, windowstar.ca) stay as-is.
