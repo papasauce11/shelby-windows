@@ -365,6 +365,7 @@ Golden Windows door products enriched with images + collections + brochures:
 3. After any multi-file edit, run the integrity check below
 4. Performance optimization must be done incrementally: one optimization type at a time, build-verify, commit, then next
 5. Use Python scripts via bash for any file modification — never use the Edit tool for bulk operations
+6. **Never delete original source images during optimization.** Create the optimized version alongside the original and update the import path. The original stays in the repo as a backup. Never include file deletion commands in push instructions.
 
 ---
 
