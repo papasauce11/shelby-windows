@@ -2,7 +2,7 @@
 // All product content for windows and doors.
 // This is the single source of truth for all product detail pages.
 
-import awningImg from '../assets/windows/awning window 1.png';
+import awningImg from '../assets/windows/awning window 1.jpg';
 import bayImg from '../assets/windows/bay window 2.png';
 import casementImg from '../assets/windows/casement window.png';
 import doubleHungImg from '../assets/windows/double hung window.png';
