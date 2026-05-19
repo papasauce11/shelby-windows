@@ -50,6 +50,8 @@ const themes = {
     sectionBg: 'bg-emerald-50',
     sectionBorder: 'border-emerald-100',
     productLabel: 'text-emerald-600',
+    heroText: 'text-[#1d3947]',
+    heroShadow: '[text-shadow:0_1px_2px_rgba(255,255,255,0.4),0_0_4px_rgba(255,255,255,0.2)]',
   },
 };
 
@@ -100,13 +102,13 @@ export default function SupplierDetail() {
           {/* Tagline */}
           {supplier.tagline && (
             <div className="mb-6">
-              <span className="inline-block px-4 py-1.5 text-xs font-heading font-700 uppercase tracking-widest text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.6),0_0_4px_rgba(0,0,0,0.4)]">
+              <span className={`inline-block px-4 py-1.5 text-xs font-heading font-700 uppercase tracking-widest ${t.heroText || 'text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.6),0_0_4px_rgba(0,0,0,0.4)]'}`}>
                 {supplier.tagline}
               </span>
             </div>
           )}
 
-          <p className="text-white text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 [text-shadow:0_1px_2px_rgba(0,0,0,0.6),0_0_4px_rgba(0,0,0,0.4)]">
+          <p className={`text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 ${t.heroText || 'text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.6),0_0_4px_rgba(0,0,0,0.4)]'}`}>
             {supplier.description}
           </p>
 
