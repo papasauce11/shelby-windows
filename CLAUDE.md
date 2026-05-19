@@ -94,8 +94,9 @@ cd C:\Users\Varai\Desktop\Varaico\shelby-windows; git add -A; git commit -m "mes
 ### `Footer.jsx`
 - Dark (`bg-warm-900`), 12-col grid: brand (3 cols) + 4 nav columns (9 cols)
 - Columns: **Pages** (pl-[30px]), **Products**, **Contact**, **Hours**
+- Contact column includes team contacts: Vick Mandla (CEO & Founder, 647 997 6935) and Emily Petch (Operations Manager, 905 308 5185), separated by a `border-t border-warm-800` divider
 - Hours: `w-8` day abbrev + time, tight `space-y-1.5`
-- Bottom bar: copyright + "Website by Varaico" with link
+- Bottom bar: copyright + "Website by Varaico" linking to `https://varaico.ca` (NOT varaico.com)
 
 ### `HeroBanner.jsx`
 - Props: `title`, `subtitle`, `cta`, `ctaLink`, `large` (bool), `image` (optional)
@@ -212,8 +213,10 @@ Golden Windows door products enriched with images + collections + brochures:
 - Story section: text left / photo right (3.png, aspect-[4/5])
 - Floating Canadian badge: `absolute -bottom-8 -left-8 hidden lg:block w-28 h-28`
 - Values: 3 cards (Canadian Products, Quality Installation, Full-Service Experience) on `bg-warm-50`, no icons, `sm:grid-cols-3 max-w-5xl`
-- Team: **placeholder box** — needs real team photo from Vick
-- Team copy: placeholder, needs Vick's actual bio/quote
+- Founder Spotlight: Vick Mandla headshot (`Vick Headshot.PNG`, portrait cutout with transparent bg) left, text right
+- Header: "CEO & Founder" label + "Vick Mandla" heading
+- Copy emphasizes personal involvement start-to-finish, includes italic quote
+- Headshot uses `drop-shadow-xl`, sized `w-64 sm:w-80 lg:w-96`
 - Story copy: marked PLACEHOLDER, needs Vick's actual company story
 
 ### `Contact.jsx`
@@ -326,9 +329,7 @@ Golden Windows door products enriched with images + collections + brochures:
 ## Known Issues / Placeholders
 - ~~Postal code~~ → `L4K 2C8` confirmed
 - Google Maps iframe src in `Contact.jsx` → placeholder coordinates, not real address
-- Team photo in `About.jsx` → placeholder text box with "Coming Soon"
 - About story copy → marked PLACEHOLDER, needs Vick's actual company story
-- About team copy → marked PLACEHOLDER, needs Vick's actual bio/quote
 - Contact form → no email sending (frontend only, sets `submitted=true`)
 
 ### Resolved (previously placeholders)
@@ -336,3 +337,4 @@ Golden Windows door products enriched with images + collections + brochures:
 - ~~Window product images~~ → all 8 local images in `src/assets/windows/`
 - ~~OurWork project images~~ → 5 projects with real IG images
 - ~~Reviews section~~ → 3 real Google reviews integrated
+- ~~Team photo / bio~~ → Founder spotlight with Vick's headshot + personal copy

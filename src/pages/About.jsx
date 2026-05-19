@@ -1,6 +1,6 @@
 import CTASection from '../components/shared/CTASection';
 import storyImg from '../assets/3.png';
-import teamImg from '../assets/6.png';
+import vickHeadshot from '../assets/Vick Headshot.PNG';
 import proudlyCanadian from '../assets/proudly_canadian.png';
 
 export default function About() {
@@ -74,23 +74,37 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team — photo right, text left */}
+      {/* Founder Spotlight */}
       <section className="py-8 sm:py-16 lg:py-24 px-5 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-16 items-center">
-          {/* Photo */}
-          <div className="aspect-[16/9] sm:aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-warm-200 bg-warm-50 order-2 lg:order-1 flex items-center justify-center">
-            <span className="text-warm-400 text-xs sm:text-sm">Team Photo — Coming Soon</span>
+          {/* Headshot */}
+          <div className="order-2 lg:order-1 flex justify-center">
+            <div className="w-64 sm:w-80 lg:w-96">
+              <img
+                src={vickHeadshot}
+                alt="Vick Mandla, CEO & Founder of Shelby Windows & Doors"
+                className="w-full h-auto drop-shadow-xl"
+              />
+            </div>
           </div>
 
           {/* Text */}
           <div className="order-1 lg:order-2">
-            <span className="text-xs sm:text-base font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 sm:mb-4 block">Our Team</span>
+            <span className="text-xs sm:text-base font-heading font-700 uppercase tracking-widest text-teal-600 mb-2 sm:mb-4 block">CEO & Founder</span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-800 text-warm-900 mb-3 sm:mb-6 leading-tight">
-              The people behind the work
+              Vick Mandla
             </h2>
-            <p className="text-warm-600 text-sm sm:text-lg leading-relaxed">
-              Our team brings together years of hands-on installation experience and a genuine commitment to doing the job right. We show up on time, keep your home clean, and don't leave until you're satisfied with the result.
-            </p>
+            <div className="space-y-3 sm:space-y-4 text-warm-600 text-sm sm:text-lg leading-relaxed">
+              <p>
+                Every Shelby project starts and ends with Vick. From the first phone call to the final walkthrough, he's personally involved because he believes that's the only way to guarantee the result lives up to the Shelby name.
+              </p>
+              <p>
+                He listens first, recommends what actually makes sense for your home, and stays hands-on through every stage of the installation. No handoffs to someone you've never met, no cutting corners to save time.
+              </p>
+              <p className="text-warm-800 font-medium italic">
+                "Your home is your biggest investment. I treat every job like it's my own."
+              </p>
+            </div>
           </div>
         </div>
       </section>
