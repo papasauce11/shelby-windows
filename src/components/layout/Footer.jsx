@@ -83,21 +83,30 @@ export default function Footer() {
             {/* Contact */}
             <div>
               <h4 className="font-heading text-xs font-700 uppercase tracking-widest text-white mb-3">Contact</h4>
-              <div className="space-y-1.5 text-sm">
+              <div className="space-y-3 text-sm">
                 <p className="leading-snug">
                   {companyInfo.address.street}<br />
                   {companyInfo.address.city}, {companyInfo.address.province}
-                </p>
-                <p>
-                  <a href={`tel:${companyInfo.phone}`} className="hover:text-teal-400 transition-colors">
-                    {companyInfo.phone}
-                  </a>
                 </p>
                 <p>
                   <a href={`mailto:${companyInfo.email}`} className="hover:text-teal-400 transition-colors">
                     {companyInfo.email}
                   </a>
                 </p>
+
+                {/* Team */}
+                <div className="space-y-2 pt-1 border-t border-warm-800">
+                  <div>
+                    <p className="text-white text-xs font-medium">Vick Mandla</p>
+                    <p className="text-warm-500 text-xs">CEO & Founder</p>
+                    <a href="tel:6479976935" className="text-xs hover:text-teal-400 transition-colors">647 997 6935</a>
+                  </div>
+                  <div>
+                    <p className="text-white text-xs font-medium">Emily Petch</p>
+                    <p className="text-warm-500 text-xs">Operations Manager</p>
+                    <a href="tel:9053085185" className="text-xs hover:text-teal-400 transition-colors">905 308 5185</a>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -133,4 +142,3 @@ export default function Footer() {
     </footer>
   );
 }
-
