@@ -31,8 +31,8 @@ export default function App() {
           </Routes>
         </Layout>
       </BrowserRouter>
-      <Analytics />
-      <SpeedInsights />
+      <Analytics mode={'production'} />
+      <SpeedInsights mode={'production'} />
     </>
   );
 }
