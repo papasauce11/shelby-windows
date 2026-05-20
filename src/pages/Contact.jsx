@@ -184,7 +184,7 @@ export default function Contact() {
                   <div className="flex justify-between"><span>Mon - Fri</span><span className="text-warm-800 font-medium">9 AM - 1 PM</span></div>
                   <div className="flex justify-between"><span>Saturday</span><span className="text-warm-800 font-medium">By Appointment</span></div>
                   <div className="flex justify-between"><span>Sunday</span><span className="text-warm-800 font-medium">By Appointment</span></div>
-                  <p className="text-warm-500 text-xs mt-1 italic">By appointment after 1 PM</p>
+                  <p className="text-warm-500 text-xs mt-1 italic">Mon-Fri: By appointment after 1 PM</p>
                 </div>
               </div>
             </div>
@@ -209,10 +209,4 @@ export default function Contact() {
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
-      </section>
-    </>
-  );
-}
+        

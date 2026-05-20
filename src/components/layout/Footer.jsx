@@ -131,7 +131,7 @@ export default function Footer() {
                     <span className="text-warm-400">{h.time}</span>
                   </div>
                 ))}
-                <p className="text-warm-500 text-xs mt-2 italic">By appointment after 1 PM</p>
+                <p className="text-warm-500 text-xs mt-2 italic">Mon-Fri: By appointment after 1 PM</p>
               </div>
             </div>
 
