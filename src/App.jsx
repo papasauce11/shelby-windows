@@ -32,7 +32,7 @@ export default function App() {
         </Layout>
       </BrowserRouter>
       <Analytics mode={'production'} />
-      <SpeedInsights mode={'production'} />
+      <SpeedInsights debug={false} />
     </>
   );
 }
