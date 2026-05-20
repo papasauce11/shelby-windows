@@ -181,9 +181,10 @@ export default function Contact() {
               <div className="bg-white rounded-xl sm:rounded-2xl border border-warm-100 shadow-sm p-4 sm:p-5">
                 <h3 className="font-heading font-700 text-warm-900 text-sm mb-3">Hours</h3>
                 <div className="space-y-1.5 text-sm text-warm-600">
-                  <div className="flex justify-between"><span>Mon - Fri</span><span className="text-warm-800 font-medium">8:00 AM - 5:00 PM</span></div>
-                  <div className="flex justify-between"><span>Saturday</span><span className="text-warm-800 font-medium">9:00 AM - 2:00 PM</span></div>
-                  <div className="flex justify-between"><span>Sunday</span><span className="text-warm-400">Closed</span></div>
+                  <div className="flex justify-between"><span>Mon - Fri</span><span className="text-warm-800 font-medium">9 AM - 1 PM</span></div>
+                  <div className="flex justify-between"><span>Saturday</span><span className="text-warm-800 font-medium">By Appointment</span></div>
+                  <div className="flex justify-between"><span>Sunday</span><span className="text-warm-800 font-medium">By Appointment</span></div>
+                  <p className="text-warm-500 text-xs mt-1 italic">By appointment after 1 PM</p>
                 </div>
               </div>
             </div>
