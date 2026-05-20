@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import { Analytics } from "@vercel/analytics/react";
 
 // Eager load home
 import Home from './pages/Home';
@@ -24,23 +25,26 @@ function Loading() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Layout>
-        <Suspense fallback={<Loading />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/windows" element={<ProductCategory key="windows" />} />
-            <Route path="/doors" element={<ProductCategory key="doors" />} />
-            <Route path="/windows/:slug" element={<ProductDetail />} />
-            <Route path="/doors/:slug" element={<ProductDetail />} />
-            <Route path="/suppliers/:slug" element={<SupplierDetail />} />
-            <Route path="/our-work" element={<OurWork />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </Suspense>
-      </Layout>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Layout>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/windows" element={<ProductCategory key="windows" />} />
+              <Route path="/doors" element={<ProductCategory key="doors" />} />
+              <Route path="/windows/:slug" element={<ProductDetail />} />
+              <Route path="/doors/:slug" element={<ProductDetail />} />
+              <Route path="/suppliers/:slug" element={<SupplierDetail />} />
+              <Route path="/our-work" element={<OurWork />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
+        </Layout>
+      </BrowserRouter>
+      <Analytics />
+    </>
   );
 }
