@@ -38,7 +38,6 @@ export default function Layout({ children }) {
       </main>
 
       <Footer />
-      <Analytics />
 
       {/* Sticky CTA bar */}
       <div className={`fixed bottom-0 left-0 right-0 z-40 transition-transform duration-400 lg:hidden ${showSticky ? 'translate-y-0' : 'translate-y-full'}`}>
