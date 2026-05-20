@@ -3,8 +3,8 @@ import { getProductsByCategory } from '../data/products';
 import HeroBanner from '../components/shared/HeroBanner';
 import ProductCard from '../components/shared/ProductCard';
 import CTASection from '../components/shared/CTASection';
-import windowsHero from '../assets/3.png';
-import doorsHero from '../assets/1.png';
+import windowsHero from '../assets/3.jpg';
+import doorsHero from '../assets/1.jpg';
 
 const categoryMeta = {
   windows: {
