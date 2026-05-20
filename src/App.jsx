@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // Eager load home
 import Home from './pages/Home';
@@ -45,6 +46,7 @@ export default function App() {
         </Layout>
       </BrowserRouter>
       <Analytics />
+      <SpeedInsights />
     </>
   );
 }
